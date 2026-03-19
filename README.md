@@ -14,6 +14,12 @@ Bio-Framework guides AI through bioinformatics best practices to take you **from
 
 All analysis **runs in your local environment**. Raw data never leaves your machine.
 
+<div align="center">
+<img src="docs/images/screenshot_bio_status.png" width="600"/>
+<br/>
+<em><code>/bio status</code> — A real project lifecycle: 86,139 cells across 4 phases, from GSE165816 QC to manuscript draft, fully managed.</em>
+</div>
+
 ---
 
 ## Generated Output Gallery
@@ -373,6 +379,14 @@ Bio-Framework runs entirely within the Claude Code local environment:
 ---
 
 ## Quick Start
+
+<div align="center">
+<img src="docs/images/screenshot_bio_help.png" width="600"/>
+<br/>
+<em><code>/bio help</code> — Not a black box. Workflow Control, Topic Management, Phase Management — a fully controllable system.</em>
+</div>
+
+<br/>
 
 **Step 1: Install the framework**
 

@@ -14,6 +14,12 @@ Bio-Framework 让 AI 按照生物信息学领域的最佳实践，帮你完成**
 
 所有分析**在你的本地环境运行**。原始数据不会上传到任何第三方服务器。
 
+<div align="center">
+<img src="docs/images/screenshot_bio_status.png" width="600"/>
+<br/>
+<em><code>/bio status</code> — 真实项目生命周期：86,139 细胞、4 个 Phase，从 GSE165816 质控到论文初稿，全程自动管理。</em>
+</div>
+
 ---
 
 ## 引擎生成的图表展示
@@ -373,6 +379,14 @@ Bio-Framework 完全运行在 Claude Code 本地环境中：
 ---
 
 ## 快速上手
+
+<div align="center">
+<img src="docs/images/screenshot_bio_help.png" width="600"/>
+<br/>
+<em><code>/bio help</code> — 不是黑箱。工作流控制、主题管理、Phase 管理——一个完全可控的系统。</em>
+</div>
+
+<br/>
 
 **第一步：安装框架**
 
