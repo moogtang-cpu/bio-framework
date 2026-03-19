@@ -1,0 +1,81 @@
+{
+  "phase": 7,
+  "method": "liana rank_aggregate (consensus resource, 4624 LR pairs, 1000 permutations)",
+  "global_analysis": {
+    "n_interactions_tested": 56760,
+    "n_significant": 1430
+  },
+  "stem_niche": {
+    "n_stem_interactions": 636,
+    "stem_incoming": 315,
+    "stem_outgoing": 435
+  },
+  "disease_comparison": {
+    "n_common_interactions": 33721,
+    "n_gained_in_AS": 11746,
+    "n_lost_in_AS": 9423,
+    "stem_gained": 6455,
+    "stem_lost": 5951
+  },
+  "pathway_communication": {
+    "WNT": "28",
+    "NOTCH": "1",
+    "FGF": "5",
+    "EGF": "16",
+    "Inflammation": "24",
+    "ECM_Adhesion": "299"
+  },
+  "fibrosis_vs_regeneration": {
+    "fibrosis_interactions": 3814,
+    "fibrosis_gained_in_AS": 2167,
+    "fibrosis_lost_in_AS": 1433,
+    "regeneration_interactions": 2611,
+    "regeneration_gained_in_AS": 1233,
+    "regeneration_lost_in_AS": 1105
+  },
+  "step2_niche_analysis": {
+    "pathway_scores": [
+      "WNT",
+      "NOTCH",
+      "TGFb_BMP",
+      "FGF",
+      "EGF",
+      "Hedgehog",
+      "Cytokine",
+      "Chemokine"
+    ],
+    "n_sig_pathway_changes": 20,
+    "autocrine_vs_paracrine": {
+      "SOX9+LGR5+_stem": {
+        "autocrine": 20,
+        "paracrine": 94
+      },
+      "CD133+_progenitor": {
+        "autocrine": 1,
+        "paracrine": 65
+      },
+      "Basalis_fibroblast": {
+        "autocrine": 26,
+        "paracrine": 109
+      }
+    },
+    "drug_target_candidates": {
+      "n_ligands": 58,
+      "n_receptors": 62,
+      "top5_ligands": [
+        "CXCL8",
+        "LGALS9",
+        "SEMA4D",
+        "PDGFC",
+        "APOE"
+      ],
+      "top5_receptors": [
+        "SDC2",
+        "MET",
+        "PDGFRA",
+        "VLDLR",
+        "PLXND1"
+      ]
+    }
+  }
+}

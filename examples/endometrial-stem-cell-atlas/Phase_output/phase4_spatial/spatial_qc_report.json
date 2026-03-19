@@ -1,0 +1,131 @@
+{
+  "dataset": "GSE287278_RIF_visium",
+  "platform": "10x Visium",
+  "n_samples": 8,
+  "conditions": {
+    "CTR": 4,
+    "RIF": 4
+  },
+  "qc_thresholds": {
+    "min_counts": 500,
+    "min_genes": 200,
+    "max_mt_pct": 25,
+    "min_cells_per_gene": 5
+  },
+  "total_spots_before": 10163,
+  "total_spots_after": 10135,
+  "n_common_genes": 14359,
+  "n_hvg": 3000,
+  "clustering": {
+    "leiden_0.3": 5,
+    "leiden_0.5": 7,
+    "leiden_0.8": 8,
+    "leiden_1.0": 11
+  },
+  "per_sample": {
+    "CTR1": {
+      "n_spots": 751,
+      "n_genes": 36601,
+      "median_total_counts": 8813.0,
+      "median_n_genes": 3711.0,
+      "mean_pct_mt": 8.213814735412598,
+      "mean_pct_ribo": 11.077706336975098,
+      "mean_pct_hb": 0.025342272594571114,
+      "condition": "CTR",
+      "n_spots_after_qc": 750,
+      "pct_spots_kept": 99.9,
+      "n_genes_after_qc": 16035
+    },
+    "CTR2": {
+      "n_spots": 820,
+      "n_genes": 36601,
+      "median_total_counts": 9761.0,
+      "median_n_genes": 3825.0,
+      "mean_pct_mt": 5.890033721923828,
+      "mean_pct_ribo": 14.223804473876953,
+      "mean_pct_hb": 0.01708379201591015,
+      "condition": "CTR",
+      "n_spots_after_qc": 820,
+      "pct_spots_kept": 100.0,
+      "n_genes_after_qc": 15990
+    },
+    "CTR3": {
+      "n_spots": 1805,
+      "n_genes": 36601,
+      "median_total_counts": 6097.0,
+      "median_n_genes": 2764.0,
+      "mean_pct_mt": 7.437532901763916,
+      "mean_pct_ribo": 14.622406959533691,
+      "mean_pct_hb": 0.023514028638601303,
+      "condition": "CTR",
+      "n_spots_after_qc": 1801,
+      "pct_spots_kept": 99.8,
+      "n_genes_after_qc": 17105
+    },
+    "CTR4": {
+      "n_spots": 2018,
+      "n_genes": 36601,
+      "median_total_counts": 5837.0,
+      "median_n_genes": 2664.5,
+      "mean_pct_mt": 8.591886520385742,
+      "mean_pct_ribo": 14.126871109008789,
+      "mean_pct_hb": 0.023779431357979774,
+      "condition": "CTR",
+      "n_spots_after_qc": 2016,
+      "pct_spots_kept": 99.9,
+      "n_genes_after_qc": 17090
+    },
+    "RIF1": {
+      "n_spots": 1334,
+      "n_genes": 36601,
+      "median_total_counts": 4020.0,
+      "median_n_genes": 2349.5,
+      "mean_pct_mt": 6.05631685256958,
+      "mean_pct_ribo": 9.496086120605469,
+      "mean_pct_hb": 0.005731247365474701,
+      "condition": "RIF",
+      "n_spots_after_qc": 1327,
+      "pct_spots_kept": 99.5,
+      "n_genes_after_qc": 16084
+    },
+    "RIF2": {
+      "n_spots": 1367,
+      "n_genes": 36601,
+      "median_total_counts": 7306.0,
+      "median_n_genes": 3346.0,
+      "mean_pct_mt": 3.6969926357269287,
+      "mean_pct_ribo": 13.871156692504883,
+      "mean_pct_hb": 0.00943948607891798,
+      "condition": "RIF",
+      "n_spots_after_qc": 1355,
+      "pct_spots_kept": 99.1,
+      "n_genes_after_qc": 17020
+    },
+    "RIF3": {
+      "n_spots": 914,
+      "n_genes": 36601,
+      "median_total_counts": 4388.0,
+      "median_n_genes": 2410.5,
+      "mean_pct_mt": 2.93410062789917,
+      "mean_pct_ribo": 15.29710578918457,
+      "mean_pct_hb": 0.004478759597986937,
+      "condition": "RIF",
+      "n_spots_after_qc": 913,
+      "pct_spots_kept": 99.9,
+      "n_genes_after_qc": 15575
+    },
+    "RIF4": {
+      "n_spots": 1154,
+      "n_genes": 36601,
+      "median_total_counts": 8546.5,
+      "median_n_genes": 3486.5,
+      "mean_pct_mt": 4.621966361999512,
+      "mean_pct_ribo": 16.795679092407227,
+      "mean_pct_hb": 0.00700153736397624,
+      "condition": "RIF",
+      "n_spots_after_qc": 1153,
+      "pct_spots_kept": 99.9,
+      "n_genes_after_qc": 16703
+    }
+  }
+}

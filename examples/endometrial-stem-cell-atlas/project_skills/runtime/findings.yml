@@ -1,0 +1,105 @@
+# Bio-Framework Findings Tracker
+# Anomalies discovered during analysis are auto-recorded by AI
+# Can also be manually added via /bio finding add
+
+next_id: 9
+findings:
+  - id: "F-1"
+    phase: 1
+    step: "data_download"
+    severity: warning
+    description: |
+      PRJNA730360 (thin endometrium, Lv et al. PNAS 2022) only provides raw FASTQ data on SRA (6 samples, ~500GB),
+      with no processed count matrix available. Cell Ranger processing from scratch is required.
+      Samples: Normal_patient_1-3 (SRR14561667-65), Thin_1-3 (SRR14561664-62)
+      Platform: Illumina NovaSeq 6000, 10x Genomics, PAIRED, 300bp
+    discovered_at: "2026-03-05"
+    status: open
+    resolution: "kb-python (kallisto|bustools) has been installed and SRA download and processing have been initiated. Running in the background."
+    status: in_progress
+
+  - id: "F-2"
+    phase: 1
+    step: "data_validation"
+    severity: info
+    description: |
+      E-MTAB-9260 Visium data currently only has gene count matrices (tsv.gz),
+      missing Space Ranger spatial coordinate files (tissue_positions, scalefactors, images).
+      Download of processed.1.zip from ArrayExpress FTP has been initiated to obtain complete spatial information.
+    discovered_at: "2026-03-05"
+    status: in_progress
+    resolution: null
+
+  - id: "F-3"
+    phase: 1
+    step: "data_validation"
+    severity: info
+    description: |
+      h5ad files for GSE215968 and GSE216748 are stored in gzip-compressed format (.h5ad.gz).
+      Successfully decompressed to .h5ad format; all files are readable.
+      Validation results: CD133 (69701 cells), AS_vs_WOI (106400 cells), AS_pre_vs_post (123250 cells), organoid (49609 cells)
+    discovered_at: "2026-03-05"
+    status: resolved
+    resolution: "All h5ad.gz files decompressed using gunzip -k"
+
+  - id: "F-4"
+    phase: 3
+    step: "reference_mapping"
+    severity: warning
+    description: |
+      HECA reference atlas label transfer shows SOX9_basalis with only 23 cells (0.007%), far below expectations.
+      However, SOX9_functionalis_I/II totals 6,096 cells, SOX9_luminal 2,012 cells, and preGlandular 3,962 cells.
+      The GSE215968_CD133 dataset (69,701 CD133+-enriched stem cells) may have been mapped to other cell types.
+      Stem cell subpopulation definitions should be re-evaluated using marker genes such as SOX9/LGR5/PROM1 during manual annotation.
+    discovered_at: "2026-03-06"
+    status: open
+    resolution: null
+
+  - id: "F-5"
+    phase: 3
+    step: "batch_integration"
+    severity: info
+    description: |
+      After Harmony integration, 5 clusters are dominated by a single dataset (>70%):
+      Cluster 0/20/21: GSE215968_CD133 (86-100%) — CD133+ sorting enrichment effect
+      Cluster 15/26: GSE215968_AS (71-99%) — disease-specific cell states
+      These represent biological differences rather than batch effects; integration quality is acceptable (ASW_batch=0.024).
+    discovered_at: "2026-03-06"
+    status: resolved
+    resolution: "Confirmed as biological differences; no additional correction required"
+
+  - id: "F-6"
+    phase: 5
+    step: "proportion_change"
+    severity: critical
+    description: |
+      CD133+_progenitor is significantly reduced in AS (7.7% -> 0.68%, log2FC=-3.51, padj=0.011)
+      SOX9+LGR5+_stem also shows a decreasing trend (6.5% -> 2.4%, padj=0.21)
+      This is consistent with the hypothesis of stem cell pool depletion in AS — the core mechanism underlying reduced endometrial regenerative capacity.
+    discovered_at: "2026-03-06"
+    status: resolved
+    resolution: "Incorporated into Phase 5 disease comparison analysis as core evidence for AS pathological mechanism"
+
+  - id: "F-7"
+    phase: 5
+    step: "deg_analysis"
+    severity: warning
+    description: |
+      SOX9+LGR5+_stem cannot undergo pseudobulk DEG analysis due to insufficient sample count (only 1 WOI + 1 AS sample containing this cell type).
+      This is because SOX9+LGR5+ stem cells are present at very low proportions in most samples, leaving only very few samples with sufficient cells after aggregation.
+      Consider using single-cell level Wilcoxon test or MAST model as alternatives.
+    discovered_at: "2026-03-06"
+    status: open
+    resolution: null
+
+  - id: "F-8"
+    phase: 5
+    step: "proportion_change"
+    severity: info
+    description: |
+      Immune cells are significantly increased in AS: NKT_cells (4.2% -> 19.1%), Macrophages (0.5% -> 6.8%)
+      Simultaneously, secretory glandular epithelium (16.1% -> 1.8%) and decidualized stroma (48.5% -> 34.2%) are markedly reduced.
+      This suggests that the pathology of AS is inflammation-driven fibrosis accompanied by loss of glandular and decidualization function.
+    discovered_at: "2026-03-06"
+    status: resolved
+    resolution: "Validated via GSEA pathway analysis; fibrosis and inflammatory pathways are significantly enriched"

@@ -1,0 +1,7 @@
+{
+  "asw_batch_harmony": 0.0244,
+  "asw_bio_GSE215968": 0.0795,
+  "cluster_mixing_score": 0.565,
+  "mean_cluster_entropy": 0.91,
+  "n_clusters_leiden1.0": 29
+}

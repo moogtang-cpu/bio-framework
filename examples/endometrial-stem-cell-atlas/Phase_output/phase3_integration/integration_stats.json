@@ -1,0 +1,31 @@
+{
+  "total_cells": 314805,
+  "total_genes": 18365,
+  "common_genes": 18365,
+  "n_hvg": 3000,
+  "n_pcs": 50,
+  "harmony_pcs_used": 30,
+  "datasets": {
+    "GSE215968_AS": 106400,
+    "GSE215968_CD133": 69701,
+    "GSE111976": 61503,
+    "E-MTAB-10287": 49550,
+    "GSE260658": 27651
+  },
+  "clustering": {
+    "leiden_0.5": 18,
+    "leiden_0.8": 24,
+    "leiden_1.0": 29,
+    "leiden_1.5": 37
+  },
+  "conditions": {
+    "Normal": 111053,
+    "AS_CD133": 69701,
+    "WOI Control": 66064,
+    "AS": 40336,
+    "endometrium": 17375,
+    "decidua": 10276
+  },
+  "load_time_s": 347,
+  "harmony_time_s": 7
+}

@@ -1,0 +1,490 @@
+{
+  "phase": 5,
+  "comparison_primary": "WOI Control vs AS (GSE215968)",
+  "comparison_secondary": "CTR vs RIF (GSE287278 Visium deconvolution)",
+  "n_cells_primary": 106384,
+  "proportion_analysis": {
+    "CD133+_progenitor": {
+      "mean_WOI": 0.07696570340230889,
+      "mean_AS": 0.006774594774109567,
+      "log2FC": -3.505814956317197,
+      "padj": 0.010616661351011868
+    },
+    "Secretory_glandular": {
+      "mean_WOI": 0.16079718484927844,
+      "mean_AS": 0.01832728283382267,
+      "log2FC": -3.1331075888604736,
+      "padj": 0.025343517545071734
+    },
+    "NKT_cells": {
+      "mean_WOI": 0.04216191883568052,
+      "mean_AS": 0.1909173370053359,
+      "log2FC": 2.1789090251668854,
+      "padj": 0.034894253342143404
+    },
+    "Macrophages": {
+      "mean_WOI": 0.0052061937463276095,
+      "mean_AS": 0.06809489872071767,
+      "log2FC": 3.708989918404928,
+      "padj": 0.034894253342143404
+    },
+    "Glandular_epithelium": {
+      "mean_WOI": 0.060732891246223976,
+      "mean_AS": 0.08177663479821626,
+      "log2FC": 0.4292045310958921,
+      "padj": 0.12155680868000981
+    },
+    "Pericyte": {
+      "mean_WOI": 0.0,
+      "mean_AS": 0.02773851687240347,
+      "log2FC": 14.759655040611927,
+      "padj": 0.17057295150997762
+    },
+    "SOX9+LGR5+_stem": {
+      "mean_WOI": 0.06515489217856459,
+      "mean_AS": 0.02386263388351029,
+      "log2FC": -1.4490819014204548,
+      "padj": 0.2124906492932115
+    },
+    "Decidualized_stromal": {
+      "mean_WOI": 0.4849005094219017,
+      "mean_AS": 0.3420183273245713,
+      "log2FC": -0.5036138913031803,
+      "padj": 0.274295272386139
+    },
+    "Erythrocytes": {
+      "mean_WOI": 5.5526484097912666e-05,
+      "mean_AS": 0.00042329665339849127,
+      "log2FC": 2.9080744291275393,
+      "padj": 0.36203937257162644
+    },
+    "Lymphoid_immune": {
+      "mean_WOI": 0.008790991092409326,
+      "mean_AS": 0.011290193281237324,
+      "log2FC": 0.3609361320122966,
+      "padj": 0.38540660849482233
+    },
+    "Lymphatic_endothelium": {
+      "mean_WOI": 0.038343260573304394,
+      "mean_AS": 0.07170122672302133,
+      "log2FC": 0.9030072736053849,
+      "padj": 0.572716156222033
+    },
+    "Basalis_fibroblast": {
+      "mean_WOI": 0.001956078706379856,
+      "mean_AS": 0.004683152493574261,
+      "log2FC": 1.2590862669198957,
+      "padj": 0.572716156222033
+    },
+    "B_cells": {
+      "mean_WOI": 0.014042304465560556,
+      "mean_AS": 0.013986514952738092,
+      "log2FC": -0.005742776089329668,
+      "padj": 0.7628388949505204
+    },
+    "Smooth_muscle": {
+      "mean_WOI": 0.040892544997962334,
+      "mean_AS": 0.13840538968334337,
+      "log2FC": 1.758965509724268,
+      "padj": 0.7628388949505204
+    }
+  },
+  "deg_summary": {
+    "CD133+_progenitor": {
+      "n_samples_WOI": 9,
+      "n_samples_AS": 2,
+      "n_genes_tested": 3596,
+      "n_sig_up": 14,
+      "n_sig_down": 209,
+      "top_up": [
+        "LPGAT1",
+        "MIA3",
+        "TMEM70",
+        "ATRX",
+        "PTEN",
+        "PTN",
+        "DDAH1",
+        "FNDC3A",
+        "EIF2AK2",
+        "COL3A1"
+      ],
+      "top_down": [
+        "DEFB1",
+        "RPS27",
+        "RPL39",
+        "MT2A",
+        "RPS28",
+        "CXCL8",
+        "CXCL2",
+        "MT1G",
+        "MT1X",
+        "ADM"
+      ]
+    },
+    "Basalis_fibroblast": {
+      "n_samples_WOI": 1,
+      "n_samples_AS": 3,
+      "n_genes_tested": 3820,
+      "n_sig_up": 7,
+      "n_sig_down": 4,
+      "top_up": [
+        "PLCG2",
+        "SCGB1D2",
+        "MAPK10",
+        "PRELP",
+        "HIST1H4C",
+        "ADH1B",
+        "LRRC17",
+        "MBP",
+        "MSX1",
+        "MATN2"
+      ],
+      "top_down": [
+        "PHLDA2",
+        "IER3",
+        "NNMT",
+        "RGCC",
+        "LUM",
+        "SGK1",
+        "RPL17",
+        "IFRD1",
+        "NME1",
+        "SPOCK1"
+      ]
+    },
+    "Decidualized_stromal": {
+      "n_samples_WOI": 12,
+      "n_samples_AS": 12,
+      "n_genes_tested": 15194,
+      "n_sig_up": 1698,
+      "n_sig_down": 2177,
+      "top_up": [
+        "DKK3",
+        "CCND2",
+        "ADAMTSL1",
+        "C11orf87",
+        "LRRC8C",
+        "PLAG1",
+        "ADRA1D",
+        "LINC01579",
+        "ITGA9",
+        "KCNG1"
+      ],
+      "top_down": [
+        "PLA2G2A",
+        "GPX3",
+        "ARL16",
+        "JUP",
+        "PRRG4",
+        "PYGL",
+        "IRX3",
+        "C2CD4A",
+        "SFN",
+        "GSG1L"
+      ]
+    },
+    "Glandular_epithelium": {
+      "n_samples_WOI": 8,
+      "n_samples_AS": 11,
+      "n_genes_tested": 11993,
+      "n_sig_up": 219,
+      "n_sig_down": 290,
+      "top_up": [
+        "KDELR2",
+        "NYNRIN",
+        "EDN3",
+        "MOXD1",
+        "CCND2",
+        "SFRP4",
+        "EPHA7",
+        "S100A8",
+        "RGS1",
+        "IL20RA"
+      ],
+      "top_down": [
+        "GDF15",
+        "LAMB3",
+        "NR1D1",
+        "PARD6B",
+        "RIOK3",
+        "SBNO2",
+        "PLAUR",
+        "LINC00511",
+        "SFN",
+        "GCNT2"
+      ]
+    },
+    "Secretory_glandular": {
+      "n_samples_WOI": 9,
+      "n_samples_AS": 2,
+      "n_genes_tested": 13926,
+      "n_sig_up": 89,
+      "n_sig_down": 2,
+      "top_up": [
+        "MEF2C",
+        "MYH11",
+        "NDUFA4L2",
+        "MAP3K7CL",
+        "GPNMB",
+        "LINC00621",
+        "AQP1",
+        "NEURL1B",
+        "SRGN",
+        "GNLY"
+      ],
+      "top_down": [
+        "RRBP1",
+        "SOD2",
+        "UBXN4",
+        "TXNRD1",
+        "MUC16",
+        "CTTNBP2NL",
+        "CLDN10",
+        "CDKN2AIP",
+        "C12orf75",
+        "SPAG9"
+      ]
+    },
+    "Smooth_muscle": {
+      "n_samples_WOI": 10,
+      "n_samples_AS": 9,
+      "n_genes_tested": 12735,
+      "n_sig_up": 476,
+      "n_sig_down": 253,
+      "top_up": [
+        "NPNT",
+        "ITIH5",
+        "KCNMA1",
+        "SORL1",
+        "COL4A6",
+        "NDNF",
+        "NT5DC3",
+        "PTGIS",
+        "SPARCL1",
+        "SNCG"
+      ],
+      "top_down": [
+        "P2RY14",
+        "HES5",
+        "KCNK17",
+        "MIR4435-2HG",
+        "TIMP1",
+        "MT1H",
+        "MT1G",
+        "SPRY1",
+        "PLA2G2A",
+        "PCED1A"
+      ]
+    },
+    "NKT_cells": {
+      "n_samples_WOI": 9,
+      "n_samples_AS": 13,
+      "n_genes_tested": 11585,
+      "n_sig_up": 103,
+      "n_sig_down": 228,
+      "top_up": [
+        "SFRP4",
+        "ZNF675",
+        "TNFAIP8",
+        "ABHD2",
+        "TNRC6C",
+        "S100A8",
+        "PIAS1",
+        "GLG1",
+        "EIF4B",
+        "RFX3"
+      ],
+      "top_down": [
+        "LDLR",
+        "SFN",
+        "NEU1",
+        "AGR2",
+        "MUC16",
+        "RAB11FIP1",
+        "KLHL18",
+        "SLC18A2",
+        "GPX3",
+        "RIMKLB"
+      ]
+    },
+    "Macrophages": {
+      "n_samples_WOI": 5,
+      "n_samples_AS": 10,
+      "n_genes_tested": 6873,
+      "n_sig_up": 271,
+      "n_sig_down": 271,
+      "top_up": [
+        "POU2F2",
+        "CR1",
+        "RXRA",
+        "CYTH4",
+        "FAM20A",
+        "IQSEC1",
+        "GLUL",
+        "NKG7",
+        "MCTP2",
+        "CX3CR1"
+      ],
+      "top_down": [
+        "AGR2",
+        "CD9",
+        "RIMKLB",
+        "CLEC5A",
+        "TUBA1C",
+        "GDF15",
+        "COX7B",
+        "TXN",
+        "PTTG1",
+        "CIB1"
+      ]
+    },
+    "Lymphoid_immune": {
+      "n_samples_WOI": 6,
+      "n_samples_AS": 6,
+      "n_genes_tested": 5534,
+      "n_sig_up": 83,
+      "n_sig_down": 124,
+      "top_up": [
+        "EMILIN3",
+        "MAPK10",
+        "PDS5B",
+        "AHNAK",
+        "LAMA2",
+        "REST",
+        "SEMA5A",
+        "PEG10",
+        "SMARCA2",
+        "ABHD2"
+      ],
+      "top_down": [
+        "PAEP",
+        "LAMTOR5",
+        "SLPI",
+        "DEFB1",
+        "NNMT",
+        "COX5B",
+        "IER3",
+        "S100A11",
+        "CXCL14",
+        "KRT18"
+      ]
+    },
+    "Lymphatic_endothelium": {
+      "n_samples_WOI": 10,
+      "n_samples_AS": 11,
+      "n_genes_tested": 12202,
+      "n_sig_up": 766,
+      "n_sig_down": 767,
+      "top_up": [
+        "F8",
+        "RUNX1T1",
+        "CCND2",
+        "FLNC",
+        "ZNF704",
+        "PTGIS",
+        "CHST15",
+        "TTC28",
+        "BTNL9",
+        "LIFR"
+      ],
+      "top_down": [
+        "ITIH5",
+        "SLPI",
+        "CLDN15",
+        "STAB1",
+        "PAEP",
+        "TXNDC17",
+        "S100A11",
+        "LDHA",
+        "DUSP23",
+        "C2CD4A"
+      ]
+    }
+  },
+  "rif_comparison": {
+    "Decidualized_stromal": {
+      "mean_CTR": 0.2696462493700802,
+      "mean_RIF": 0.18365562382655365,
+      "log2FC": -0.5540623874427042,
+      "padj": 0.06666666666666667
+    },
+    "Glandular_epithelium": {
+      "mean_CTR": 0.02227404767879815,
+      "mean_RIF": 0.13687597085015918,
+      "log2FC": 2.619379312902585,
+      "padj": 0.06666666666666667
+    },
+    "NKT_cells": {
+      "mean_CTR": 0.06846608003573199,
+      "mean_RIF": 0.028148884296973018,
+      "log2FC": -1.2822814936181222,
+      "padj": 0.06666666666666667
+    },
+    "Macrophages": {
+      "mean_CTR": 0.0401690117739638,
+      "mean_RIF": 0.021809046327845277,
+      "log2FC": -0.8811260497572184,
+      "padj": 0.06666666666666667
+    },
+    "Smooth_muscle": {
+      "mean_CTR": 0.10709707116171692,
+      "mean_RIF": 0.051923573918862376,
+      "log2FC": -1.0444431195505213,
+      "padj": 0.06666666666666667
+    },
+    "Pericyte": {
+      "mean_CTR": 0.07537672207724877,
+      "mean_RIF": 0.15260034661645133,
+      "log2FC": 1.017557590780794,
+      "padj": 0.06666666666666667
+    },
+    "Lymphatic_endothelium": {
+      "mean_CTR": 0.07439109891065865,
+      "mean_RIF": 0.047030502024965136,
+      "log2FC": -0.6615219950150447,
+      "padj": 0.11428571428571428
+    },
+    "Basalis_fibroblast": {
+      "mean_CTR": 0.12549669128253307,
+      "mean_RIF": 0.09890106571943338,
+      "log2FC": -0.3435882646075138,
+      "padj": 0.17777777777777776
+    },
+    "CD133+_progenitor": {
+      "mean_CTR": 0.03164855690172523,
+      "mean_RIF": 0.057696555406582875,
+      "log2FC": 0.8663248926168254,
+      "padj": 0.17777777777777776
+    },
+    "SOX9+LGR5+_stem": {
+      "mean_CTR": 0.033037293526832386,
+      "mean_RIF": 0.025189071824481556,
+      "log2FC": -0.39128393586835897,
+      "padj": 0.28
+    },
+    "Secretory_glandular": {
+      "mean_CTR": 0.04577126859100333,
+      "mean_RIF": 0.08832304190125896,
+      "log2FC": 0.9483323971297157,
+      "padj": 0.4363636363636364
+    },
+    "B_cells": {
+      "mean_CTR": 0.02817917052364497,
+      "mean_RIF": 0.025486938961529017,
+      "log2FC": -0.14486562468333275,
+      "padj": 0.5230769230769231
+    },
+    "Erythrocytes": {
+      "mean_CTR": 0.03325082980545879,
+      "mean_RIF": 0.029472687839078505,
+      "log2FC": -0.17400614622571353,
+      "padj": 0.5230769230769231
+    },
+    "Lymphoid_immune": {
+      "mean_CTR": 0.04519590832786318,
+      "mean_RIF": 0.05288668986436181,
+      "log2FC": 0.22670787062378941,
+      "padj": 0.8857142857142857
+    }
+  }
+}

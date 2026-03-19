@@ -1,0 +1,65 @@
+# Endometrial Stem Cell Atlas Analysis Environment - Stage 1: Conda packages only
+name: endometrium_atlas
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # Python core
+  - python=3.11
+  - pip
+
+  # R core
+  - r-base=4.4
+  - r-essentials
+  - r-devtools
+  - r-biocmanager
+  - r-remotes
+
+  # R - Seurat ecosystem
+  - r-seurat>=5.0
+  - r-seuratobject
+
+  # R - Data processing
+  - r-tidyverse
+  - r-data.table
+  - r-matrix
+  - r-hdf5r
+  - r-jsonlite
+  - r-yaml
+  - r-r.utils
+  - r-future
+  - r-future.apply
+
+  # R - Visualization
+  - r-ggplot2
+  - r-patchwork
+  - bioconductor-complexheatmap
+  - r-circlize
+  - r-rcolorbrewer
+  - r-viridis
+  - r-ggrepel
+  - r-cowplot
+  - r-scales
+  - r-ggsci
+
+  # R - Integration
+  - r-harmony
+
+  # R - Bioinformatics core
+  - bioconductor-singlecellexperiment
+  - bioconductor-scater
+  - bioconductor-scran
+  - bioconductor-edger
+  - bioconductor-deseq2
+  - bioconductor-limma
+  - bioconductor-clusterprofiler
+  - bioconductor-org.hs.eg.db
+  - bioconductor-enrichplot
+  - bioconductor-dose
+  - bioconductor-reactomepa
+  - bioconductor-fgsea
+  - bioconductor-glmgampoi
+  - bioconductor-scdblfinder
+  - bioconductor-slingshot
+  - bioconductor-aucell
+  - bioconductor-rcistarget

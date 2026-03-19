@@ -1,0 +1,584 @@
+{
+  "phase": 8,
+  "target_prioritization": {
+    "n_candidates": 463,
+    "scoring_criteria": "DEG evidence + TF regulation + cell communication + stem gene + fibrosis gene",
+    "top10": [
+      {
+        "rank": 1,
+        "gene": "IER3",
+        "score": 24.854926367585946,
+        "evidence": "DEG_in_8ct(maxLFC=2.85); stem_DEG_CD133plus_progenitor; stem_DEG_Basalis_fibroblast"
+      },
+      {
+        "rank": 2,
+        "gene": "ELF3",
+        "score": 23.19458956786487,
+        "evidence": "DEG_in_5ct(maxLFC=3.19); TF_diff_5ct"
+      },
+      {
+        "rank": 3,
+        "gene": "CXCL8",
+        "score": 23.0,
+        "evidence": "DEG_in_6ct(maxLFC=7.09); stem_DEG_CD133plus_progenitor; comm_ligand"
+      },
+      {
+        "rank": 4,
+        "gene": "PAEP",
+        "score": 22.0,
+        "evidence": "DEG_in_7ct(maxLFC=11.25); stem_DEG_CD133plus_progenitor"
+      },
+      {
+        "rank": 5,
+        "gene": "MT1H",
+        "score": 22.0,
+        "evidence": "DEG_in_7ct(maxLFC=10.40); stem_DEG_CD133plus_progenitor"
+      },
+      {
+        "rank": 6,
+        "gene": "MT1G",
+        "score": 22.0,
+        "evidence": "DEG_in_7ct(maxLFC=6.70); stem_DEG_CD133plus_progenitor"
+      },
+      {
+        "rank": 7,
+        "gene": "GPX3",
+        "score": 22.0,
+        "evidence": "DEG_in_7ct(maxLFC=10.33); stem_DEG_CD133plus_progenitor"
+      },
+      {
+        "rank": 8,
+        "gene": "NNMT",
+        "score": 21.0,
+        "evidence": "DEG_in_5ct(maxLFC=5.05); stem_DEG_CD133plus_progenitor; stem_DEG_Basalis_fibroblast"
+      },
+      {
+        "rank": 9,
+        "gene": "MET",
+        "score": 21.0,
+        "evidence": "DEG_in_4ct(maxLFC=5.93); stem_DEG_CD133plus_progenitor; comm_receptor; known_stem_gene"
+      },
+      {
+        "rank": 10,
+        "gene": "CKS2",
+        "score": 20.967648098612543,
+        "evidence": "DEG_in_7ct(maxLFC=3.97); stem_DEG_CD133plus_progenitor"
+      }
+    ]
+  },
+  "drug_database": {
+    "source": "DGIdb GraphQL API",
+    "n_targets_with_drugs": 60,
+    "n_drug_target_pairs": 3030,
+    "n_approved_drugs": 712
+  },
+  "druggability": {
+    "Tier1_approved": 24,
+    "Tier2_investigational": 5,
+    "Tier3_novel": 21
+  },
+  "organoid_validation": {
+    "dataset": "GSE216748 (49,609 AS organoid cells)",
+    "n_targets_expressed_gt10pct": 19,
+    "n_targets_available": 30,
+    "top_expressed": [
+      "PAEP",
+      "IER3",
+      "LAMB3",
+      "DEFB1",
+      "ELF3"
+    ]
+  },
+  "top10_evidence_chains": {
+    "IER3": {
+      "rank": 1,
+      "gene": "IER3",
+      "priority_score": 24.854926367585946,
+      "evidence_summary": "DEG_in_8ct(maxLFC=2.85); stem_DEG_CD133plus_progenitor; stem_DEG_Basalis_fibroblast",
+      "deg_evidence": {
+        "Glandular_epithelium": {
+          "log2FC": -1.6756451171406417,
+          "padj": 0.0032357408643654
+        },
+        "NKT_cells": {
+          "log2FC": -1.571941861922426,
+          "padj": 0.0018337241069109
+        },
+        "Lymphoid_immune": {
+          "log2FC": -1.908346768809308,
+          "padj": 0.0006031866580401
+        },
+        "Smooth_muscle": {
+          "log2FC": -1.4637668340675354,
+          "padj": 0.0008793287962955
+        },
+        "CD133plus_progenitor": {
+          "log2FC": -2.854926367585945,
+          "padj": 0.0197824241942111
+        },
+        "Lymphatic_endothelium": {
+          "log2FC": -2.0361722841284817,
+          "padj": 0.0007808964472281
+        },
+        "Basalis_fibroblast": {
+          "log2FC": -2.258168236317488,
+          "padj": 0.0276780264733839
+        },
+        "Decidualized_stromal": {
+          "log2FC": -2.456522828397302,
+          "padj": 1.0041042256011662e-05
+        }
+      },
+      "tf_evidence": {},
+      "comm_evidence": {},
+      "druggability": {
+        "priority_score": 24.854926367585946,
+        "evidence": "DEG_in_8ct(maxLFC=2.85); stem_DEG_CD133plus_progenitor; stem_DEG_Basalis_fibroblast",
+        "has_drug_interactions": false,
+        "n_drugs": 0,
+        "n_approved_drugs": 0,
+        "drug_categories": [],
+        "druggability_tier": "Tier3_novel"
+      },
+      "organoid_expr": {}
+    },
+    "ELF3": {
+      "rank": 2,
+      "gene": "ELF3",
+      "priority_score": 23.19458956786487,
+      "evidence_summary": "DEG_in_5ct(maxLFC=3.19); TF_diff_5ct",
+      "deg_evidence": {
+        "NKT_cells": {
+          "log2FC": -3.194589567864871,
+          "padj": 0.0015586018829334
+        },
+        "Lymphoid_immune": {
+          "log2FC": -2.6417062508018128,
+          "padj": 0.0026000857168918
+        },
+        "Smooth_muscle": {
+          "log2FC": -2.760110744156176,
+          "padj": 0.0246312721415741
+        },
+        "Lymphatic_endothelium": {
+          "log2FC": -3.118176729010626,
+          "padj": 0.0032652778485203
+        },
+        "Decidualized_stromal": {
+          "log2FC": -3.0903689586245067,
+          "padj": 2.209269042459921e-05
+        }
+      },
+      "tf_evidence": {
+        "Basalis_fibroblast": {
+          "diff": 0.4903983664239573,
+          "padj": 2.1993192170415623e-15
+        },
+        "CD133plus_progenitor": {
+          "diff": -0.681878340398576,
+          "padj": 1.3238235626715112e-11
+        },
+        "Glandular_epithelium": {
+          "diff": -0.0621771116587719,
+          "padj": 0.0203810328845692
+        },
+        "SOX9plusLGR5plus_stem": {
+          "diff": -0.1073822814090681,
+          "padj": 0.0382845011523863
+        },
+        "Decidualized_stromal": {
+          "diff": 0.1942193109189622,
+          "padj": 5.346242609940902e-234
+        }
+      },
+      "comm_evidence": {},
+      "druggability": {
+        "priority_score": 23.19458956786487,
+        "evidence": "DEG_in_5ct(maxLFC=3.19); TF_diff_5ct",
+        "has_drug_interactions": true,
+        "n_drugs": 2,
+        "n_approved_drugs": 0,
+        "drug_categories": [
+          "inhibitor"
+        ],
+        "druggability_tier": "Tier2_investigational"
+      },
+      "organoid_expr": {}
+    },
+    "CXCL8": {
+      "rank": 3,
+      "gene": "CXCL8",
+      "priority_score": 23.0,
+      "evidence_summary": "DEG_in_6ct(maxLFC=7.09); stem_DEG_CD133plus_progenitor; comm_ligand",
+      "deg_evidence": {
+        "Glandular_epithelium": {
+          "log2FC": -2.036539126579319,
+          "padj": 0.0324692574249412
+        },
+        "NKT_cells": {
+          "log2FC": -3.1696725577072677,
+          "padj": 0.0029910604513313
+        },
+        "Smooth_muscle": {
+          "log2FC": -3.0994330347564576,
+          "padj": 0.0252665774769225
+        },
+        "CD133plus_progenitor": {
+          "log2FC": -7.090364773167803,
+          "padj": 0.0003677046163972
+        },
+        "Lymphatic_endothelium": {
+          "log2FC": -3.018256994327015,
+          "padj": 0.0032843954096582
+        },
+        "Decidualized_stromal": {
+          "log2FC": -3.521641151192782,
+          "padj": 1.2643759519359307e-05
+        }
+      },
+      "tf_evidence": {},
+      "comm_evidence": {
+        "role": "ligand"
+      },
+      "druggability": {
+        "priority_score": 23.0,
+        "evidence": "DEG_in_6ct(maxLFC=7.09); stem_DEG_CD133plus_progenitor; comm_ligand",
+        "has_drug_interactions": true,
+        "n_drugs": 82,
+        "n_approved_drugs": 43,
+        "drug_categories": [
+          "inhibitor"
+        ],
+        "druggability_tier": "Tier1_approved"
+      },
+      "organoid_expr": {}
+    },
+    "PAEP": {
+      "rank": 4,
+      "gene": "PAEP",
+      "priority_score": 22.0,
+      "evidence_summary": "DEG_in_7ct(maxLFC=11.25); stem_DEG_CD133plus_progenitor",
+      "deg_evidence": {
+        "NKT_cells": {
+          "log2FC": -6.368495635548871,
+          "padj": 0.0006183896423357
+        },
+        "Lymphoid_immune": {
+          "log2FC": -7.479171079918184,
+          "padj": 0.0001262508121475
+        },
+        "Smooth_muscle": {
+          "log2FC": -5.9253476001395855,
+          "padj": 0.0023718886926347
+        },
+        "Macrophages": {
+          "log2FC": -5.114995435193261,
+          "padj": 0.0494525428325107
+        },
+        "CD133plus_progenitor": {
+          "log2FC": -11.249026243525591,
+          "padj": 0.0021620970713963
+        },
+        "Lymphatic_endothelium": {
+          "log2FC": -7.301486893414179,
+          "padj": 1.1201234329158003e-06
+        },
+        "Decidualized_stromal": {
+          "log2FC": -5.761774129659754,
+          "padj": 1.2583146323751828e-05
+        }
+      },
+      "tf_evidence": {},
+      "comm_evidence": {},
+      "druggability": {
+        "priority_score": 22.0,
+        "evidence": "DEG_in_7ct(maxLFC=11.25); stem_DEG_CD133plus_progenitor",
+        "has_drug_interactions": true,
+        "n_drugs": 3,
+        "n_approved_drugs": 3,
+        "drug_categories": [
+          "inhibitor"
+        ],
+        "druggability_tier": "Tier1_approved"
+      },
+      "organoid_expr": {}
+    },
+    "MT1H": {
+      "rank": 5,
+      "gene": "MT1H",
+      "priority_score": 22.0,
+      "evidence_summary": "DEG_in_7ct(maxLFC=10.40); stem_DEG_CD133plus_progenitor",
+      "deg_evidence": {
+        "NKT_cells": {
+          "log2FC": -3.821391520958639,
+          "padj": 0.0085082403862323
+        },
+        "Lymphoid_immune": {
+          "log2FC": -4.246090797618098,
+          "padj": 0.0209532362248501
+        },
+        "Smooth_muscle": {
+          "log2FC": -5.719558037329812,
+          "padj": 5.9263951224805e-05
+        },
+        "Macrophages": {
+          "log2FC": -6.697637182240586,
+          "padj": 0.0002324629601033
+        },
+        "CD133plus_progenitor": {
+          "log2FC": -10.399367355128907,
+          "padj": 0.0212852278759521
+        },
+        "Lymphatic_endothelium": {
+          "log2FC": -5.468405504797864,
+          "padj": 2.0604823854440185e-05
+        },
+        "Decidualized_stromal": {
+          "log2FC": -3.550032862658788,
+          "padj": 0.0002798822661401
+        }
+      },
+      "tf_evidence": {},
+      "comm_evidence": {},
+      "druggability": {
+        "priority_score": 22.0,
+        "evidence": "DEG_in_7ct(maxLFC=10.40); stem_DEG_CD133plus_progenitor",
+        "has_drug_interactions": true,
+        "n_drugs": 7,
+        "n_approved_drugs": 3,
+        "drug_categories": [],
+        "druggability_tier": "Tier1_approved"
+      },
+      "organoid_expr": {}
+    },
+    "MT1G": {
+      "rank": 6,
+      "gene": "MT1G",
+      "priority_score": 22.0,
+      "evidence_summary": "DEG_in_7ct(maxLFC=6.70); stem_DEG_CD133plus_progenitor",
+      "deg_evidence": {
+        "NKT_cells": {
+          "log2FC": -3.986078730314864,
+          "padj": 0.0003614355898153
+        },
+        "Lymphoid_immune": {
+          "log2FC": -3.7101458720508327,
+          "padj": 0.0210420890208136
+        },
+        "Smooth_muscle": {
+          "log2FC": -4.627254211236771,
+          "padj": 7.360494026298987e-05
+        },
+        "Macrophages": {
+          "log2FC": -4.726181247421807,
+          "padj": 0.0036762404269547
+        },
+        "CD133plus_progenitor": {
+          "log2FC": -6.695952003435058,
+          "padj": 0.000445822186616
+        },
+        "Lymphatic_endothelium": {
+          "log2FC": -2.3856246716195,
+          "padj": 0.0046984952208316
+        },
+        "Decidualized_stromal": {
+          "log2FC": -2.66019686011379,
+          "padj": 0.0021627747430648
+        }
+      },
+      "tf_evidence": {},
+      "comm_evidence": {},
+      "druggability": {
+        "priority_score": 22.0,
+        "evidence": "DEG_in_7ct(maxLFC=6.70); stem_DEG_CD133plus_progenitor",
+        "has_drug_interactions": true,
+        "n_drugs": 1,
+        "n_approved_drugs": 0,
+        "drug_categories": [],
+        "druggability_tier": "Tier2_investigational"
+      },
+      "organoid_expr": {}
+    },
+    "GPX3": {
+      "rank": 7,
+      "gene": "GPX3",
+      "priority_score": 22.0,
+      "evidence_summary": "DEG_in_7ct(maxLFC=10.33); stem_DEG_CD133plus_progenitor",
+      "deg_evidence": {
+        "Glandular_epithelium": {
+          "log2FC": -3.5822341920946403,
+          "padj": 0.0142757061385482
+        },
+        "NKT_cells": {
+          "log2FC": -5.836133130059749,
+          "padj": 8.361383506536056e-06
+        },
+        "Lymphoid_immune": {
+          "log2FC": -4.457193763203801,
+          "padj": 0.0063150635747877
+        },
+        "Macrophages": {
+          "log2FC": -3.2945222288781606,
+          "padj": 0.0210409764828527
+        },
+        "CD133plus_progenitor": {
+          "log2FC": -10.327136952614742,
+          "padj": 0.0037284596516847
+        },
+        "Lymphatic_endothelium": {
+          "log2FC": -2.948773046580137,
+          "padj": 0.0017182779498531
+        },
+        "Decidualized_stromal": {
+          "log2FC": -5.556207836084219,
+          "padj": 2.986479564277756e-10
+        }
+      },
+      "tf_evidence": {},
+      "comm_evidence": {},
+      "druggability": {
+        "priority_score": 22.0,
+        "evidence": "DEG_in_7ct(maxLFC=10.33); stem_DEG_CD133plus_progenitor",
+        "has_drug_interactions": true,
+        "n_drugs": 4,
+        "n_approved_drugs": 2,
+        "drug_categories": [
+          "inhibitor"
+        ],
+        "druggability_tier": "Tier1_approved"
+      },
+      "organoid_expr": {}
+    },
+    "NNMT": {
+      "rank": 8,
+      "gene": "NNMT",
+      "priority_score": 21.0,
+      "evidence_summary": "DEG_in_5ct(maxLFC=5.05); stem_DEG_CD133plus_progenitor; stem_DEG_Basalis_fibroblast",
+      "deg_evidence": {
+        "Lymphoid_immune": {
+          "log2FC": -3.7311060975349735,
+          "padj": 0.000405678044945
+        },
+        "CD133plus_progenitor": {
+          "log2FC": -5.049092728435013,
+          "padj": 0.0288248010716215
+        },
+        "Lymphatic_endothelium": {
+          "log2FC": -1.399474939726,
+          "padj": 7.950712374804925e-05
+        },
+        "Basalis_fibroblast": {
+          "log2FC": -2.7443588588918097,
+          "padj": 0.0325213040122542
+        },
+        "Decidualized_stromal": {
+          "log2FC": -1.804838284128531,
+          "padj": 0.0040469461108784
+        }
+      },
+      "tf_evidence": {},
+      "comm_evidence": {},
+      "druggability": {
+        "priority_score": 21.0,
+        "evidence": "DEG_in_5ct(maxLFC=5.05); stem_DEG_CD133plus_progenitor; stem_DEG_Basalis_fibroblast",
+        "has_drug_interactions": true,
+        "n_drugs": 1,
+        "n_approved_drugs": 1,
+        "drug_categories": [],
+        "druggability_tier": "Tier1_approved"
+      },
+      "organoid_expr": {}
+    },
+    "MET": {
+      "rank": 9,
+      "gene": "MET",
+      "priority_score": 21.0,
+      "evidence_summary": "DEG_in_4ct(maxLFC=5.93); stem_DEG_CD133plus_progenitor; comm_receptor; known_stem_gene",
+      "deg_evidence": {
+        "NKT_cells": {
+          "log2FC": -3.637714449777111,
+          "padj": 0.0008655426399617
+        },
+        "Smooth_muscle": {
+          "log2FC": -3.0140125949928525,
+          "padj": 0.0064654976970364
+        },
+        "CD133plus_progenitor": {
+          "log2FC": -5.926906646280732,
+          "padj": 0.009796887932805
+        },
+        "Decidualized_stromal": {
+          "log2FC": -3.096444429509754,
+          "padj": 0.0001767873950896
+        }
+      },
+      "tf_evidence": {},
+      "comm_evidence": {
+        "role": "_receptor"
+      },
+      "druggability": {
+        "priority_score": 21.0,
+        "evidence": "DEG_in_4ct(maxLFC=5.93); stem_DEG_CD133plus_progenitor; comm_receptor; known_stem_gene",
+        "has_drug_interactions": true,
+        "n_drugs": 100,
+        "n_approved_drugs": 21,
+        "drug_categories": [
+          "inhibitor",
+          "binder",
+          "antibody",
+          "agonist"
+        ],
+        "druggability_tier": "Tier1_approved"
+      },
+      "organoid_expr": {}
+    },
+    "CKS2": {
+      "rank": 10,
+      "gene": "CKS2",
+      "priority_score": 20.967648098612543,
+      "evidence_summary": "DEG_in_7ct(maxLFC=3.97); stem_DEG_CD133plus_progenitor",
+      "deg_evidence": {
+        "Glandular_epithelium": {
+          "log2FC": -1.5161026715949466,
+          "padj": 0.0247292349038135
+        },
+        "Lymphoid_immune": {
+          "log2FC": -0.8963251577091282,
+          "padj": 0.0477271927280772
+        },
+        "Smooth_muscle": {
+          "log2FC": -1.448452042112646,
+          "padj": 0.0189973244892301
+        },
+        "Macrophages": {
+          "log2FC": -1.1158356558167966,
+          "padj": 0.0264256287560475
+        },
+        "CD133plus_progenitor": {
+          "log2FC": -3.967648098612544,
+          "padj": 0.0182760589407911
+        },
+        "Lymphatic_endothelium": {
+          "log2FC": -1.8077722752710568,
+          "padj": 0.0009981611115658
+        },
+        "Decidualized_stromal": {
+          "log2FC": -1.699764729941024,
+          "padj": 0.0001388111452792
+        }
+      },
+      "tf_evidence": {},
+      "comm_evidence": {},
+      "druggability": {
+        "priority_score": 20.967648098612543,
+        "evidence": "DEG_in_7ct(maxLFC=3.97); stem_DEG_CD133plus_progenitor",
+        "has_drug_interactions": false,
+        "n_drugs": 0,
+        "n_approved_drugs": 0,
+        "drug_categories": [],
+        "druggability_tier": "Tier3_novel"
+      },
+      "organoid_expr": {}
+    }
+  }
+}

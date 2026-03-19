@@ -1,0 +1,468 @@
+{
+  "top_changed_ligands": [
+    "CXCL8",
+    "LGALS9",
+    "SEMA4D",
+    "PDGFC",
+    "APOE",
+    "SEMA4A",
+    "LAMC2",
+    "SEMA3B",
+    "DKK3",
+    "CCL28",
+    "SEMA3C",
+    "COL1A1",
+    "COL3A1",
+    "LEFTY1",
+    "COL6A1",
+    "ADM",
+    "LRIG1",
+    "NLGN2",
+    "NRXN3",
+    "LAMB1",
+    "TGFB1",
+    "ARPC5",
+    "APP",
+    "CP",
+    "PLAU",
+    "DNAJB11",
+    "VEGFA",
+    "LAMA2",
+    "ACTR2",
+    "COL5A1"
+  ],
+  "top_changed_receptors": [
+    "SDC2",
+    "MET",
+    "PDGFRA",
+    "VLDLR",
+    "PLXND1",
+    "ITGA3_ITGB1",
+    "NRP1_PLXNA2",
+    "KREMEN1",
+    "ADRA2A",
+    "NRP1_PLXNA3",
+    "ITGA1_ITGB1",
+    "DDR2",
+    "ACVR1B",
+    "SDC1",
+    "RAMP1",
+    "NRXN3",
+    "NLGN2",
+    "LRP5",
+    "ITGA1",
+    "ITGB8",
+    "LDLR",
+    "TSPAN15",
+    "SLC40A1",
+    "PLAUR",
+    "PRTG",
+    "GPC1",
+    "ITGAV_ITGB8",
+    "SDC3",
+    "ITGA2_ITGB1",
+    "CD44"
+  ],
+  "top_interactions": [
+    {
+      "source": "SOX9+LGR5+_stem",
+      "target": "Glandular_epithelium",
+      "ligand": "CXCL8",
+      "receptor": "SDC2",
+      "rank_diff": 0.9920804657757054,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "Glandular_epithelium",
+      "target": "CD133+_progenitor",
+      "ligand": "LGALS9",
+      "receptor": "MET",
+      "rank_diff": -0.9919464574025204,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "CD133+_progenitor",
+      "target": "CD133+_progenitor",
+      "ligand": "SEMA4D",
+      "receptor": "MET",
+      "rank_diff": -0.9742794242629476,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "Glandular_epithelium",
+      "target": "CD133+_progenitor",
+      "ligand": "PDGFC",
+      "receptor": "PDGFRA",
+      "rank_diff": 0.9691777662482448,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "SOX9+LGR5+_stem",
+      "target": "CD133+_progenitor",
+      "ligand": "APOE",
+      "receptor": "VLDLR",
+      "rank_diff": 0.9664157901878426,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "Decidualized_stromal",
+      "target": "SOX9+LGR5+_stem",
+      "ligand": "SEMA4A",
+      "receptor": "PLXND1",
+      "rank_diff": 0.96089697759692,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "SOX9+LGR5+_stem",
+      "target": "Lymphoid_immune",
+      "ligand": "CXCL8",
+      "receptor": "SDC2",
+      "rank_diff": 0.9583281408178778,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "CD133+_progenitor",
+      "target": "CD133+_progenitor",
+      "ligand": "LGALS9",
+      "receptor": "MET",
+      "rank_diff": -0.9549261713144368,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "Glandular_epithelium",
+      "target": "SOX9+LGR5+_stem",
+      "ligand": "LAMC2",
+      "receptor": "ITGA3_ITGB1",
+      "rank_diff": -0.9523883394428108,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "SOX9+LGR5+_stem",
+      "target": "Glandular_epithelium",
+      "ligand": "SEMA3B",
+      "receptor": "NRP1_PLXNA2",
+      "rank_diff": -0.9399494893997068,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "Decidualized_stromal",
+      "target": "CD133+_progenitor",
+      "ligand": "DKK3",
+      "receptor": "KREMEN1",
+      "rank_diff": 0.9367923242633134,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "SOX9+LGR5+_stem",
+      "target": "Basalis_fibroblast",
+      "ligand": "CCL28",
+      "receptor": "ADRA2A",
+      "rank_diff": 0.9359857195387514,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "CD133+_progenitor",
+      "target": "Glandular_epithelium",
+      "ligand": "SEMA3C",
+      "receptor": "NRP1_PLXNA3",
+      "rank_diff": 0.9357437665114896,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "CD133+_progenitor",
+      "target": "Decidualized_stromal",
+      "ligand": "CXCL8",
+      "receptor": "SDC2",
+      "rank_diff": 0.9331747286969906,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "CD133+_progenitor",
+      "target": "Smooth_muscle",
+      "ligand": "COL1A1",
+      "receptor": "ITGA1_ITGB1",
+      "rank_diff": -0.9330023871573676,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "CD133+_progenitor",
+      "target": "Decidualized_stromal",
+      "ligand": "COL3A1",
+      "receptor": "DDR2",
+      "rank_diff": -0.930714029975972,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "Glandular_epithelium",
+      "target": "CD133+_progenitor",
+      "ligand": "LEFTY1",
+      "receptor": "ACVR1B",
+      "rank_diff": -0.9253405415604884,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "Lymphatic_endothelium",
+      "target": "Basalis_fibroblast",
+      "ligand": "COL3A1",
+      "receptor": "DDR2",
+      "rank_diff": -0.922762634193772,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "SOX9+LGR5+_stem",
+      "target": "Glandular_epithelium",
+      "ligand": "COL6A1",
+      "receptor": "SDC1",
+      "rank_diff": 0.9222960353691416,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "SOX9+LGR5+_stem",
+      "target": "Glandular_epithelium",
+      "ligand": "COL6A1",
+      "receptor": "ITGA3_ITGB1",
+      "rank_diff": 0.9211705501487952,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "CD133+_progenitor",
+      "target": "Basalis_fibroblast",
+      "ligand": "COL3A1",
+      "receptor": "DDR2",
+      "rank_diff": -0.9184942667466311,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "Lymphoid_immune",
+      "target": "SOX9+LGR5+_stem",
+      "ligand": "ADM",
+      "receptor": "RAMP1",
+      "rank_diff": 0.9169927018312566,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "Glandular_epithelium",
+      "target": "CD133+_progenitor",
+      "ligand": "APOE",
+      "receptor": "VLDLR",
+      "rank_diff": 0.9116957966613038,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "Lymphoid_immune",
+      "target": "CD133+_progenitor",
+      "ligand": "LRIG1",
+      "receptor": "MET",
+      "rank_diff": -0.911254110684327,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "Lymphoid_immune",
+      "target": "SOX9+LGR5+_stem",
+      "ligand": "NLGN2",
+      "receptor": "NRXN3",
+      "rank_diff": 0.9104928458103874,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "SOX9+LGR5+_stem",
+      "target": "Lymphoid_immune",
+      "ligand": "NRXN3",
+      "receptor": "NLGN2",
+      "rank_diff": 0.9104928458103874,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "SOX9+LGR5+_stem",
+      "target": "Glandular_epithelium",
+      "ligand": "APOE",
+      "receptor": "LRP5",
+      "rank_diff": 0.9084886695631862,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "Basalis_fibroblast",
+      "target": "Lymphoid_immune",
+      "ligand": "LAMB1",
+      "receptor": "ITGA1",
+      "rank_diff": -0.9009031541529552,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "CD133+_progenitor",
+      "target": "Lymphoid_immune",
+      "ligand": "COL3A1",
+      "receptor": "DDR2",
+      "rank_diff": -0.8993952841275901,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "B_cells",
+      "target": "SOX9+LGR5+_stem",
+      "ligand": "TGFB1",
+      "receptor": "ITGB8",
+      "rank_diff": 0.8985335625838884,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "Decidualized_stromal",
+      "target": "SOX9+LGR5+_stem",
+      "ligand": "ARPC5",
+      "receptor": "LDLR",
+      "rank_diff": 0.8924130847253958,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "NKT_cells",
+      "target": "CD133+_progenitor",
+      "ligand": "APP",
+      "receptor": "TSPAN15",
+      "rank_diff": -0.8920182020669658,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "CD133+_progenitor",
+      "target": "Basalis_fibroblast",
+      "ligand": "CP",
+      "receptor": "SLC40A1",
+      "rank_diff": 0.8898259626756954,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "Macrophages",
+      "target": "SOX9+LGR5+_stem",
+      "ligand": "PLAU",
+      "receptor": "PLAUR",
+      "rank_diff": 0.8883878013972653,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "SOX9+LGR5+_stem",
+      "target": "Lymphoid_immune",
+      "ligand": "DNAJB11",
+      "receptor": "PRTG",
+      "rank_diff": -0.8880869077597351,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "CD133+_progenitor",
+      "target": "Glandular_epithelium",
+      "ligand": "VEGFA",
+      "receptor": "GPC1",
+      "rank_diff": -0.87976434287329,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "Glandular_epithelium",
+      "target": "Basalis_fibroblast",
+      "ligand": "LAMA2",
+      "receptor": "ITGAV_ITGB8",
+      "rank_diff": 0.878138356015573,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "SOX9+LGR5+_stem",
+      "target": "Glandular_epithelium",
+      "ligand": "ACTR2",
+      "receptor": "LDLR",
+      "rank_diff": 0.8764062124795324,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "Basalis_fibroblast",
+      "target": "Smooth_muscle",
+      "ligand": "COL5A1",
+      "receptor": "ITGA1_ITGB1",
+      "rank_diff": -0.8756794392225037,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "SOX9+LGR5+_stem",
+      "target": "Glandular_epithelium",
+      "ligand": "ARPC5",
+      "receptor": "LDLR",
+      "rank_diff": 0.8754554588468304,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "Glandular_epithelium",
+      "target": "CD133+_progenitor",
+      "ligand": "SEMA4D",
+      "receptor": "MET",
+      "rank_diff": -0.8750605601327193,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "Decidualized_stromal",
+      "target": "CD133+_progenitor",
+      "ligand": "PDGFC",
+      "receptor": "PDGFRA",
+      "rank_diff": 0.8749559225540295,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "Glandular_epithelium",
+      "target": "SOX9+LGR5+_stem",
+      "ligand": "SEMA4A",
+      "receptor": "PLXND1",
+      "rank_diff": 0.8711401017264462,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "CD133+_progenitor",
+      "target": "Decidualized_stromal",
+      "ligand": "CXCL8",
+      "receptor": "SDC3",
+      "rank_diff": 0.8687933496105253,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "Glandular_epithelium",
+      "target": "CD133+_progenitor",
+      "ligand": "COL12A1",
+      "receptor": "ITGA2_ITGB1",
+      "rank_diff": 0.8681216436565142,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "CD133+_progenitor",
+      "target": "Glandular_epithelium",
+      "ligand": "VCAN",
+      "receptor": "CD44",
+      "rank_diff": 0.8670837874033442,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "CD133+_progenitor",
+      "target": "SOX9+LGR5+_stem",
+      "ligand": "HBEGF",
+      "receptor": "EGFR_ERBB2",
+      "rank_diff": -0.8644957642303313,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "CD133+_progenitor",
+      "target": "Smooth_muscle",
+      "ligand": "COL3A1",
+      "receptor": "ITGA1_ITGB1",
+      "rank_diff": -0.8604127916065026,
+      "direction": "gained_in_AS"
+    },
+    {
+      "source": "Glandular_epithelium",
+      "target": "Basalis_fibroblast",
+      "ligand": "NPW",
+      "receptor": "ADRA2A",
+      "rank_diff": 0.860346946892431,
+      "direction": "lost_in_AS"
+    },
+    {
+      "source": "CD133+_progenitor",
+      "target": "Glandular_epithelium",
+      "ligand": "HBEGF",
+      "receptor": "CD82",
+      "rank_diff": -0.8592621273467884,
+      "direction": "gained_in_AS"
+    }
+  ]
+}

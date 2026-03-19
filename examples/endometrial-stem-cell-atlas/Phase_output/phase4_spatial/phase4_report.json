@@ -1,0 +1,42 @@
+{
+  "phase": 4,
+  "dataset": "GSE287278_RIF_visium",
+  "n_spots": 10135,
+  "n_samples": 8,
+  "spatial_regions": {
+    "Stroma": 6480,
+    "Functionalis": 3423,
+    "Basalis_niche": 232
+  },
+  "cluster_annotations": {
+    "0": "Stroma",
+    "1": "Stroma",
+    "2": "Functionalis",
+    "3": "Functionalis",
+    "4": "Stroma",
+    "5": "Stroma",
+    "6": "Basalis_niche"
+  },
+  "deconvolution": {
+    "method": "Cell2location",
+    "reference": "Phase 3 integrated atlas (314,805 cells, 14 types)",
+    "n_reference_sampled": 60445,
+    "n_common_genes": 13017,
+    "cell_types": [
+      "q05cell_abundance_w_sf_B_cells",
+      "q05cell_abundance_w_sf_Basalis_fibroblast",
+      "q05cell_abundance_w_sf_CD133+_progenitor",
+      "q05cell_abundance_w_sf_Decidualized_stromal",
+      "q05cell_abundance_w_sf_Erythrocytes",
+      "q05cell_abundance_w_sf_Glandular_epithelium",
+      "q05cell_abundance_w_sf_Lymphatic_endothelium",
+      "q05cell_abundance_w_sf_Lymphoid_immune",
+      "q05cell_abundance_w_sf_Macrophages",
+      "q05cell_abundance_w_sf_NKT_cells",
+      "q05cell_abundance_w_sf_Pericyte",
+      "q05cell_abundance_w_sf_SOX9+LGR5+_stem",
+      "q05cell_abundance_w_sf_Secretory_glandular",
+      "q05cell_abundance_w_sf_Smooth_muscle"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+# ============================================================
+# phase_summaries.yml — Per-phase analysis summaries
+# Updated: 2026-03-08
+# ============================================================
+
+Phase1:
+  status: completed
+  dataset: GSE165816
+  cells: 86137
+  cell_types: 11
+  key_findings:
+    - "Myeloid dual-positive rate highest (34.3%), Macrophage/Endothelial next (13-18%)"
+    - "Fibroblast: Healing 39.4% vs NonHealing 25.3% (+14.1%)"
+    - "HE-Fibro: Healing 15.8% vs NonHealing 3.8% (4-fold enrichment)"
+    - "NF-κB↔M1: rho=0.819; HIF↔M1: rho=0.340"
+    - "Healing=M1-biased, NonHealing=M2-biased"
+    - "IL1 Myeloid→Fibroblast communication strongest in Healing"
+
+Phase2:
+  status: completed
+  datasets: [GSE134431, GSE199939]
+  key_findings:
+    - "HIF1A significantly upregulated: GSE134431 FC=1.91(p=0.016), GSE199939 FC=4.06(p=5.7e-6)"
+    - "IL1B strongly upregulated: GSE134431 FC=9.33, GSE199939 FC=5.56"
+    - "CXCL8 strongly upregulated: GSE134431 FC=23.34, GSE199939 FC=7.47"
+    - "HIF1A-NFKB1 correlation: GSE134431 rho=0.708, GSE199939 rho=0.634"
+    - "GSE199939 DEGs: up=1304, down=2467"
+
+Phase3:
+  status: completed
+  datasets: [GSE28914, GSE50425, GSE147890]
+  key_findings:
+    - "GSE147890: Control 24h responds to 3493 probes, Diabetic 4098 probes"
+    - "Interaction-effect probes very few (2), suggesting overall similar response patterns but different magnitudes"
+
+Phase4:
+  status: completed
+  datasets: [GSE15949, GSE16099, GSE165816_macrophage]
+  key_findings:
+    - "100 hypoxia signature genes constructed, 82 available in scRNA"
+    - "Hypoxia score: Healing(0.101) >> NonHealing(0.013), p=1.33e-155"
+    - "HIF+M1 subpopulation (C0): 76% from Healing, HIF=0.157, NFKB=1.209, M1=0.450"
+    - "(HIF+NFKB) vs (M1-M2) coupling: rho=0.721"
+    - "Hypoxia-upregulated target gene validation: PTGS2(9.4x), ANGPTL4(9.3x), IL1B(7.2x), TNF(5.1x)"

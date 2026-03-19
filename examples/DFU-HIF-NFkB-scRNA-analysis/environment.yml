@@ -1,0 +1,70 @@
+# Conda environment for DFU HIF-NFkB scRNA-seq analysis
+# Create: conda env create -f environment.yml
+# Activate: conda activate bio_skin
+name: bio_skin
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  # Core
+  - r-base=4.4
+  - r-seurat
+  - r-harmony
+  - r-matrix
+  - r-data.table
+
+  # Tidyverse & utilities
+  - r-tidyverse
+  - r-dplyr
+  - r-tidyr
+  - r-ggplot2
+  - r-readxl
+  - r-openxlsx
+  - r-patchwork
+  - r-cowplot
+  - r-ggrepel
+  - r-ggpubr
+  - r-pheatmap
+  - r-rcolorbrewer
+  - r-future
+
+  # Bioconductor - core
+  - r-biocmanager
+  - bioconductor-biocparallel
+  - bioconductor-singlecellexperiment
+  - bioconductor-summarizedexperiment
+  - bioconductor-biocsingular
+  - bioconductor-biocneighbors
+  - bioconductor-limma
+
+  # Bioconductor - scRNA-seq
+  - bioconductor-scran
+  - bioconductor-scuttle
+  - bioconductor-scdblfinder
+  - bioconductor-aucell
+  - bioconductor-singler
+  - bioconductor-celldex
+  - bioconductor-slingshot
+
+  # Bioconductor - pathway & enrichment
+  - bioconductor-clusterprofiler
+  - bioconductor-org.hs.eg.db
+  - bioconductor-reactomepa
+  - bioconductor-gsva
+  - bioconductor-fgsea
+  - bioconductor-gseabase
+  - bioconductor-geoquery
+  - r-msigdbr
+
+  # Network analysis
+  - bioconductor-complexheatmap
+
+  # Other
+  - r-nloptr
+  - r-lme4
+  - make
+
+  # Packages installed via R (not available in conda)
+  # Install after env creation:
+  #   R -e "install.packages('WGCNA')"
+  #   R -e "devtools::install_github('jinworks/CellChat')"

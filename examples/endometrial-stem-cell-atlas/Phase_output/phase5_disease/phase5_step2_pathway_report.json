@@ -1,0 +1,2844 @@
+{
+  "phase": 5,
+  "step": 2,
+  "analysis": "GSEA + ORA pathway enrichment",
+  "gene_sets": [
+    "GO_Biological_Process_2023",
+    "KEGG_2021_Human",
+    "Reactome_2022",
+    "WikiPathway_2023_Human",
+    "Custom_Pathways"
+  ],
+  "custom_pathways": [
+    "WNT_SIGNALING_STEM",
+    "NOTCH_SIGNALING_STEM",
+    "TGFB_SIGNALING",
+    "FIBROSIS_MARKERS",
+    "ENDOMETRIAL_REGENERATION",
+    "STEM_NICHE_FACTORS"
+  ],
+  "gsea_summary": {
+    "Basalis_fibroblast": {
+      "GO_Biological_Process_2023": 12,
+      "KEGG_2021_Human": 15,
+      "Reactome_2022": 119,
+      "WikiPathway_2023_Human": 2,
+      "Custom_Pathways": 0
+    },
+    "CD133plus_progenitor": {
+      "GO_Biological_Process_2023": 53,
+      "KEGG_2021_Human": 13,
+      "Reactome_2022": 49,
+      "WikiPathway_2023_Human": 11,
+      "Custom_Pathways": 0
+    },
+    "Decidualized_stromal": {
+      "GO_Biological_Process_2023": 103,
+      "KEGG_2021_Human": 39,
+      "Reactome_2022": 257,
+      "WikiPathway_2023_Human": 27,
+      "Custom_Pathways": 1
+    },
+    "Glandular_epithelium": {
+      "GO_Biological_Process_2023": 28,
+      "KEGG_2021_Human": 14,
+      "Reactome_2022": 40,
+      "WikiPathway_2023_Human": 29,
+      "Custom_Pathways": 2
+    },
+    "Lymphatic_endothelium": {
+      "GO_Biological_Process_2023": 68,
+      "KEGG_2021_Human": 52,
+      "Reactome_2022": 232,
+      "WikiPathway_2023_Human": 33,
+      "Custom_Pathways": 0
+    },
+    "Lymphoid_immune": {
+      "GO_Biological_Process_2023": 53,
+      "KEGG_2021_Human": 30,
+      "Reactome_2022": 184,
+      "WikiPathway_2023_Human": 18,
+      "Custom_Pathways": 0
+    },
+    "Macrophages": {
+      "GO_Biological_Process_2023": 82,
+      "KEGG_2021_Human": 77,
+      "Reactome_2022": 237,
+      "WikiPathway_2023_Human": 46,
+      "Custom_Pathways": 0
+    },
+    "NKT_cells": {
+      "GO_Biological_Process_2023": 14,
+      "KEGG_2021_Human": 31,
+      "Reactome_2022": 27,
+      "WikiPathway_2023_Human": 30,
+      "Custom_Pathways": 1
+    },
+    "Secretory_glandular": {
+      "GO_Biological_Process_2023": 35,
+      "KEGG_2021_Human": 5,
+      "Reactome_2022": 19,
+      "WikiPathway_2023_Human": 3,
+      "Custom_Pathways": 3
+    },
+    "Smooth_muscle": {
+      "GO_Biological_Process_2023": 11,
+      "KEGG_2021_Human": 2,
+      "Reactome_2022": 6,
+      "WikiPathway_2023_Human": 0,
+      "Custom_Pathways": 0
+    }
+  },
+  "top_pathways": {
+    "Basalis_fibroblast": [
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Cellular Response To Organic Substance (GO:0071310)",
+        "nes": 1.977727637372197,
+        "fdr": 0.04138196317191404
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Positive Regulation Of mRNA Catabolic Process (GO:0061014)",
+        "nes": 1.8729365440865617,
+        "fdr": 0.14843530268186558
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Cellular Response To Calcium Ion (GO:0071277)",
+        "nes": 1.7495089776671173,
+        "fdr": 0.5217725791241336
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Wnt Signaling Pathway (GO:0016055)",
+        "nes": 1.748157567053327,
+        "fdr": 0.3987511994771934
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Neuron Projection Guidance (GO:0097485)",
+        "nes": 1.748076495345682,
+        "fdr": 0.3195407243187797
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Cytoplasmic Translation (GO:0002181)",
+        "nes": -2.828453443631467,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Macromolecule Biosynthetic Process (GO:0009059)",
+        "nes": -2.7717552555792855,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Peptide Biosynthetic Process (GO:0043043)",
+        "nes": -2.7424347137670377,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Translation (GO:0006412)",
+        "nes": -2.72726205982436,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Gene Expression (GO:0010467)",
+        "nes": -2.3828419131992797,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Fc epsilon RI signaling pathway",
+        "nes": 1.965832334578841,
+        "fdr": 0.016241433886591702
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "C-type lectin receptor signaling pathway",
+        "nes": 1.887164504504027,
+        "fdr": 0.03480307261412508
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Growth hormone synthesis, secretion and action",
+        "nes": 1.846368474643595,
+        "fdr": 0.04176368713695009
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Inflammatory mediator regulation of TRP channels",
+        "nes": 1.8437834591076658,
+        "fdr": 0.03277289337830112
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Cortisol synthesis and secretion",
+        "nes": 1.8039564045745642,
+        "fdr": 0.04315581004151509
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Ribosome",
+        "nes": -2.7615092036128024,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Coronavirus disease",
+        "nes": -2.1033521012791163,
+        "fdr": 0.0007594526960570709
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Oxidative phosphorylation",
+        "nes": -1.8122937748493502,
+        "fdr": 0.0367068803094251
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Amyotrophic lateral sclerosis",
+        "nes": -1.8082063952041283,
+        "fdr": 0.02923892879819723
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Parkinson disease",
+        "nes": -1.7623208261407632,
+        "fdr": 0.03964343073417911
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Phase I - Functionalization Of Compounds R-HSA-211945",
+        "nes": 1.874879220719204,
+        "fdr": 0.09211772247937092
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "RND1 GTPase Cycle R-HSA-9696273",
+        "nes": 1.7227391940362031,
+        "fdr": 0.3517456051097767
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "RND2 GTPase Cycle R-HSA-9696270",
+        "nes": 1.6989348093702095,
+        "fdr": 0.3067159921659501
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Cardiac Conduction R-HSA-5576891",
+        "nes": 1.639872894182686,
+        "fdr": 0.4218631452651637
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Ion Homeostasis R-HSA-5578775",
+        "nes": 1.6310611236895989,
+        "fdr": 0.3691913637245849
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "SRP-dependent Cotranslational Protein Targeting To Membrane R-HSA-1799339",
+        "nes": -2.8598409590771006,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Selenoamino Acid Metabolism R-HSA-2408522",
+        "nes": -2.770470312833599,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Eukaryotic Translation Elongation R-HSA-156842",
+        "nes": -2.754355288878219,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Nonsense Mediated Decay (NMD) Independent Of Exon Junction Complex (EJC) R-HSA-975956",
+        "nes": -2.7488395466162685,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Viral mRNA Translation R-HSA-192823",
+        "nes": -2.7444095820239403,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "ErbB Signaling Pathway WP673",
+        "nes": 1.8124889584904513,
+        "fdr": 0.24639827088932711
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Novel Intracellular Components Of RIG I Like Receptor Pathway WP3865",
+        "nes": 1.735556345956077,
+        "fdr": 0.32899769124427203
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Hair Follicle Development Cytodifferentiation Part 3 Of 3 WP2840",
+        "nes": 1.6626149867180673,
+        "fdr": 0.4719522436099864
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Glioblastoma Signaling Pathways WP2261",
+        "nes": 1.6568948487879331,
+        "fdr": 0.37543069873193874
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Male Infertility WP4673",
+        "nes": 1.6392593980555155,
+        "fdr": 0.3557841699356496
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Cytoplasmic Ribosomal Proteins WP477",
+        "nes": -2.8781429636416043,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Pathogenic Escherichia Coli Infection WP2272",
+        "nes": -2.049116145531521,
+        "fdr": 0.0032808205006945885
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "IL 1 Signaling Pathway WP195",
+        "nes": -1.8139191017891896,
+        "fdr": 0.08712401107400072
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Electron Transport Chain OXPHOS System In Mitochondria WP111",
+        "nes": -1.7241499188271512,
+        "fdr": 0.1796249224130287
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Apoptosis Related Network Due To Altered Notch3 In Ovarian Cancer WP2864",
+        "nes": -1.7017625787511552,
+        "fdr": 0.1745396506369521
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "WNT_SIGNALING_STEM",
+        "nes": 1.4993261393213317,
+        "fdr": 0.1982148353339489
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "STEM_NICHE_FACTORS",
+        "nes": 1.2252125251101929,
+        "fdr": 0.47460757156048017
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "TGFB_SIGNALING",
+        "nes": 1.18551813970447,
+        "fdr": 0.36770288293833997
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "NOTCH_SIGNALING_STEM",
+        "nes": 1.1635533390368848,
+        "fdr": 0.29763004001231147
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "ENDOMETRIAL_REGENERATION",
+        "nes": -1.0975177662022852,
+        "fdr": 0.7248273355143584
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "FIBROSIS_MARKERS",
+        "nes": -0.6728989852014832,
+        "fdr": 0.8629589240276263
+      }
+    ],
+    "CD133plus_progenitor": [
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Cilium Assembly (GO:0060271)",
+        "nes": 3.097653542409891,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Cilium Organization (GO:0044782)",
+        "nes": 2.7584993333733485,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Cilium Movement (GO:0003341)",
+        "nes": 2.6752858980577394,
+        "fdr": 0.001268760637474857
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Plasma Membrane Bounded Cell Projection Assembly (GO:0120031)",
+        "nes": 2.4057157334938597,
+        "fdr": 0.0014273557171592137
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Axoneme Assembly (GO:0035082)",
+        "nes": 2.314973569124008,
+        "fdr": 0.0015225127649698285
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Cytoplasmic Translation (GO:0002181)",
+        "nes": -2.2060377367331268,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Peptide Biosynthetic Process (GO:0043043)",
+        "nes": -2.1708378476837384,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Macromolecule Biosynthetic Process (GO:0009059)",
+        "nes": -2.150648245757075,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Translation (GO:0006412)",
+        "nes": -2.090417566994565,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Ribosomal Small Subunit Biogenesis (GO:0042274)",
+        "nes": -2.0222518449036446,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Platelet activation",
+        "nes": 1.2414822874926454,
+        "fdr": 0.7130718509958535
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Phosphatidylinositol signaling system",
+        "nes": 1.1538263351896996,
+        "fdr": 0.5599551356128066
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Progesterone-mediated oocyte maturation",
+        "nes": 1.1447865635410055,
+        "fdr": 0.390977273242245
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Inflammatory mediator regulation of TRP channels",
+        "nes": 1.0457226153050263,
+        "fdr": 0.46257902250016997
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Notch signaling pathway",
+        "nes": 0.7817891462344816,
+        "fdr": 0.8342056964176466
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Ribosome",
+        "nes": -2.181993380614017,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Coronavirus disease",
+        "nes": -2.144292399696492,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Mineral absorption",
+        "nes": -1.915152473704584,
+        "fdr": 0.0007040262220914195
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "TNF signaling pathway",
+        "nes": -1.8637780099128152,
+        "fdr": 0.0013200491664214116
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Cytokine-cytokine receptor interaction",
+        "nes": -1.8590105370985133,
+        "fdr": 0.0014784550663919812
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Intraflagellar Transport R-HSA-5620924",
+        "nes": 2.699959891389772,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Cilium Assembly R-HSA-5617833",
+        "nes": 2.240585621793499,
+        "fdr": 0.00143441534293152
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Organelle Biogenesis And Maintenance R-HSA-1852241",
+        "nes": 2.0588430070084094,
+        "fdr": 0.008287733092493227
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Anchoring Of Basal Body To Plasma Membrane R-HSA-5620912",
+        "nes": 1.5992330670779775,
+        "fdr": 0.17667215640439887
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "HDACs Deacetylate Histones R-HSA-3214815",
+        "nes": 1.4707355159948494,
+        "fdr": 0.2937682622323753
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Peptide Chain Elongation R-HSA-156902",
+        "nes": -2.233837482945711,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Eukaryotic Translation Elongation R-HSA-156842",
+        "nes": -2.2206417431055017,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Selenoamino Acid Metabolism R-HSA-2408522",
+        "nes": -2.2142080739744325,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Nonsense Mediated Decay (NMD) Independent Of Exon Junction Complex (EJC) R-HSA-975956",
+        "nes": -2.211136787211428,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Response Of EIF2AK4 (GCN2) To Amino Acid Deficiency R-HSA-9633012",
+        "nes": -2.208124751557281,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Ciliopathies WP4803",
+        "nes": 3.071367569720751,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Bardet Biedl Syndrome WP5234",
+        "nes": 3.0494520198833066,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Genes Related To Primary Cilium Development Based On CRISPR WP4536",
+        "nes": 2.9819782263371404,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Joubert Syndrome WP4656",
+        "nes": 1.4448006990214215,
+        "fdr": 0.26757102272727273
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Retinoblastoma Gene In Cancer WP2446",
+        "nes": 1.4226914174170913,
+        "fdr": 0.24460227272727272
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Cytoplasmic Ribosomal Proteins WP477",
+        "nes": -2.2509388049228467,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Lung Fibrosis WP3624",
+        "nes": -1.8190382436259278,
+        "fdr": 0.0073512252042007
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Burn Wound Healing WP5055",
+        "nes": -1.8181390911975448,
+        "fdr": 0.004900816802800467
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "TGF Beta Receptor Signaling In Skeletal Dysplasias WP4816",
+        "nes": -1.7765923050081938,
+        "fdr": 0.007645274212368728
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "TGF Beta Receptor Signaling WP560",
+        "nes": -1.7765923050081938,
+        "fdr": 0.007645274212368728
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "NOTCH_SIGNALING_STEM",
+        "nes": 0.7053577535310102,
+        "fdr": 0.8222222222222222
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "ENDOMETRIAL_REGENERATION",
+        "nes": -1.3622711802739742,
+        "fdr": 0.0734982332155477
+      }
+    ],
+    "Decidualized_stromal": [
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Central Nervous System Neuron Differentiation (GO:0021953)",
+        "nes": 2.299247516177258,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Neuron Projection Guidance (GO:0097485)",
+        "nes": 2.111934154120169,
+        "fdr": 0.003484489554189556
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Modulation Of Excitatory Postsynaptic Potential (GO:0098815)",
+        "nes": 1.9794155406762683,
+        "fdr": 0.060729675087303696
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Modulation Of Chemical Synaptic Transmission (GO:0050804)",
+        "nes": 1.9688097347942994,
+        "fdr": 0.053262911756897506
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Positive Regulation Of Cyclin-Dependent Protein Serine/Threonine Kinase Activity (GO:0045737)",
+        "nes": 1.9459061267941433,
+        "fdr": 0.0569465149998979
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Translation (GO:0006412)",
+        "nes": -2.744175015145657,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Cytoplasmic Translation (GO:0002181)",
+        "nes": -2.6231670703660326,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Peptide Biosynthetic Process (GO:0043043)",
+        "nes": -2.6048498687666095,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Cellular Respiration (GO:0045333)",
+        "nes": -2.5653165488437715,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Macromolecule Biosynthetic Process (GO:0009059)",
+        "nes": -2.5514884794008803,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Hedgehog signaling pathway",
+        "nes": 1.9340643551444292,
+        "fdr": 0.02383895162792273
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Insulin secretion",
+        "nes": 1.9260065874502175,
+        "fdr": 0.01354485887950155
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Salivary secretion",
+        "nes": 1.9144907903870263,
+        "fdr": 0.009752298393241115
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Aldosterone synthesis and secretion",
+        "nes": 1.8202851415206607,
+        "fdr": 0.023297157272742664
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Primary immunodeficiency",
+        "nes": 1.6719609521718497,
+        "fdr": 0.10424123393664393
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Ribosome",
+        "nes": -2.693039600420513,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Oxidative phosphorylation",
+        "nes": -2.4833427943882795,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Spliceosome",
+        "nes": -2.3220116586134134,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Non-alcoholic fatty liver disease",
+        "nes": -2.3140291996823636,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Parkinson disease",
+        "nes": -2.291668181425095,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Regulation Of RUNX1 Expression And Activity R-HSA-8934593",
+        "nes": 2.11694651877033,
+        "fdr": 0.0048737840888862845
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Neurexins And Neuroligins R-HSA-6794361",
+        "nes": 2.079956841399532,
+        "fdr": 0.0034812743492044895
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Collagen Chain Trimerization R-HSA-8948216",
+        "nes": 2.0168590084923887,
+        "fdr": 0.007658803568249877
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Assembly And Cell Surface Presentation Of NMDA Receptors R-HSA-9609736",
+        "nes": 2.0151581649784776,
+        "fdr": 0.005918166393647632
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Interaction Between L1 And Ankyrins R-HSA-445095",
+        "nes": 1.952008819219991,
+        "fdr": 0.014064348370786139
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Translation R-HSA-72766",
+        "nes": -2.766314035169247,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Selenoamino Acid Metabolism R-HSA-2408522",
+        "nes": -2.637417023980513,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "SRP-dependent Cotranslational Protein Targeting To Membrane R-HSA-1799339",
+        "nes": -2.6256765888728038,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Major Pathway Of rRNA Processing In Nucleolus And Cytosol R-HSA-6791226",
+        "nes": -2.5933408338177397,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "rRNA Processing In Nucleus And Cytosol R-HSA-8868773",
+        "nes": -2.5903670813591337,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Regulation Of Wnt B Catenin Signaling By Small Molecule Compounds WP3664",
+        "nes": 2.1842445843289497,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Phosphodiesterases In Neuronal Function WP4222",
+        "nes": 1.9807602092571936,
+        "fdr": 0.017755566390378678
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "TYROBP Causal Network In Microglia WP3945",
+        "nes": 1.845775931592726,
+        "fdr": 0.08005579933907579
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Wnt Signaling WP428",
+        "nes": 1.8279258604474653,
+        "fdr": 0.07522753128555178
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "lncRNA In Canonical Wnt Signaling And Colorectal Cancer WP4258",
+        "nes": 1.7785070043043034,
+        "fdr": 0.10260848366650414
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Cytoplasmic Ribosomal Proteins WP477",
+        "nes": -2.515180427653859,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Electron Transport Chain OXPHOS System In Mitochondria WP111",
+        "nes": -2.4602758842835595,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Nonalcoholic Fatty Liver Disease WP4396",
+        "nes": -2.3904200812952516,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Mitochondrial Complex I Assembly Model OXPHOS System WP4324",
+        "nes": -2.17980807160253,
+        "fdr": 0.00026187265132965836
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Oxidative Phosphorylation WP623",
+        "nes": -2.151140610973496,
+        "fdr": 0.00020949812106372672
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "WNT_SIGNALING_STEM",
+        "nes": 1.7817387955144488,
+        "fdr": 0.016236162361623615
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "NOTCH_SIGNALING_STEM",
+        "nes": 1.2743573496298373,
+        "fdr": 0.33136531365313654
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "FIBROSIS_MARKERS",
+        "nes": 1.0354706641548537,
+        "fdr": 0.5451414514145142
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "TGFB_SIGNALING",
+        "nes": 0.9276904062744666,
+        "fdr": 0.5608856088560885
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "ENDOMETRIAL_REGENERATION",
+        "nes": -1.4560523898736155,
+        "fdr": 0.11246200607902736
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "STEM_NICHE_FACTORS",
+        "nes": -0.8495920421603923,
+        "fdr": 0.6759878419452887
+      }
+    ],
+    "Glandular_epithelium": [
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Cytoplasmic Translation (GO:0002181)",
+        "nes": 2.1658846748692677,
+        "fdr": 0.002466938226832754
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Endoplasmic Reticulum To Golgi Vesicle-Mediated Transport (GO:0006888)",
+        "nes": 2.1484358777580344,
+        "fdr": 0.001233469113416377
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Peptide Biosynthetic Process (GO:0043043)",
+        "nes": 2.072136505121872,
+        "fdr": 0.006304397690794816
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Positive Regulation Of Calcium Ion Transport (GO:0051928)",
+        "nes": 2.035605862112637,
+        "fdr": 0.010278909278469809
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Proton Motive Force-Driven Mitochondrial ATP Synthesis (GO:0042776)",
+        "nes": 2.02981306350064,
+        "fdr": 0.008387589971231364
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Glucose Homeostasis (GO:0042593)",
+        "nes": -2.014579265695226,
+        "fdr": 0.029192187857512864
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Neutral Amino Acid Transport (GO:0015804)",
+        "nes": -1.9784514383314071,
+        "fdr": 0.032560517225687424
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Intracellular Glucose Homeostasis (GO:0001678)",
+        "nes": -1.978085127828056,
+        "fdr": 0.02208127030247768
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Cellular Response To Interleukin-6 (GO:0071354)",
+        "nes": -1.9616026969921567,
+        "fdr": 0.01992928209503282
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Intrinsic Apoptotic Signaling Pathway In Response To Endoplasmic Reticulum Stress (GO:0070059)",
+        "nes": -1.9599256713900672,
+        "fdr": 0.017066202132084443
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Ribosome",
+        "nes": 2.310263218888996,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Fatty acid degradation",
+        "nes": 2.039369339245552,
+        "fdr": 0.0010737165027519624
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Purine metabolism",
+        "nes": 1.9492884427155248,
+        "fdr": 0.007516015519263737
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Propanoate metabolism",
+        "nes": 1.9286653016749886,
+        "fdr": 0.007247586393575747
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Drug metabolism",
+        "nes": 1.8961102714505156,
+        "fdr": 0.007945502120364522
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Bladder cancer",
+        "nes": -1.8114311832105305,
+        "fdr": 0.082034204436417
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Inflammatory bowel disease",
+        "nes": -1.782459898648539,
+        "fdr": 0.06772591296494891
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Chronic myeloid leukemia",
+        "nes": -1.7804119819578699,
+        "fdr": 0.045786532708697855
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Autoimmune thyroid disease",
+        "nes": -1.759450015556836,
+        "fdr": 0.04674041880679573
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "ErbB signaling pathway",
+        "nes": -1.7251811665118633,
+        "fdr": 0.056851611446633185
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Eukaryotic Translation Elongation R-HSA-156842",
+        "nes": 2.2655237950569966,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Peptide Chain Elongation R-HSA-156902",
+        "nes": 2.258370574540036,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Translation R-HSA-72766",
+        "nes": 2.2481471578617427,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "SRP-dependent Cotranslational Protein Targeting To Membrane R-HSA-1799339",
+        "nes": 2.2459518880871596,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "L13a-mediated Translational Silencing Of Ceruloplasmin Expression R-HSA-156827",
+        "nes": 2.214914559054066,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Heme Signaling R-HSA-9707616",
+        "nes": -1.944817005059586,
+        "fdr": 0.05973302255866559
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Kinesins R-HSA-983189",
+        "nes": -1.937694234825949,
+        "fdr": 0.032397571557242356
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Nuclear Events (Kinase And Transcription Factor Activation) R-HSA-198725",
+        "nes": -1.9333160985527904,
+        "fdr": 0.022610805149325394
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "NGF-stimulated Transcription R-HSA-9031628",
+        "nes": -1.9074271884193252,
+        "fdr": 0.023791966612349856
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Tight Junction Interactions R-HSA-420029",
+        "nes": -1.8695120127114047,
+        "fdr": 0.03442241977957
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Cytoplasmic Ribosomal Proteins WP477",
+        "nes": 2.186924042326636,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Electron Transport Chain OXPHOS System In Mitochondria WP111",
+        "nes": 2.116239526732266,
+        "fdr": 0.0006698959084819128
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Markers Of Kidney Cell Lineage WP5236",
+        "nes": 1.9000753989287442,
+        "fdr": 0.022999759524545672
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Oxidative Phosphorylation WP623",
+        "nes": 1.8858641150209932,
+        "fdr": 0.021604143048541687
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Mitochondrial Complex I Assembly Model OXPHOS System WP4324",
+        "nes": 1.8509147340685146,
+        "fdr": 0.027197773884365655
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Autophagy In Pancreatic Ductal Adenocarcinoma WP5331",
+        "nes": -2.0345450237693252,
+        "fdr": 0.003679225277443981
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Unfolded Protein Response WP4925",
+        "nes": -1.94835507324376,
+        "fdr": 0.018396126387219908
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Aryl Hydrocarbon Receptor Pathway WP2586",
+        "nes": -1.9000370705244933,
+        "fdr": 0.02493697132489809
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "TP53 Network WP1742",
+        "nes": -1.8840943629833866,
+        "fdr": 0.02514137272920054
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Hepatitis C And Hepatocellular Carcinoma WP3646",
+        "nes": -1.8450283355059651,
+        "fdr": 0.03482999929313635
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "WNT_SIGNALING_STEM",
+        "nes": 1.8696816236588905,
+        "fdr": 0.004501125281320331
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "FIBROSIS_MARKERS",
+        "nes": 1.834554172314061,
+        "fdr": 0.0028132033008252066
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "STEM_NICHE_FACTORS",
+        "nes": 1.4083254564983487,
+        "fdr": 0.09114778694673668
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "ENDOMETRIAL_REGENERATION",
+        "nes": -1.4258617106864002,
+        "fdr": 0.22225554889022195
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "NOTCH_SIGNALING_STEM",
+        "nes": -1.354591143024619,
+        "fdr": 0.1727654469106179
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "TGFB_SIGNALING",
+        "nes": -1.2055734462721746,
+        "fdr": 0.23425314937012598
+      }
+    ],
+    "Lymphatic_endothelium": [
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Axon Guidance (GO:0007411)",
+        "nes": 2.0219335709325548,
+        "fdr": 0.033391293523629476
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Transmembrane Receptor Protein Tyrosine Kinase Signaling Pathway (GO:0007169)",
+        "nes": 1.9791894032066315,
+        "fdr": 0.03965216105931001
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Positive Regulation Of Neuron Projection Development (GO:0010976)",
+        "nes": 1.9785392526065184,
+        "fdr": 0.027130425987948948
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Neuron Projection Guidance (GO:0097485)",
+        "nes": 1.9498722413465284,
+        "fdr": 0.030782598717095922
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Protein Autophosphorylation (GO:0046777)",
+        "nes": 1.93760228936581,
+        "fdr": 0.03297390235458411
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Mitochondrial ATP Synthesis Coupled Electron Transport (GO:0042775)",
+        "nes": -2.5767759040831355,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Aerobic Electron Transport Chain (GO:0019646)",
+        "nes": -2.572594135242551,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Cellular Respiration (GO:0045333)",
+        "nes": -2.5580243698934444,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Aerobic Respiration (GO:0009060)",
+        "nes": -2.4052757530124587,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Mitochondrial Translation (GO:0032543)",
+        "nes": -2.357682763346527,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Hedgehog signaling pathway",
+        "nes": 2.0418558625992302,
+        "fdr": 0.00308714939299968
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Calcium signaling pathway",
+        "nes": 1.8906366838156077,
+        "fdr": 0.01183407267316544
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Cushing syndrome",
+        "nes": 1.8387901881055289,
+        "fdr": 0.01852289635799808
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Insulin secretion",
+        "nes": 1.8251251037608522,
+        "fdr": 0.01723658411091488
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "cAMP signaling pathway",
+        "nes": 1.8144355982555012,
+        "fdr": 0.015847366884065024
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Oxidative phosphorylation",
+        "nes": -2.600774613710391,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Ribosome",
+        "nes": -2.410706350330175,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Huntington disease",
+        "nes": -2.3703333431890257,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Amyotrophic lateral sclerosis",
+        "nes": -2.365196853784676,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Parkinson disease",
+        "nes": -2.341243573059179,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Estrogen-dependent Nuclear Events Downstream Of ESR-membrane Signaling R-HSA-9634638",
+        "nes": 2.01094913793829,
+        "fdr": 0.018640436227175705
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Regulation Of MECP2 Expression And Activity R-HSA-9022692",
+        "nes": 1.9809223940298237,
+        "fdr": 0.014166731532653536
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "RORA Activates Gene Expression R-HSA-1368082",
+        "nes": 1.9087332534874388,
+        "fdr": 0.030570315412568157
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "NR1H3 And NR1H2 Regulate Gene Expression Linked To Cholesterol Transport And Efflux R-HSA-9029569",
+        "nes": 1.8971598280291941,
+        "fdr": 0.02609661071804599
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Collagen Chain Trimerization R-HSA-8948216",
+        "nes": 1.8491516534489532,
+        "fdr": 0.041456330169238775
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Respiratory Electron Transport R-HSA-611105",
+        "nes": -2.4966036222762593,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Respiratory Electron Transport, ATP Synthesis By Chemiosmotic Coupling, Heat Production By Uncoupling Proteins R-HSA-163200",
+        "nes": -2.490874820332518,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Translation R-HSA-72766",
+        "nes": -2.450156764562775,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Citric Acid (TCA) Cycle And Respiratory Electron Transport R-HSA-1428517",
+        "nes": -2.4356264954205615,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Mitochondrial Translation Termination R-HSA-5419276",
+        "nes": -2.4352573226073675,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Hedgehog Signaling Pathway WP4249",
+        "nes": 1.9453866241582614,
+        "fdr": 0.028105303420864446
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Bardet Biedl Syndrome WP5234",
+        "nes": 1.9339793597544204,
+        "fdr": 0.016214598127421796
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Endochondral Ossification WP474",
+        "nes": 1.9315996201504244,
+        "fdr": 0.008377542365834593
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Endochondral Ossification With Skeletal Dysplasias WP4808",
+        "nes": 1.9315996201504244,
+        "fdr": 0.008377542365834593
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Ciliopathies WP4803",
+        "nes": 1.9235775720068977,
+        "fdr": 0.006918228534366632
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Electron Transport Chain OXPHOS System In Mitochondria WP111",
+        "nes": -2.5544804438348465,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Nonalcoholic Fatty Liver Disease WP4396",
+        "nes": -2.3096767209190063,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Mitochondrial Complex IV Assembly WP4922",
+        "nes": -2.2794617337698617,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Mitochondrial Complex I Assembly Model OXPHOS System WP4324",
+        "nes": -2.2743153016719537,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Oxidative Phosphorylation WP623",
+        "nes": -2.251701478606969,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "STEM_NICHE_FACTORS",
+        "nes": 1.5655776002480903,
+        "fdr": 0.09781890284203569
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "FIBROSIS_MARKERS",
+        "nes": 1.3854975015338329,
+        "fdr": 0.19035029742233972
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "WNT_SIGNALING_STEM",
+        "nes": 1.3090870702336048,
+        "fdr": 0.19343467724168317
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "ENDOMETRIAL_REGENERATION",
+        "nes": 0.7685830584152674,
+        "fdr": 0.7838730998017185
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "NOTCH_SIGNALING_STEM",
+        "nes": -0.6710800719279569,
+        "fdr": 1.0
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "TGFB_SIGNALING",
+        "nes": -0.6650682840611514,
+        "fdr": 0.8897108271687962
+      }
+    ],
+    "Lymphoid_immune": [
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Peptidyl-Serine Phosphorylation (GO:0018105)",
+        "nes": 2.2605747554617324,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Peptidyl-Serine Modification (GO:0018209)",
+        "nes": 2.2312136124856763,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Positive Regulation Of Nucleic Acid-Templated Transcription (GO:1903508)",
+        "nes": 2.093314286111142,
+        "fdr": 0.008946244059816017
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Protein Phosphorylation (GO:0006468)",
+        "nes": 2.051812026568414,
+        "fdr": 0.016401447442996032
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Positive Regulation Of Wnt Signaling Pathway (GO:0030177)",
+        "nes": 2.025741724412139,
+        "fdr": 0.017296071848977634
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Translation (GO:0006412)",
+        "nes": -2.5734103865045244,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Aerobic Electron Transport Chain (GO:0019646)",
+        "nes": -2.5523499552903854,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Cellular Respiration (GO:0045333)",
+        "nes": -2.5522542998289084,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Mitochondrial ATP Synthesis Coupled Electron Transport (GO:0042775)",
+        "nes": -2.5411656551046358,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Mitochondrial Translation (GO:0032543)",
+        "nes": -2.4653142983369185,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Parathyroid hormone synthesis, secretion and action",
+        "nes": 1.8565093724443118,
+        "fdr": 0.1197451091990581
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "C-type lectin receptor signaling pathway",
+        "nes": 1.8059800059110835,
+        "fdr": 0.11084513486669569
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Growth hormone synthesis, secretion and action",
+        "nes": 1.7904260656431705,
+        "fdr": 0.09007852809118336
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Cushing syndrome",
+        "nes": 1.7754096252586025,
+        "fdr": 0.08090885756693114
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Lysine degradation",
+        "nes": 1.7004576446964272,
+        "fdr": 0.14498867275994062
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Ribosome",
+        "nes": -2.624882582229062,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Oxidative phosphorylation",
+        "nes": -2.498867325027158,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Parkinson disease",
+        "nes": -2.36640420917089,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Non-alcoholic fatty liver disease",
+        "nes": -2.2809510761735394,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Prion disease",
+        "nes": -2.2314715860113314,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Transcriptional Regulation By MECP2 R-HSA-8986944",
+        "nes": 2.1223403120674313,
+        "fdr": 0.0010122376035798307
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Heme Signaling R-HSA-9707616",
+        "nes": 2.034597641080298,
+        "fdr": 0.005061188017899153
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "DAG And IP3 Signaling R-HSA-1489509",
+        "nes": 2.0322919179254684,
+        "fdr": 0.0037115378797927126
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Regulation Of MECP2 Expression And Activity R-HSA-9022692",
+        "nes": 1.9948135431056289,
+        "fdr": 0.009616257234008392
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Chromatin Modifying Enzymes R-HSA-3247509",
+        "nes": 1.9910855762003028,
+        "fdr": 0.008705243390786543
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Translation R-HSA-72766",
+        "nes": -2.515232123706056,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Selenoamino Acid Metabolism R-HSA-2408522",
+        "nes": -2.4874716979305442,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Eukaryotic Translation Termination R-HSA-72764",
+        "nes": -2.4781148823844976,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Formation Of A Pool Of Free 40S Subunits R-HSA-72689",
+        "nes": -2.4762000282376464,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Mitochondrial Translation Elongation R-HSA-5389840",
+        "nes": -2.474015440386795,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Wnt Signaling Pathway And Pluripotency WP399",
+        "nes": 1.9036119919722063,
+        "fdr": 0.11035168784494931
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Histone Modifications WP2369",
+        "nes": 1.9036094104379664,
+        "fdr": 0.055175843922474654
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Pathways Affected In Adenoid Cystic Carcinoma WP3651",
+        "nes": 1.902736170577279,
+        "fdr": 0.03726789457921534
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Glioblastoma Signaling Pathways WP2261",
+        "nes": 1.8659797278833183,
+        "fdr": 0.0486418624053395
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Osteoblast Differentiation And Related Diseases WP4787",
+        "nes": 1.858562201848436,
+        "fdr": 0.04094628417404698
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Cytoplasmic Ribosomal Proteins WP477",
+        "nes": -2.4360006034702204,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Nonalcoholic Fatty Liver Disease WP4396",
+        "nes": -2.429472520910002,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Electron Transport Chain OXPHOS System In Mitochondria WP111",
+        "nes": -2.388137103027436,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Mitochondrial Complex I Assembly Model OXPHOS System WP4324",
+        "nes": -2.2757106071030155,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Oxidative Phosphorylation WP623",
+        "nes": -2.184043585092651,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "WNT_SIGNALING_STEM",
+        "nes": 1.2477845683148723,
+        "fdr": 1.0
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "TGFB_SIGNALING",
+        "nes": 1.2235670865145425,
+        "fdr": 0.5837657524091919
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "STEM_NICHE_FACTORS",
+        "nes": 1.0958227950874961,
+        "fdr": 0.6041512231282431
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "NOTCH_SIGNALING_STEM",
+        "nes": 0.8382624319327773,
+        "fdr": 0.8353409933283914
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "ENDOMETRIAL_REGENERATION",
+        "nes": 0.40966747279953813,
+        "fdr": 0.9977761304670126
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "FIBROSIS_MARKERS",
+        "nes": -1.1384009026581814,
+        "fdr": 0.3107207752877044
+      }
+    ],
+    "Macrophages": [
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Macrophage Activation (GO:0042116)",
+        "nes": 2.192342952478804,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Pattern Recognition Receptor Signaling Pathway (GO:0002221)",
+        "nes": 2.144556179967863,
+        "fdr": 0.0006071705983124249
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Positive Regulation Of Defense Response (GO:0031349)",
+        "nes": 2.085201599518551,
+        "fdr": 0.0016191215954997997
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Inflammatory Response (GO:0006954)",
+        "nes": 2.0616747314257866,
+        "fdr": 0.002125097094093487
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Positive Regulation Of Neurogenesis (GO:0050769)",
+        "nes": 2.0531666377720814,
+        "fdr": 0.0024286823932496994
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Mitochondrial ATP Synthesis Coupled Electron Transport (GO:0042775)",
+        "nes": -2.591603334858808,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Aerobic Electron Transport Chain (GO:0019646)",
+        "nes": -2.5630211146857644,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Cellular Respiration (GO:0045333)",
+        "nes": -2.513517592363698,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Translation (GO:0006412)",
+        "nes": -2.429032603338595,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Mitochondrial Respiratory Chain Complex Assembly (GO:0033108)",
+        "nes": -2.3503011900031265,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Growth hormone synthesis, secretion and action",
+        "nes": 2.176064087253933,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "B cell receptor signaling pathway",
+        "nes": 2.107025304261746,
+        "fdr": 0.0006457530728306732
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Neutrophil extracellular trap formation",
+        "nes": 2.087200657511467,
+        "fdr": 0.00043050204855378223
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Acute myeloid leukemia",
+        "nes": 1.9981524723289439,
+        "fdr": 0.001614382682076683
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Adipocytokine signaling pathway",
+        "nes": 1.9947660478583484,
+        "fdr": 0.0012915061456613465
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Oxidative phosphorylation",
+        "nes": -2.5709089745992806,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Parkinson disease",
+        "nes": -2.564002808668788,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Ribosome",
+        "nes": -2.546415595872646,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Huntington disease",
+        "nes": -2.3741686688952774,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Prion disease",
+        "nes": -2.299547374329403,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Heme Signaling R-HSA-9707616",
+        "nes": 2.2815228017852043,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "RORA Activates Gene Expression R-HSA-1368082",
+        "nes": 2.0836920119957285,
+        "fdr": 0.001258664589329121
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "NR1H2 And NR1H3-mediated Signaling R-HSA-9024446",
+        "nes": 2.032096140155086,
+        "fdr": 0.00139851621036569
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "NR1H3 And NR1H2 Regulate Gene Expression Linked To Cholesterol Transport And Efflux R-HSA-9029569",
+        "nes": 2.022823850115367,
+        "fdr": 0.001258664589329121
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Interleukin-3, Interleukin-5 And GM-CSF Signaling R-HSA-512988",
+        "nes": 2.0211554974848154,
+        "fdr": 0.0011747536167071794
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Respiratory Electron Transport R-HSA-611105",
+        "nes": -2.5757726252952744,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "SRP-dependent Cotranslational Protein Targeting To Membrane R-HSA-1799339",
+        "nes": -2.4729478584006266,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Respiratory Electron Transport, ATP Synthesis By Chemiosmotic Coupling, Heat Production By Uncoupling Proteins R-HSA-163200",
+        "nes": -2.4631547594824883,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Translation R-HSA-72766",
+        "nes": -2.425216199827484,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "APC/C-mediated Degradation Of Cell Cycle Proteins R-HSA-174143",
+        "nes": -2.3891213199255885,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "IL 4 Signaling Pathway WP395",
+        "nes": 2.140131346050685,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Kit Receptor Signaling Pathway WP304",
+        "nes": 2.0033811718789285,
+        "fdr": 0.0027059073910796266
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Chemokine Signaling Pathway WP3929",
+        "nes": 1.9975120681686738,
+        "fdr": 0.002254922825899689
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Interferon Type I Signaling Pathways WP585",
+        "nes": 1.995512616604442,
+        "fdr": 0.0027059073910796266
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "PDGFR Beta Pathway WP3972",
+        "nes": 1.9695412829007959,
+        "fdr": 0.0037882703475114773
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Electron Transport Chain OXPHOS System In Mitochondria WP111",
+        "nes": -2.484579049955599,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Mitochondrial Complex I Assembly Model OXPHOS System WP4324",
+        "nes": -2.299566185627523,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Mitochondrial Complex IV Assembly WP4922",
+        "nes": -2.296580629094619,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Oxidative Phosphorylation WP623",
+        "nes": -2.2134417828781165,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Zinc Homeostasis WP3529",
+        "nes": -2.1444179541214443,
+        "fdr": 0.00012245761296714796
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "STEM_NICHE_FACTORS",
+        "nes": 1.3919221767924939,
+        "fdr": 0.4217623079335215
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "WNT_SIGNALING_STEM",
+        "nes": 1.2813405507318383,
+        "fdr": 0.41784258388209466
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "NOTCH_SIGNALING_STEM",
+        "nes": 1.20162885460692,
+        "fdr": 0.40137974286610223
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "FIBROSIS_MARKERS",
+        "nes": 1.132658784576389,
+        "fdr": 0.4037315772969583
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "TGFB_SIGNALING",
+        "nes": 1.0395726971130335,
+        "fdr": 0.43618689244277203
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "ENDOMETRIAL_REGENERATION",
+        "nes": -0.9942878512744503,
+        "fdr": 0.4834578441835646
+      }
+    ],
+    "NKT_cells": [
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Extracellular Structure Organization (GO:0043062)",
+        "nes": 2.019344354162816,
+        "fdr": 0.037196167734369144
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "External Encapsulating Structure Organization (GO:0045229)",
+        "nes": 2.010643294592962,
+        "fdr": 0.021763715163726625
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Mitotic Spindle Assembly (GO:0090307)",
+        "nes": 1.980617951025146,
+        "fdr": 0.02215941907579438
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Protein Localization To Chromosome (GO:0034502)",
+        "nes": 1.8816503856073457,
+        "fdr": 0.08230641371009342
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Epithelial Cell Migration (GO:0010631)",
+        "nes": 1.8710003288908743,
+        "fdr": 0.07724140363562614
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Cholesterol Biosynthetic Process (GO:0006695)",
+        "nes": -2.1802521761154936,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Secondary Alcohol Biosynthetic Process (GO:1902653)",
+        "nes": -2.1698940639078597,
+        "fdr": 0.0005888673085664697
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Sterol Biosynthetic Process (GO:0016126)",
+        "nes": -2.0956542331682995,
+        "fdr": 0.004710938468531758
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Phosphatidylcholine Metabolic Process (GO:0046470)",
+        "nes": -2.0744219567012623,
+        "fdr": 0.005594239431381462
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Cholesterol Metabolic Process (GO:0008203)",
+        "nes": -2.0722718020645825,
+        "fdr": 0.004710938468531758
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Fanconi anemia pathway",
+        "nes": 1.827584639064424,
+        "fdr": 0.05406337167392735
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Platelet activation",
+        "nes": 1.7055622733086446,
+        "fdr": 0.12183846804776381
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Primary immunodeficiency",
+        "nes": 1.658533397541031,
+        "fdr": 0.13763959841623052
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "GnRH secretion",
+        "nes": 1.6207523471508123,
+        "fdr": 0.15415896198326387
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Progesterone-mediated oocyte maturation",
+        "nes": 1.578557943465543,
+        "fdr": 0.18600933964333843
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Bile secretion",
+        "nes": -2.110417211984168,
+        "fdr": 0.0023489000580910763
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Parkinson disease",
+        "nes": -2.1083940236211163,
+        "fdr": 0.0011744500290455382
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Sphingolipid metabolism",
+        "nes": -2.025125184927479,
+        "fdr": 0.0011744500290455384
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Steroid biosynthesis",
+        "nes": -1.9366266190016252,
+        "fdr": 0.0055786376379663065
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Ferroptosis",
+        "nes": -1.9286420114868181,
+        "fdr": 0.004932690121991261
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Collagen Chain Trimerization R-HSA-8948216",
+        "nes": 2.2992867110510358,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Collagen Biosynthesis And Modifying Enzymes R-HSA-1650814",
+        "nes": 2.16014370961326,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Collagen Formation R-HSA-1474290",
+        "nes": 1.9604180725212463,
+        "fdr": 0.01084618811668472
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Assembly Of Collagen Fibrils And Other Multimeric Structures R-HSA-2022090",
+        "nes": 1.94302940966184,
+        "fdr": 0.010353179565926325
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "RUNX1 Regulates Genes Involved In Megakaryocyte Differentiation And Platelet Function R-HSA-8936459",
+        "nes": 1.8342035393719744,
+        "fdr": 0.05176589782963162
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Keratinization R-HSA-6805567",
+        "nes": -2.1388828315225616,
+        "fdr": 0.0036522044404011197
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Cholesterol Biosynthesis R-HSA-191273",
+        "nes": -2.1028697488040677,
+        "fdr": 0.0036522044404011197
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "mRNA Splicing - Major Pathway R-HSA-72163",
+        "nes": -1.9377492854448608,
+        "fdr": 0.05194246315237148
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "AUF1 (hnRNP D0) Binds And Destabilizes mRNA R-HSA-450408",
+        "nes": -1.918862659513058,
+        "fdr": 0.05660916882621735
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "RNA Pol II CTD Phosphorylation And Interaction With CE R-HSA-77075",
+        "nes": -1.9185297511809274,
+        "fdr": 0.045530815357000626
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Retinoblastoma Gene In Cancer WP2446",
+        "nes": 2.041546116803458,
+        "fdr": 0.004727511490479317
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "miRNA Targets In ECM And Membrane Receptors WP2911",
+        "nes": 1.959813176832138,
+        "fdr": 0.010636900853578464
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Gastric Cancer Network 1 WP2361",
+        "nes": 1.9347627986104274,
+        "fdr": 0.010242941562705186
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "DNA Repair Pathways Full Network WP4946",
+        "nes": 1.7190699904684381,
+        "fdr": 0.1619172685489166
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Nanoparticle Mediated Activation Of Receptor Signaling WP2643",
+        "nes": 1.6943913324498154,
+        "fdr": 0.16877216021011163
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Enterocyte Cholesterol Metabolism WP5333",
+        "nes": -2.25503668433494,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Cholesterol Metabolism WP5304",
+        "nes": -2.1916712336359567,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Cholesterol Metabolism With Bloch And Kandutsch Russell Pathways WP4718",
+        "nes": -2.1639117895132878,
+        "fdr": 0.00039451596679272884
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Overview Of Proinflammatory And Profibrotic Mediators WP5095",
+        "nes": -2.1541272707916104,
+        "fdr": 0.0005917739501890933
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Cholesterol Biosynthesis Pathway In Hepatocytes WP5329",
+        "nes": -2.0587769989432623,
+        "fdr": 0.0021303862206807356
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "FIBROSIS_MARKERS",
+        "nes": 1.7080870549203888,
+        "fdr": 0.02232746955345061
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "WNT_SIGNALING_STEM",
+        "nes": 1.4404006012500061,
+        "fdr": 0.10148849797023005
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "STEM_NICHE_FACTORS",
+        "nes": 1.0617977456599588,
+        "fdr": 0.39884979702300405
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "TGFB_SIGNALING",
+        "nes": -1.0118762253545068,
+        "fdr": 1.0
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "NOTCH_SIGNALING_STEM",
+        "nes": -0.9703029860201198,
+        "fdr": 0.7564060446780553
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "ENDOMETRIAL_REGENERATION",
+        "nes": -0.7995939148912827,
+        "fdr": 0.730946123521682
+      }
+    ],
+    "Secretory_glandular": [
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Negative Regulation Of Endothelial Cell Proliferation (GO:0001937)",
+        "nes": 2.091151212538884,
+        "fdr": 0.016590543919592134
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Negative Regulation Of Ossification (GO:0030279)",
+        "nes": 2.020674558688521,
+        "fdr": 0.04520923218088857
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Positive Regulation Of Neuron Differentiation (GO:0045666)",
+        "nes": 2.0136154529139825,
+        "fdr": 0.03456363316581695
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Cartilage Development (GO:0051216)",
+        "nes": 2.013428239754794,
+        "fdr": 0.025922724874362712
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Chondrocyte Differentiation (GO:0002062)",
+        "nes": 2.0037769764078797,
+        "fdr": 0.02471991044019228
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Cytoplasmic Translation (GO:0002181)",
+        "nes": -1.997936654557323,
+        "fdr": 0.1436444949748409
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Mitotic Sister Chromatid Cohesion (GO:0007064)",
+        "nes": -1.9913884440344896,
+        "fdr": 0.08149062695688089
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Signal Transduction By P53 Class Mediator (GO:0072331)",
+        "nes": -1.9897345038939265,
+        "fdr": 0.05570828170498637
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Nucleosome Organization (GO:0034728)",
+        "nes": -1.9825172388585368,
+        "fdr": 0.04799659808053578
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Regulation Of mRNA Processing (GO:0050684)",
+        "nes": -1.9762755287175722,
+        "fdr": 0.04447454555951805
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Malaria",
+        "nes": 1.967483107263189,
+        "fdr": 0.012965492124191935
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Vascular smooth muscle contraction",
+        "nes": 1.8673170746185916,
+        "fdr": 0.038896476372575796
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Fluid shear stress and atherosclerosis",
+        "nes": 1.8223404011132494,
+        "fdr": 0.045919451273179764
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "cGMP-PKG signaling pathway",
+        "nes": 1.8169673227901193,
+        "fdr": 0.03727578985705181
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Olfactory transduction",
+        "nes": 1.8004493126245955,
+        "fdr": 0.03727578985705181
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "mRNA surveillance pathway",
+        "nes": -1.799279780815903,
+        "fdr": 0.15681244743481917
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Spliceosome",
+        "nes": -1.7830575827802397,
+        "fdr": 0.09424586487244183
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Ribosome",
+        "nes": -1.6820236177086223,
+        "fdr": 0.17159611251284929
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Thyroid cancer",
+        "nes": -1.6664554891996939,
+        "fdr": 0.14612068965517241
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Protein export",
+        "nes": -1.6521049699204888,
+        "fdr": 0.1343201569946734
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Muscle Contraction R-HSA-397014",
+        "nes": 2.0293151985927107,
+        "fdr": 0.009283335301111199
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "RHO GTPases Activate CIT R-HSA-5625900",
+        "nes": 2.0079656363478025,
+        "fdr": 0.008620239922460398
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Smooth Muscle Contraction R-HSA-445355",
+        "nes": 2.003703547477324,
+        "fdr": 0.0068519855793916
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "RHO GTPases Activate PAKs R-HSA-5627123",
+        "nes": 1.9482279376221956,
+        "fdr": 0.020224409048849395
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "RHO GTPases Activate ROCKs R-HSA-5627117",
+        "nes": 1.8705389682466718,
+        "fdr": 0.059678584078572
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "SRP-dependent Cotranslational Protein Targeting To Membrane R-HSA-1799339",
+        "nes": -2.3220651314229634,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Nonsense Mediated Decay (NMD) Enhanced By Exon Junction Complex (EJC) R-HSA-975957",
+        "nes": -2.247308603521033,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Peptide Chain Elongation R-HSA-156902",
+        "nes": -2.1795707715396437,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Eukaryotic Translation Elongation R-HSA-156842",
+        "nes": -2.168623792266214,
+        "fdr": 0.00046039410421196304
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Viral mRNA Translation R-HSA-192823",
+        "nes": -2.1409205026581812,
+        "fdr": 0.0007366305667391408
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Cardiac Progenitor Differentiation WP2406",
+        "nes": 1.9472067313682404,
+        "fdr": 0.06217522931634359
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Regulation Of Wnt B Catenin Signaling By Small Molecule Compounds WP3664",
+        "nes": 1.9399803202270478,
+        "fdr": 0.03434096968053861
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Markers Of Kidney Cell Lineage WP5236",
+        "nes": 1.7919038279995838,
+        "fdr": 0.19327338725468046
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Endochondral Ossification WP474",
+        "nes": 1.784569392558007,
+        "fdr": 0.12623017486783245
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Endochondral Ossification With Skeletal Dysplasias WP4808",
+        "nes": 1.784569392558007,
+        "fdr": 0.12623017486783245
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Cytoplasmic Ribosomal Proteins WP477",
+        "nes": -2.185877511240006,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "MET In Type 1 Papillary Renal Cell Carcinoma WP4205",
+        "nes": -1.9712587344705457,
+        "fdr": 0.02531567938852451
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "15Q11Q13 Copy Number Variation WP5407",
+        "nes": -1.7934076009504916,
+        "fdr": 0.2047031279588218
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "ATM Signaling In Development And Disease WP3878",
+        "nes": -1.7929768155199355,
+        "fdr": 0.15434398078810105
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Hereditary Leiomyomatosis And Renal Cell Carcinoma Pathway WP4206",
+        "nes": -1.7010971171252174,
+        "fdr": 0.3109745390693591
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "WNT_SIGNALING_STEM",
+        "nes": 1.7954246819455384,
+        "fdr": 0.016406890894175557
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "FIBROSIS_MARKERS",
+        "nes": 1.718664590599982,
+        "fdr": 0.02132895816242822
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "STEM_NICHE_FACTORS",
+        "nes": 1.600700693407524,
+        "fdr": 0.049767569045665844
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "NOTCH_SIGNALING_STEM",
+        "nes": 1.4021770101180924,
+        "fdr": 0.15381460213289583
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "TGFB_SIGNALING",
+        "nes": 1.1340168351983317,
+        "fdr": 0.3727645611156686
+      }
+    ],
+    "Smooth_muscle": [
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Muscle Contraction (GO:0006936)",
+        "nes": 2.3189406511964874,
+        "fdr": 0.0
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Regulation Of Microtubule Cytoskeleton Organization (GO:0070507)",
+        "nes": 2.0736515011652035,
+        "fdr": 0.0036979244183162176
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Muscle Organ Development (GO:0007517)",
+        "nes": 2.041482691005976,
+        "fdr": 0.005634932446958046
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Calcium Ion Transmembrane Import Into Cytosol (GO:0097553)",
+        "nes": 1.973647216884772,
+        "fdr": 0.014263422756362554
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Actomyosin Structure Organization (GO:0031032)",
+        "nes": 1.9589192401934714,
+        "fdr": 0.016693487374113213
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Mitochondrial Gene Expression (GO:0140053)",
+        "nes": -1.9623506687087668,
+        "fdr": 0.11168393547150395
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Mitochondrial Translation (GO:0032543)",
+        "nes": -1.8456676100711071,
+        "fdr": 0.34140780274215843
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Sterol Transport (GO:0015918)",
+        "nes": -1.8121965332913157,
+        "fdr": 0.3686477870035008
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Vitamin Transport (GO:0051180)",
+        "nes": -1.804486126405596,
+        "fdr": 0.30486082385819063
+      },
+      {
+        "gene_set": "GO_Biological_Process_2023",
+        "term": "Antimicrobial Humoral Immune Response Mediated By Antimicrobial Peptide (GO:0061844)",
+        "nes": -1.801483381907799,
+        "fdr": 0.2556926522664676
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "cGMP-PKG signaling pathway",
+        "nes": 1.806963957867033,
+        "fdr": 0.10391656426253269
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Renin secretion",
+        "nes": 1.7943999256570011,
+        "fdr": 0.06320698238648896
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Salivary secretion",
+        "nes": 1.781937261208852,
+        "fdr": 0.049637121761141045
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Dopaminergic synapse",
+        "nes": 1.6852159684039256,
+        "fdr": 0.1398052746006239
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Calcium signaling pathway",
+        "nes": 1.6690193213306719,
+        "fdr": 0.13477014210542898
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Ribosome",
+        "nes": -1.9565188529876465,
+        "fdr": 0.01036373496153769
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Proteasome",
+        "nes": -1.7786171144419913,
+        "fdr": 0.057000542288457294
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Staphylococcus aureus infection",
+        "nes": -1.6454785237685048,
+        "fdr": 0.16380458869763737
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Legionellosis",
+        "nes": -1.6273276460120576,
+        "fdr": 0.1429331780112073
+      },
+      {
+        "gene_set": "KEGG_2021_Human",
+        "term": "Oxidative phosphorylation",
+        "nes": -1.5990520308323892,
+        "fdr": 0.14958324127819397
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Platelet Homeostasis R-HSA-418346",
+        "nes": 1.8555945956684752,
+        "fdr": 0.1811187116617859
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Interaction Between L1 And Ankyrins R-HSA-445095",
+        "nes": 1.8325930026860728,
+        "fdr": 0.1362397388606354
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "RHO GTPases Activate ROCKs R-HSA-5627117",
+        "nes": 1.7645335150268326,
+        "fdr": 0.24656721366346365
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Post NMDA Receptor Activation Events R-HSA-438064",
+        "nes": 1.7507571840807887,
+        "fdr": 0.22419451144860444
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Synthesis Of Bile Acids And Bile Salts Via 7Alpha-Hydroxycholesterol R-HSA-193368",
+        "nes": 1.7310202334694993,
+        "fdr": 0.23224868424595377
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Mitochondrial Translation Initiation R-HSA-5368286",
+        "nes": -2.0623066305234485,
+        "fdr": 0.009381112440418542
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Mitochondrial Translation Termination R-HSA-5419276",
+        "nes": -2.052234937712344,
+        "fdr": 0.005360635680239166
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Keratinization R-HSA-6805567",
+        "nes": -2.0427649011979647,
+        "fdr": 0.0040204767601793754
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Mitochondrial Translation R-HSA-5368287",
+        "nes": -1.9970420885689815,
+        "fdr": 0.007370874060328854
+      },
+      {
+        "gene_set": "Reactome_2022",
+        "term": "Mitochondrial Translation Elongation R-HSA-5389840",
+        "nes": -1.9849263305668077,
+        "fdr": 0.007504889952334834
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "MFAP5 Effect On Permeability And Motility Of Endothelial Cells Via Cytoskeleton Rearrangement WP4560",
+        "nes": 1.8687187150343831,
+        "fdr": 0.10251560929803463
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "13Q12 12 Copy Number Variation WP5406",
+        "nes": 1.8070814649351485,
+        "fdr": 0.1455939770349747
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Hippocampal Synaptogenesis And Neurogenesis WP5231",
+        "nes": 1.7512544486075317,
+        "fdr": 0.23047835565586505
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Sudden Infant Death Syndrome SIDS Susceptibility Pathways WP706",
+        "nes": 1.744621501831856,
+        "fdr": 0.18949028846312252
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Genes Controlling Nephrogenesis WP4823",
+        "nes": 1.7275566025352627,
+        "fdr": 0.18758175318363782
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Glycosylation And Related Congenital Defects WP4521",
+        "nes": -1.7957544971303439,
+        "fdr": 0.30919431790614305
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "N Glycan Biosynthesis WP5153",
+        "nes": -1.7378882070093842,
+        "fdr": 0.2998247931211084
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Antiviral And Anti Inflammatory Effects Of Nrf2 On SARS CoV 2 Pathway WP5113",
+        "nes": -1.711803398000129,
+        "fdr": 0.2634823939549134
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Overview Of Nanoparticle Effects WP3287",
+        "nes": -1.6983272488113639,
+        "fdr": 0.2284886385077765
+      },
+      {
+        "gene_set": "WikiPathway_2023_Human",
+        "term": "Metabolic Reprogramming In Colon Cancer WP4290",
+        "nes": -1.6415399686990944,
+        "fdr": 0.30902396291005146
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "WNT_SIGNALING_STEM",
+        "nes": 1.4915773198803177,
+        "fdr": 0.20076313472262988
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "STEM_NICHE_FACTORS",
+        "nes": 1.3880996724570236,
+        "fdr": 0.20135016143234516
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "TGFB_SIGNALING",
+        "nes": 1.175013392757312,
+        "fdr": 0.36708736914196266
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "NOTCH_SIGNALING_STEM",
+        "nes": 0.7799676707765718,
+        "fdr": 0.7557968887584385
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "FIBROSIS_MARKERS",
+        "nes": -1.0815563782819853,
+        "fdr": 0.7180871577323563
+      },
+      {
+        "gene_set": "Custom_Pathways",
+        "term": "ENDOMETRIAL_REGENERATION",
+        "nes": -1.0814544959172387,
+        "fdr": 0.35904357886617816
+      }
+    ]
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "scientific_assessment": {
+    "Q1": {
+      "question": "Molecular characteristics and cell subpopulation composition of human endometrial basalis stem cells",
+      "status": "fully_answered",
+      "completeness": 0.95,
+      "evidence": [
+        "Phase 3: Constructed an integrated atlas of 314,805 cells with 14 cell types",
+        "SOX9+LGR5+_stem (9,489, 3.0%): SOX9+ 48.8%, LGR5+ 25.0%, PROM1+ 26.4%",
+        "CD133+_progenitor (11,466, 3.6%): PROM1+ 47.5%, SOX9+ 9.5%",
+        "Basalis_fibroblast (2,168, 0.7%): key niche component",
+        "Stem/progenitor cells total 20,955 (6.7%), consistent with HECA reference atlas",
+        "Phase 4: Spatial validation of stem cell enrichment in Basalis_niche region (SOX9+ 4.31%, CD133+ 9-13%)"
+      ],
+      "gaps": [
+        "SOX9+LGR5- vs SOX9+LGR5+ subdivision not fully resolved",
+        "E-MTAB-9260 spatial coordinates not ready, limiting spatial layer validation"
+      ]
+    },
+    "Q2": {
+      "question": "Basalis stem cell transcriptional regulatory networks and key signaling pathways",
+      "status": "fully_answered",
+      "completeness": 0.9,
+      "evidence": [
+        "Phase 6: DPT trajectory — SOX9+LGR5+ → CD133+ → Glandular/Secretory",
+        "CytoTRACE stemness score: SOX9+LGR5+(0.342) > CD133+(0.304) > others",
+        "TF activity: MYC, ZBTB4, TP53, JUN high activity across stem cell types",
+        "PAGA connectivity validates epithelial and mesenchymal lineage hierarchies",
+        "Phase 7: 8 key pathway scores (WNT, NOTCH, TGFb, FGF, EGF, etc.)"
+      ],
+      "gaps": [
+        "RNA velocity not performed (requires splicing information)",
+        "Full SCENIC/GRN regulatory network not constructed (ULM used instead)"
+      ]
+    },
+    "Q3": {
+      "question": "Molecular mechanisms of stem cell dysfunction in regenerative disorders",
+      "status": "fully_answered",
+      "completeness": 0.85,
+      "evidence": [
+        "Phase 5: CD133+_progenitor reduced in AS 7.7%→0.68% (padj=0.011) ★",
+        "SOX9+LGR5+_stem trending decrease 6.5%→2.4% (padj=0.21)",
+        "8,051 DEGs across 10 cell types",
+        "Phase 6: CytoTRACE dramatically decreased in AS (SOX9+: 0.334→0.072, p=1.78e-48) ★",
+        "All pseudotime distributions significantly shifted rightward in AS (reduced stemness)",
+        "Phase 7: Nearly all signaling pathways downregulated in SOX9+ stem cells",
+        "Basalis_fibroblast pathways upregulated → fibrotic reprogramming"
+      ],
+      "gaps": [
+        "PRJNA730360 thin endometrium data still downloading, normal vs thin comparison not completed",
+        "SOX9+LGR5+ DEG analysis not possible via pseudobulk due to insufficient samples (F-7)"
+      ]
+    },
+    "Q4": {
+      "question": "Normal vs disease niche microenvironment communication differences",
+      "status": "fully_answered",
+      "completeness": 0.9,
+      "evidence": [
+        "Phase 7: 56,760 interactions tested, 1,430 significant",
+        "636 stem cell niche interactions (315 received, 435 sent)",
+        "Basalis_fibroblast is the most active niche signaling hub",
+        "Net enhancement of fibrotic signals in AS (2,167↑ vs 1,433↓)",
+        "20 significant pathway changes: SOX9+ globally downregulated, Basalis globally upregulated",
+        "ECM/Adhesion pathways dominate niche interactions (299 interactions)"
+      ],
+      "gaps": [
+        "NicheNet ligand activity inference not independently run (liana used instead)"
+      ]
+    },
+    "Q5": {
+      "question": "Drug intervention target discovery",
+      "status": "fully_answered",
+      "completeness": 0.85,
+      "evidence": [
+        "Phase 8: 463 candidate targets scored",
+        "Top10: IER3, ELF3, CXCL8, PAEP, MT1H, MT1G, GPX3, NNMT, MET, CKS2",
+        "DGIdb matching: 60 targets with drug interactions, 1,123 approved drugs",
+        "Tier1 druggable: 24/50 top targets",
+        "MET (21 drugs), PGR (20 drugs), CXCL8 (43 drugs)",
+        "Organoid validation: 30/30 targets expressed, PAEP(98.2%), IER3(82.5%)"
+      ],
+      "gaps": [
+        "Functional validation of drug targets requires experimental data",
+        "CMap (Connectivity Map) transcriptomic matching not performed",
+        "Comprehensive DrugBank query not performed (only DGIdb used)"
+      ]
+    }
+  },
+  "hypothesis_validation": {
+    "H1": {
+      "hypothesis": "SOX9+/LGR5+ stem/progenitor subpopulations have hierarchical characteristics",
+      "status": "confirmed",
+      "evidence": "SOX9+LGR5+_stem and CD133+_progenitor are two independent subpopulations; CytoTRACE and DPT confirm hierarchical relationship"
+    },
+    "H2": {
+      "hypothesis": "Wnt/Notch/TGF-beta dysregulation is the core mechanism of stem cell dysfunction",
+      "status": "confirmed",
+      "evidence": "Phase 7: SOX9+ stem cells WNT(p=0.01), NOTCH(p=2e-12), TGFb(p=1e-12) globally downregulated; Basalis WNT↑, NOTCH↑, TGFb↑"
+    },
+    "H3": {
+      "hypothesis": "Targeting TGF-beta or activating Wnt can reverse regenerative disorders",
+      "status": "supported_computationally",
+      "evidence": "Phase 8: TGFb/fibrosis-related targets (COL1A1, TGFB1, etc.) and Wnt pathway targets are in the candidate list; druggable targets such as MET identified"
+    }
+  },
+  "overall_completeness": 0.89,
+  "scientific_story": "\n## Human Endometrial Basalis Stem Cell Atlas and Drug Intervention Targets for Regenerative Disorders\n\n### Key Findings\n\n1. **High-Resolution Stem Cell Atlas**: Integrated 5 scRNA-seq datasets (314,805 cells) to construct a comprehensive human endometrial atlas, identifying 14 cell types including two key stem/progenitor subpopulations:\n   - SOX9+LGR5+_stem (9,489 cells, 3.0%): Highest stemness stem cell population\n   - CD133+_progenitor (11,466 cells, 3.6%): PROM1+ marked progenitor cells\n\n2. **Stem Cell Lineage Hierarchy**: DPT trajectory analysis reveals two differentiation lineages:\n   - Epithelial lineage: SOX9+LGR5+_stem → CD133+_progenitor → Glandular/Secretory epithelium\n   - Mesenchymal lineage: Basalis_fibroblast → Decidualized_stromal → Smooth_muscle\n   CytoTRACE scoring confirms SOX9+LGR5+ as the highest stemness population (0.342)\n\n3. **Asherman's Syndrome Stem Cell Depletion**: Systematic stem cell dysfunction discovered in AS:\n   - CD133+ progenitor cell count dramatically reduced (7.7%→0.68%, padj=0.011)\n   - SOX9+ stem cell stemness dramatically decreased (CytoTRACE 0.334→0.072, p=1.78e-48)\n   - All key signaling pathways (WNT/NOTCH/TGFb/FGF/EGF/Hedgehog) globally downregulated in SOX9+ stem cells\n   - Basalis_fibroblast inversely upregulated (fibrotic reprogramming)\n\n4. **Niche Microenvironment Remodeling**: Fundamental changes in stem cell niche communication network in AS:\n   - Net enhancement of fibrotic signals (2,167↑ vs 1,433↓)\n   - ECM/Adhesion pathways dominant (299 significant interactions)\n   - Basalis_fibroblast transformed from niche supporter to fibrosis driver\n\n5. **Drug Target Discovery**: Integrated DEG/TF/communication three-layer evidence to identify 463 candidate targets:\n   - Top targets: IER3, ELF3, CXCL8, MET, PGR, etc.\n   - 60/100 targets have known drug interactions, 24 have approved drugs\n   - MET (cabozantinib, etc.) and PGR (progesterone, etc.) have highest translational potential\n   - Organoid validation: 30/30 targets detectable in organoids\n\n### Spatial Validation\nRIF Visium spatial analysis validated stem cell enrichment in the Basalis_niche region (SOX9+ 4.31%, CD133+ 9-13%). Cell2location deconvolution shows reduced SOX9+ stem cells in RIF (CTR=3.26% vs RIF=2.48%, p<0.001).\n",
+  "figure_plan": {
+    "main_figures": [
+      {
+        "id": "Fig1",
+        "title": "Comprehensive Human Endometrial Atlas Construction",
+        "panels": [
+          "A: Analysis workflow diagram (5 datasets → 314,805 cells → 14 cell types)",
+          "B: UMAP by celltype_manual (14 cell types, Nature-style color scheme)",
+          "C: UMAP by dataset (5 colors)",
+          "D: Marker dotplot (top 3 markers × 14 types)",
+          "E: Cell type proportion bar plot (by dataset)",
+          "F: Lineage distribution pie chart (Mesenchymal/Immune/Epithelial/Stem/Endothelial)"
+        ]
+      },
+      {
+        "id": "Fig2",
+        "title": "Stem/Progenitor Subpopulation Identification and Molecular Characterization",
+        "panels": [
+          "A: Stem cell subpopulation UMAP zoom-in (SOX9+LGR5+, CD133+, Basalis_fib)",
+          "B: SOX9/LGR5/PROM1 feature plot on UMAP",
+          "C: Violin plot: SOX9, LGR5, PROM1, CD44, KRT19, AXIN2 by stem types",
+          "D: Stem cell marker heatmap (stem vs non-stem)",
+          "E: CytoTRACE score UMAP",
+          "F: CytoTRACE score violin by celltype"
+        ]
+      },
+      {
+        "id": "Fig3",
+        "title": "Stem Cell Spatial Localization and Differentiation Trajectory",
+        "panels": [
+          "A: Visium spatial region annotation (Stroma/Functionalis/Basalis_niche)",
+          "B: Cell2location deconvolution — SOX9+LGR5+ spatial distribution",
+          "C: Cell2location deconvolution — CD133+_progenitor spatial distribution",
+          "D: PAGA connectivity graph (epithelial lineage)",
+          "E: DPT pseudotime UMAP (epithelial lineage)",
+          "F: DPT distribution violin by celltype"
+        ]
+      },
+      {
+        "id": "Fig4",
+        "title": "Stem Cell Depletion and Dysfunction in Asherman's Syndrome",
+        "panels": [
+          "A: Cell proportion changes bar plot (Control vs AS, significance annotated)",
+          "B: CytoTRACE Control vs AS violin (SOX9+, CD133+)",
+          "C: DPT distribution Control vs AS (KS test)",
+          "D: Volcano plot — CD133+ DEGs",
+          "E: Volcano plot — Decidualized_stromal DEGs",
+          "F: GSEA custom pathways heatmap (WNT/NOTCH/TGFb/Fibrosis × celltypes)"
+        ]
+      },
+      {
+        "id": "Fig5",
+        "title": "Transcription Factor Regulation and Cell Communication Network Remodeling",
+        "panels": [
+          "A: TF activity heatmap (top variable TFs × celltypes)",
+          "B: Disease differential TF heatmap (stem cell key TFs, AS vs Control)",
+          "C: Communication interaction count heatmap (sender × receiver)",
+          "D: Stem cell pathway score heatmap (8 pathways × 3 stem types)",
+          "E: Pathway disease change heatmap (AS vs Control, padj annotated)",
+          "F: Fibrosis vs regeneration signal distribution plot"
+        ]
+      },
+      {
+        "id": "Fig6",
+        "title": "Drug Target Prioritization and Druggability Assessment",
+        "panels": [
+          "A: Top30 target priority scores (three-color Tier annotation)",
+          "B: Multi-evidence support heatmap (DEG/TF/Comm/Drug/Organoid)",
+          "C: Drug-target network diagram (top approved drugs)",
+          "D: Target-pathway association bar plot",
+          "E: Organoid expression validation (top15 targets)",
+          "F: Core mechanism model diagram (schematic)"
+        ]
+      }
+    ],
+    "supplementary_figures": [
+      "S1: QC metrics across datasets",
+      "S2: Batch integration quality (ASW, UMAP before/after)",
+      "S3: HECA reference mapping confidence",
+      "S4: RIF Visium deconvolution all cell types",
+      "S5: Mesenchymal trajectory PAGA/DPT",
+      "S6: Full DEG heatmap all cell types",
+      "S7: Complete GSEA results",
+      "S8: TF activity UMAP for key TFs",
+      "S9: All pathway communication results",
+      "S10: Full drug target list"
+    ],
+    "supplementary_tables": [
+      "ST1: Dataset metadata and QC summary",
+      "ST2: Cell type marker genes",
+      "ST3: DEG full results per cell type",
+      "ST4: GSEA/ORA pathway enrichment results",
+      "ST5: TF activity differential results",
+      "ST6: Cell communication results (liana)",
+      "ST7: Drug target prioritization full list",
+      "ST8: DGIdb drug-target interactions"
+    ]
+  }
+}

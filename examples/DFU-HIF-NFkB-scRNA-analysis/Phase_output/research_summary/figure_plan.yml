@@ -1,0 +1,84 @@
+# ============================================================
+# figure_plan.yml — Publication Figure Plan
+# Figure design based on research findings
+# ============================================================
+
+figures:
+  Figure1:
+    title: "Study Overview and Single-cell Landscape"
+    panels:
+      a: "Study design schematic (hand-drawn/BioRender)"
+      b: "UMAP colored by cell type (11 types)"
+      c: "UMAP colored by condition (4 groups)"
+      d: "Cell type proportion stacked bar chart"
+      e: "Cell count table by condition×celltype"
+    data_source: "Phase1/clustering/"
+
+  Figure2:
+    title: "HIF1A/NFKB1 Co-expression Landscape"
+    panels:
+      a: "DotPlot: HIF1A/NFKB1/RELA/EPAS1 by cell type"
+      b: "Co-expression scatter HIF1A vs NFKB1 by cell type"
+      c: "Dual-positive cell percentage heatmap"
+      d: "UMAP: HIF pathway score"
+      e: "UMAP: NF-kB pathway score"
+      f: "HIF-NF-kB coupling scatter by condition"
+    data_source: "Phase1/expression/, Phase1/pathway/"
+
+  Figure3:
+    title: "HE-Fibroblast Subpopulation"
+    panels:
+      a: "Fibroblast sub-UMAP with HE-Fibro highlighted"
+      b: "FeaturePlot: MMP1, MMP3, CHI3L1, HIF1A"
+      c: "HE-Fibro proportion bar chart by condition"
+      d: "HE-Fibro marker DotPlot"
+    data_source: "Phase1/fibroblast/"
+
+  Figure4:
+    title: "Macrophage Polarization and HIF/NF-kB Coupling"
+    panels:
+      a: "Macrophage sub-UMAP by cluster"
+      b: "M1/M2/HIF/NFKB score FeaturePlots"
+      c: "M1 vs M2 scatter by condition"
+      d: "HIF+NFKB vs M1-M2 coupling scatter"
+      e: "Polarization state comparison: Healing vs NonHealing"
+      f: "Correlation heatmap: HIF,NFKB,M1,M2"
+    data_source: "Phase1/macrophage/, Phase4/"
+
+  Figure5:
+    title: "Hypoxia Signature in DFU Macrophages"
+    panels:
+      a: "Hypoxia signature gene heatmap (top50)"
+      b: "Hypoxia score UMAP in macrophages"
+      c: "Hypoxia score violin by condition"
+      d: "HIF+M1 subcluster (C0) characterization"
+      e: "C0 condition composition pie/bar"
+    data_source: "Phase4/"
+
+  Figure6:
+    title: "Bulk RNA-seq Multi-cohort Validation"
+    panels:
+      a: "Target gene boxplots GSE134431 (DFS vs DFU)"
+      b: "Target gene boxplots GSE199939 (Normal vs DFU)"
+      c: "HIF1A-NFKB1 correlation scatter (both cohorts)"
+      d: "M1/M2 immune scores"
+      e: "Volcano plot GSE199939 DEGs"
+    data_source: "Phase2/"
+
+  Figure7:
+    title: "Mechanistic Model"
+    panels:
+      a: "Schematic: HIF-1α/NF-κB → M1 polarization → wound healing"
+      b: "Summary statistics table"
+    type: "conceptual diagram"
+
+supplementary:
+  FigS1: "QC metrics (violin/scatter)"
+  FigS2: "Marker gene heatmap for all cell types"
+  FigS3: "Cell communication top L-R pairs"
+  FigS4: "WGCNA dendrogram and module"
+  TableS1: "Cell counts per sample"
+  TableS2: "All marker genes"
+  TableS3: "DEGs Healing vs NonHealing per celltype"
+  TableS4: "Pathway scores per celltype per condition"
+  TableS5: "Hypoxia signature genes"

@@ -1,0 +1,216 @@
+{
+  "phase": 6,
+  "epithelial_trajectory": {
+    "n_cells": 72417,
+    "cell_types": [
+      "SOX9+LGR5+_stem",
+      "CD133+_progenitor",
+      "Glandular_epithelium",
+      "Secretory_glandular"
+    ],
+    "pseudotime_medians": {
+      "SOX9+LGR5+_stem": 0.11585284769535065,
+      "CD133+_progenitor": 0.5158946514129639,
+      "Glandular_epithelium": 0.1224130392074585,
+      "Secretory_glandular": 0.12683264911174774
+    }
+  },
+  "mesenchymal_trajectory": {
+    "n_cells": 134504,
+    "cell_types": [
+      "SOX9+LGR5+_stem",
+      "Basalis_fibroblast",
+      "Decidualized_stromal",
+      "Smooth_muscle"
+    ]
+  },
+  "cytotrace": {
+    "method": "simplified gene count",
+    "score_column": "cytotrace_score"
+  },
+  "tf_analysis": {
+    "method": "decoupler ULM + CollecTRI (omnipath)",
+    "n_tfs": 760,
+    "n_regulations": 62411,
+    "celltype_top_tfs": {
+      "SOX9+LGR5+_stem": [
+        "MYC",
+        "ZBTB4",
+        "TP53",
+        "JUN",
+        "NFKB2"
+      ],
+      "CD133+_progenitor": [
+        "MYC",
+        "TP53",
+        "ZBTB4",
+        "JUN",
+        "HSF2"
+      ],
+      "Basalis_fibroblast": [
+        "MYC",
+        "ZBTB4",
+        "TP53",
+        "JUN",
+        "SRF"
+      ],
+      "Glandular_epithelium": [
+        "MYC",
+        "ZBTB4",
+        "TP53",
+        "AR",
+        "JUN"
+      ],
+      "Secretory_glandular": [
+        "MYC",
+        "JUN",
+        "ZBTB4",
+        "TP53",
+        "AR"
+      ],
+      "Decidualized_stromal": [
+        "MYC",
+        "ZBTB4",
+        "TP53",
+        "JUN",
+        "ZBED1"
+      ]
+    },
+    "disease_diff": {
+      "SOX9+LGR5+_stem": {
+        "n_sig_up": 255,
+        "n_sig_down": 352,
+        "top_up": [
+          "IRF9",
+          "ATOH7",
+          "HNF4G",
+          "HAND1",
+          "PHOX2B"
+        ],
+        "top_down": [
+          "REST",
+          "NKRF",
+          "NKX3-1",
+          "ZNF300",
+          "MYC"
+        ]
+      },
+      "CD133+_progenitor": {
+        "n_sig_up": 161,
+        "n_sig_down": 404,
+        "top_up": [
+          "ZEB2",
+          "HDAC1",
+          "TFAP2C",
+          "HOXA9",
+          "HIF3A"
+        ],
+        "top_down": [
+          "GRHL2",
+          "HOXB9",
+          "NFE2L2",
+          "RBPJ",
+          "TFAP4"
+        ]
+      },
+      "Basalis_fibroblast": {
+        "n_sig_up": 395,
+        "n_sig_down": 196,
+        "top_up": [
+          "STAT2",
+          "GATA4",
+          "NCOR2",
+          "MLXIPL",
+          "NFIC"
+        ],
+        "top_down": [
+          "HDAC1",
+          "NKX6-1",
+          "ELF4",
+          "ZNF300",
+          "DAXX"
+        ]
+      },
+      "Decidualized_stromal": {
+        "n_sig_up": 438,
+        "n_sig_down": 304,
+        "top_up": [
+          "HOXD3",
+          "HR",
+          "HTATIP2",
+          "ID1",
+          "POU3F2"
+        ],
+        "top_down": [
+          "HOPX",
+          "HSF4",
+          "PA2G4",
+          "POU3F1",
+          "PPARG"
+        ]
+      },
+      "Glandular_epithelium": {
+        "n_sig_up": 285,
+        "n_sig_down": 409,
+        "top_up": [
+          "ZEB2",
+          "ZFP42",
+          "KLF13",
+          "TCF21",
+          "SNAI2"
+        ],
+        "top_down": [
+          "KDM5A",
+          "YAP1",
+          "KAT6A",
+          "FLI1",
+          "ETV7"
+        ]
+      }
+    }
+  },
+  "disease_trajectory_comparison": [
+    {
+      "celltype": "SOX9+LGR5+_stem",
+      "ctrl_median": 0.3335006388027012,
+      "as_median": 0.0723672202956744,
+      "diff": -0.2611334185070268,
+      "pvalue": 1.7826644401858225e-48
+    },
+    {
+      "celltype": "CD133+_progenitor",
+      "ctrl_median": 0.2302427450264647,
+      "as_median": 0.1379813834641358,
+      "diff": -0.09226136156232889,
+      "pvalue": 4.706557308889478e-06
+    },
+    {
+      "celltype": "Basalis_fibroblast",
+      "ctrl_median": 0.11717466691002007,
+      "as_median": 0.15290198941412667,
+      "diff": 0.035727322504106596,
+      "pvalue": 4.142973952826375e-20
+    },
+    {
+      "celltype": "Glandular_epithelium",
+      "ctrl_median": 0.29877714911480197,
+      "as_median": 0.178682241284906,
+      "diff": -0.12009490782989596,
+      "pvalue": 3.006549757258931e-49
+    },
+    {
+      "celltype": "Secretory_glandular",
+      "ctrl_median": 0.15887935754699764,
+      "as_median": 0.14236174484394962,
+      "diff": -0.016517612703048024,
+      "pvalue": 0.01860308734314381
+    },
+    {
+      "celltype": "Decidualized_stromal",
+      "ctrl_median": 0.1964774593903997,
+      "as_median": 0.21107866398977915,
+      "diff": 0.014601204599379441,
+      "pvalue": 4.128476908157813e-126
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+# ============================================================
+# TOPIC.yml — HIF-1α/NF-κB Hypoxia-Inflammation Coupling Research Topic Configuration
+# Generated: 2026-03-08
+# Source: docs/bio_analyze.md + data/data_info.txt
+# ============================================================
+
+topic:
+  title: "HIF-1α and NF-κB Hypoxia-Inflammation Coupling in Diabetic Foot Ulcers"
+  title_zh: "Research on HIF-1alpha and NF-kappaB Hypoxia-Inflammation Coupling in Diabetic Foot Ulcers"
+  domain: "transcriptomics"
+  sub_domain: "wound_healing_immunology"
+  organism: "Homo sapiens"
+
+scientific_questions:
+  Q1:
+    question: "Which cell types are the primary carriers of HIF1A/NFKB1 co-expression? How do the activation states and associations of the two pathways differ across cell types?"
+    answered_by: [Phase1]
+  Q2:
+    question: "How does the co-expression pattern of HIF1A/NFKB1 correlate with wound healing outcomes? In which cell types do healing vs. non-healing groups show differences in pathway activity?"
+    answered_by: [Phase1, Phase2]
+  Q3:
+    question: "What are the common target genes co-regulated by HIF-1alpha and NF-kappaB? How are these co-regulated target genes dysregulated in diabetic wounds?"
+    answered_by: [Phase2, Phase4]
+  Q4:
+    question: "Is HIF/NF-kappaB dysregulation in diabetic wounds a sustained or delayed response? How does the temporal dynamic pattern differ from normal acute healing?"
+    answered_by: [Phase3]
+  Q5:
+    question: "How does HIF/NF-kappaB activation state in macrophage subpopulations correlate with M1/M2 polarization? What are the transcriptional reprogramming characteristics of macrophages under hypoxic conditions?"
+    answered_by: [Phase1, Phase4]
+
+datasets:
+  GSE165816:
+    type: "scRNA-seq"
+    platform: "10x Genomics"
+    organism: "Homo sapiens"
+    samples: 50
+    groups:
+      - "Healthy non-diabetic (foot/forearm skin)"
+      - "Diabetic without DFU (foot/forearm skin)"
+      - "Healing DFU (foot/forearm skin)"
+      - "Non-healing DFU (foot/forearm skin)"
+      - "PBMCs (all groups)"
+    files: "data/GSE165816/GSM*counts.csv.gz"
+    used_in: [Phase1, Phase4]
+
+  GSE134431:
+    type: "bulk RNA-seq"
+    platform: "Illumina NextSeq500"
+    organism: "Homo sapiens"
+    samples: 21
+    groups:
+      - "Diabetic Foot Skin (n=8)"
+      - "DFU Patients (n=13)"
+    files:
+      - "data/GSE134431/GSE134431_181016_diabetic_rna-seq_ANOVA_by_group.xlsx"
+      - "data/GSE134431/GSE134431_181016_diabetic_rna-seq_results.gene.rpkm.xlsx"
+    used_in: [Phase2]
+
+  GSE199939:
+    type: "bulk RNA-seq"
+    platform: "Illumina"
+    organism: "Homo sapiens"
+    samples: 21
+    groups:
+      - "Diabetic Foot Skin (DW, n=10)"
+      - "Non-Diabetic Foot Skin (N, n=11)"
+    files: "data/GSE199939/GSE199939_gene.tpm.matrix.annot_-_21.txt.gz"
+    used_in: [Phase2]
+
+  GSE80178:
+    type: "microarray"
+    platform: "Affymetrix GeneChip Human Gene 2.0 ST"
+    organism: "Homo sapiens"
+    samples: 12
+    groups:
+      - "Diabetic Foot Ulcer (n=6)"
+      - "Diabetic Foot Skin (n=3)"
+      - "Non-Diabetic Foot Skin (n=3)"
+    files: "data/GSE80178/GSE80178_further_processed_data.txt.gz"
+    used_in: [Phase2]
+
+  GSE28914:
+    type: "microarray"
+    platform: "Affymetrix"
+    organism: "Homo sapiens"
+    samples: 25
+    timepoints: ["Day 0 (intact)", "Day 0 (acute wound)", "Day 3", "Day 7"]
+    description: "Normal skin re-epithelialization time series"
+    files: "data/GSE28914/GSE28914_series_matrix.txt.gz"
+    used_in: [Phase3]
+
+  GSE50425:
+    type: "microarray"
+    platform: "Affymetrix"
+    organism: "Homo sapiens"
+    samples: 12
+    timepoints: ["Day 0 (intact)", "Day 14", "Day 21"]
+    description: "Late-stage healing of skin graft donor sites"
+    files: "data/GSE50425/GSE50425_series_matrix.txt.gz"
+    used_in: [Phase3]
+
+  GSE147890:
+    type: "microarray"
+    platform: "Affymetrix"
+    organism: "Homo sapiens"
+    samples: 26
+    groups:
+      - "Control_0h (n=7)"
+      - "Control_24h (n=7)"
+      - "Diabetic_0h (n=6)"
+      - "Diabetic_24h (n=6)"
+    description: "Humanized skin mouse model - diabetic wound healing impairment"
+    files: "data/GSE147890/GSE147890_series_matrix.txt.gz"
+    used_in: [Phase3]
+
+  GSE15949:
+    type: "microarray"
+    platform: "Affymetrix"
+    organism: "Homo sapiens"
+    samples: 2
+    groups: ["MDMs normoxia", "MDMs hypoxia (<0.5% O2)"]
+    description: "Macrophage hypoxia-responsive gene expression profile"
+    files: "data/GSE15949/GSE15949_series_matrix.txt.gz"
+    used_in: [Phase4]
+
+  GSE16099:
+    type: "microarray"
+    platform: "Illumina BeadArray"
+    organism: "Homo sapiens"
+    samples: 4
+    groups: ["MDMs normoxia (rep1,rep2)", "MDMs hypoxia 0.1% O2 (rep1,rep2)"]
+    description: "Macrophage hypoxia 18h gene expression"
+    files: "data/GSE16099/GSE16099_series_matrix.txt.gz"
+    used_in: [Phase4]
+
+analysis_plan_source: "docs/bio_analyze.md"
+data_info_source: "data/data_info.txt"

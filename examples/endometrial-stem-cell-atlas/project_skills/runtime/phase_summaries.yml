@@ -1,0 +1,472 @@
+# Bio-Framework Phase Summaries
+# Auto-generated and maintained by AI after each phase completes
+# Used for cross-session context recovery with /bio continue
+
+summaries:
+  - phase: 1
+    step: "env_setup"
+    status: "completed"
+    completed_at: "2026-03-05"
+    summary: |
+      Conda environment endometrium_atlas configured successfully.
+      - Environment path: /root/miniconda3/envs/endometrium_atlas
+      - Python 3.11.14 + R 4.4.3
+      - Python packages (13+): scanpy, anndata, scvi-tools, scvelo, cellrank, squidpy, cell2location, decoupler, liana, gseapy, pydeseq2, scrublet, torch(CUDA)
+      - R Conda packages (11): Seurat 5.4.0, Harmony, scater, scran, DESeq2, clusterProfiler, ComplexHeatmap, scDblFinder, slingshot, AUCell, RcisTarget
+      - R source packages (4): monocle3 1.4.26, CellChat 2.2.0, DoubletFinder 2.0.6, nichenetr 2.2.1
+    key_decisions:
+      - "Phased installation strategy: conda → pip grouped → R from source"
+      - "Removed defaults channel to resolve conda ToS issue"
+      - "monocle3 installed from GitHub tarball source (bioconda/BiocManager both unavailable)"
+      - "CytoTRACE unavailable; replaced with CellRank's CytoTRACE kernel"
+    issues_resolved:
+      - "conda defaults channel ToS error"
+      - "pip dependency conflicts (resolved by splitting into 4 groups)"
+      - "monocle3 missing dependency chain (grr, lme4, sf, spdep)"
+      - "nichenetr chained dependency (freetype linker error)"
+      - "missing g++ compiler (annoy build failed)"
+      - "GitHub API rate limiting (switched to curl tarball download)"
+
+  - phase: 1
+    step: "data_download"
+    status: "completed"
+    completed_at: "2026-03-05"
+    summary: |
+      10/11 datasets downloaded; 1 still being processed in background.
+      Downloaded datasets (~31GB):
+      - HECA_reference: 313,527 cells + 312,246 nuclei (h5ad, 23.2GB)
+      - GSE215968_Asherman: 3 h5ad files, 299,351 cells total (3.8GB)
+      - GSE216748_organoid: 49,609 cells (527MB)
+      - E-MTAB-10287_temporal: 11 samples, MTX format (1.5GB)
+      - GSE111976_menstrual: RDS + CSV format (422MB)
+      - GSE260658_uterus_atlas: 11 samples, 10x MTX format (621MB)
+      - E-MTAB-9260_visium: 4 Visium section count matrices (57MB)
+      - GSE287278_RIF_visium: 8 Visium samples with spatial information (786MB)
+      - GSE234354_staging: Bulk count matrix (14MB)
+      - GSE127918_decidual: DGE matrix (14MB)
+      Background processing:
+      - PRJNA730360_thin: SRA raw data download + kb-python processing in progress
+    key_decisions:
+      - "PRJNA730360 only has raw SRA FASTQ; using kb-python instead of Cell Ranger"
+      - "h5ad.gz files decompressed to h5ad for direct anndata loading"
+      - "GSE260658/GSE287278 TAR archives extracted to standard 10x format"
+
+  - phase: 1
+    step: "data_validation"
+    status: "completed"
+    completed_at: "2026-03-05"
+    summary: |
+      Data integrity validation complete:
+      - HECA reference atlas: h5ad readable, 313,527 + 312,246 cells
+      - GSE215968 AS: all 3 h5ad files validated (69,701 + 106,400 + 123,250 cells)
+      - GSE216748 organoid: h5ad validated (49,609 cells)
+      - E-MTAB-10287: all 11 sample MTX triplets complete
+      - GSE111976: RDS + CSV files complete
+      - GSE260658: 11 samples in 10x MTX format readable (tested endo1: 5,250 cells)
+      - E-MTAB-9260: count matrix readable; spatial coordinates downloading (F-2)
+      - GSE287278: Space Ranger standard output format with spatial coordinates
+      - GSE234354/GSE127918: Bulk data readable
+    issues_found:
+      - "F-2: E-MTAB-9260 missing Space Ranger spatial coordinate files"
+      - "F-3: h5ad.gz required decompression (resolved)"
+
+  - phase: 1
+    step: "data_organize"
+    status: "completed"
+    completed_at: "2026-03-05"
+    summary: |
+      All downloaded datasets unified into h5ad format, stored in data/organized/ directory:
+      - HECA_reference: 2 h5ad (313,527 + 312,246)
+      - GSE215968_Asherman: 3 h5ad (69,701 + 106,400 + 123,250)
+      - GSE216748_organoid: 1 h5ad (49,609)
+      - E-MTAB-10287_temporal: 11 h5ad (55,729 cells, MTX->h5ad)
+      - GSE111976_menstrual: 1 h5ad (71,032, RDS->MTX->h5ad, includes UMAP)
+      - GSE260658_uterus_atlas: 11 h5ad (71,058, 10x MTX->h5ad)
+      - GSE287278_RIF_visium: 8 h5ad (10,163 spots, with spatial coordinates)
+      - E-MTAB-9260_visium: count matrix ready; spatial coordinates downloading
+      - bulk: 3 symlinked files (GSE234354 + GSE127918)
+      Total: ~1,182,214 single cells/nuclei + 10,163 spatial spots
+    key_decisions:
+      - "GSE111976: RDS file is actually a dgCMatrix sparse matrix; exported to MTX via R then converted to h5ad in Python"
+      - "E-MTAB-10287: cells_tsv contains header row; read with skiprows=1"
+      - "GSE287278: manually loaded 10x MTX + tissue_positions.csv to construct Visium h5ad"
+    pending:
+      - "PRJNA730360: SRA download and kb-python processing in progress (background)"
+      - "E-MTAB-9260: Space Ranger spatial coordinate download in progress (background)"
+
+  - phase: 2
+    step: "all_steps"
+    status: "completed"
+    completed_at: "2026-03-05"
+    summary: |
+      Phase 2 quality control and preprocessing complete. Total 832,750 usable cells.
+
+      Datasets using original QC (validated and accepted):
+      - HECA_cells: 313,527 cells (mt%=0.1%, genes=3048)
+      - GSE215968_AS_vs_WOI: 106,400 cells (mt%=6.4%, genes=2350)
+      - GSE215968_AS_pre_vs_post: 123,250 cells (mt%=7.0%)
+      - GSE215968_CD133: 69,701 cells (mt%=5.2%, genes=1689)
+      - GSE216748_organoid: 49,609 cells (mt%=8.1%)
+
+      Newly processed datasets (full QC pipeline):
+      - GSE111976: 71,032 → 61,503 cells (86.6%, scrublet 0.2%)
+        Normalization + 3000 HVG + 50 PCs, 22 clusters (leiden0.5)
+      - E-MTAB-10287: 55,729 → 49,550 cells (88.9%, scrublet 3.4%)
+        Normalization + 3000 HVG + 50 PCs, 25 clusters (leiden0.5)
+      - GSE260658: 71,058 → 59,210 cells (83.3%, scrublet 1.3%)
+        Normalization + 3000 HVG + 50 PCs, 22 clusters (leiden0.5)
+        Tissue layers: myometrium 32K, endometrium 18K, decidua 10K
+    key_decisions:
+      - "QC parameters: mt%<20, 200<genes<8000, UMI>500, min_cells=3"
+      - "GSE215968/GSE216748 already QC'd by original authors (mt<25%); adopted directly"
+      - "Scrublet doublet detection run per sample independently, not on merged data"
+      - "HVG selected using seurat_v3 flavor (based on counts layer)"
+      - "Preprocessing: log1p(10k) → 3000 HVG → scale → 50 PCs → UMAP"
+    outputs:
+      - "Phase_output/phase2_qc/GSE111976_qc.h5ad (61,503 cells)"
+      - "Phase_output/phase2_qc/E-MTAB-10287_qc.h5ad (49,550 cells)"
+      - "Phase_output/phase2_qc/GSE260658_qc.h5ad (59,210 cells)"
+      - "Phase_output/phase2_qc/phase2_report.json"
+
+  - phase: 3
+    step: "batch_integration + joint_clustering"
+    status: "completed"
+    completed_at: "2026-03-06"
+    summary: |
+      5 datasets integrated (Harmony, GPU-accelerated, 3-round convergence).
+
+      Integrated datasets:
+      - GSE215968_AS_vs_WOI: 106,400 cells (Asherman's syndrome vs WOI control)
+      - GSE215968_CD133: 69,701 cells (CD133+ stem/progenitor cell-enriched)
+      - GSE111976: 61,503 cells (normal menstrual cycle)
+      - E-MTAB-10287: 49,550 cells (endometrial temporal dynamics)
+      - GSE260658: 27,651 cells (endometrium + decidua subset, myometrium excluded)
+      Total: 314,805 cells x 18,365 common genes
+
+      Excluded:
+      - GSE215968_AS_pre_vs_post: post-treatment samples introduce confounding factors
+      - GSE216748_organoid: in vitro data reserved for Phase 8 validation
+      - HECA reference atlas: used in reference_mapping step
+
+      Processing pipeline:
+      log1p(10K) normalization → 3000 HVG (dataset-aware) → 50 PCs (randomized SVD) → Harmony (GPU) → 30-neighbors → UMAP → Leiden multi-resolution
+
+      Leiden clustering:
+      - res=0.5: 18 clusters
+      - res=0.8: 24 clusters
+      - res=1.0: 29 clusters (primary clustering)
+      - res=1.5: 37 clusters
+
+      Integration quality:
+      - ASW_batch = 0.024 (near 0, good batch mixing)
+      - Cluster mixing score = 0.565
+      - 5 dataset-dominant clusters (CD133-enriched and AS disease-specific) reflect biological differences
+    key_decisions:
+      - "GSE215968 X is log-normalized (Seurat LogNormalize); raw counts back-computed via expm1 (scale=10000), error <0.3 verified"
+      - "GSE260658 myometrium excluded; only endometrium+decidua retained (27,651 cells)"
+      - "AS_pre_vs_post excluded to avoid treatment confounding; organoid excluded to maintain in vivo data consistency"
+      - "HVG selected using seurat_v3 flavor, dataset-aware selection"
+      - "PCA computed only on 3000 HVG subset with scale+PCA (avoids full-genome densification; memory reduced from 74GB to 38GB)"
+      - "Randomized SVD used instead of arpack; PCA time reduced from >30min to ~1min"
+      - "Harmony GPU-accelerated; 3-round convergence in only 7 seconds"
+    outputs:
+      - "Phase_output/phase3_integration/integrated_harmony.h5ad (314,805 cells, 25GB)"
+      - "Phase_output/phase3_integration/integration_stats.json"
+      - "Phase_output/phase3_integration/integration_quality.json"
+
+  - phase: 3
+    step: "reference_mapping + manual_annotation + stem_cell_subtyping + atlas_visualization"
+    status: "completed"
+    completed_at: "2026-03-06"
+    summary: |
+      HECA reference atlas label transfer + marker gene fine annotation complete.
+
+      Reference Mapping (HECA → Query):
+      - Method: KNN label transfer (k=30, distance-weighted)
+      - Reference: HECA (Nature Genetics 2024, 313,527 cells, 36 cell types)
+      - Common genes: 15,874
+      - Mean celltype confidence: 0.866, lineage confidence: 0.994
+      - 94% of cells with confidence >= 0.5
+
+      Fine annotation results (14 cell types):
+      - Decidualized_stromal: 96,224 (30.6%)
+      - Lymphoid_immune: 57,804 (18.4%)
+      - Secretory_glandular: 42,217 (13.4%)
+      - Smooth_muscle: 26,623 (8.5%)
+      - NKT_cells: 21,423 (6.8%)
+      - Macrophages: 15,411 (4.9%)
+      - Lymphatic_endothelium: 14,458 (4.6%)
+      - CD133+_progenitor: 11,466 (3.6%) *
+      - SOX9+LGR5+_stem: 9,489 (3.0%) *
+      - Glandular_epithelium: 9,245 (2.9%)
+      - Erythrocytes: 4,866 (1.5%)
+      - B_cells: 2,847 (0.9%)
+      - Basalis_fibroblast: 2,168 (0.7%)
+      - Pericyte: 564 (0.2%)
+
+      Stem/progenitor cell subpopulations (total 20,955 cells, 6.7%):
+      - SOX9+LGR5+_stem (9,489): SOX9+ 48.8%, LGR5+ 25.0%, PROM1+ 26.4%
+      - CD133+_progenitor (11,466): SOX9+ 9.5%, LGR5+ 13.0%, PROM1+ 47.5%
+      - Primarily from: GSE111976 (normal), GSE215968_AS (disease), E-MTAB-10287 (temporal)
+
+      Lineage distribution:
+      Mesenchymal 39.9% | Immune 31.0% | Epithelial 16.3% | Stem 6.7% | Endothelial 4.6%
+    key_decisions:
+      - "HECA label transfer initially identified only 23 SOX9_basalis cells (F-4); marker-based annotation corrected to 9,489 SOX9+LGR5+ stem cells"
+      - "CD133+_progenitor is distinct from SOX9+ subpopulation; PROM1 expression 47.5% but SOX9 only 9.5%"
+      - "Basalis_fibroblast (2,168) consistent with HECA; key component of stem cell niche"
+      - "Lineage distribution consistent with HECA reference: Mesenchymal ~40%, Immune ~31%, Epithelial ~23%"
+    outputs:
+      - "Phase_output/phase3_integration/integrated_harmony.h5ad (with all annotations)"
+      - "Phase_output/phase3_integration/reference_mapping_stats.json"
+      - "Phase_output/phase3_integration/annotation_details.json"
+      - "Phase_output/phase3_integration/figures/ (4 UMAP plots + dotplot)"
+
+  - phase: 4
+    step: "spatial_qc + deconvolution"
+    status: "completed"
+    completed_at: "2026-03-06"
+    summary: |
+      GSE287278 RIF Visium spatial transcriptomics analysis complete (8 samples: CTR1-4, RIF1-4).
+
+      Step 1 - Spatial QC and preprocessing:
+      - 10,163 → 10,135 spots (99.7%), 14,359 common genes
+      - QC thresholds: UMI>=500, genes>=200, mt%<=25, min_cells>=5
+      - Harmony batch correction → UMAP → Leiden clustering (0.3/0.5/0.8/1.0)
+      - 3000 HVG (seurat_v3), 30 PCs
+
+      Step 2 - Spatial region annotation:
+      - Stroma: 6,480 spots (63.9%) -- clusters 0,1,4,5
+      - Functionalis: 3,423 spots (33.8%) -- clusters 2,3
+      - Basalis_niche: 232 spots (2.3%) -- cluster 6
+      - Automated annotation based on 8 marker gene set scores
+
+      Step 3 - Cell2location deconvolution:
+      - Reference: Phase 3 integrated atlas (60,445 cells sampled, 14 cell types)
+      - Common genes: 13,017
+      - NB regression: 100 epochs (ELBO ~4.54e+8)
+      - Spatial model: 5,000 epochs (ELBO ~7.97e+7)
+
+      Key findings:
+      - SOX9+LGR5+_stem: decreased in RIF (CTR=3.26%, RIF=2.48%, p<0.001)
+      - CD133+_progenitor: increased in RIF (CTR=3.47%, RIF=5.86%, p<0.001)
+      - Basalis_fibroblast: decreased in RIF (CTR=12.91%, RIF=9.84%)
+      - Stem cell enrichment in Basalis_niche region: SOX9+LGR5+ (4.31%), CD133+ (9.46%-13.34%)
+    key_decisions:
+      - "Cell2location used instead of RCTD: Bayesian model better suited for sparse Visium data"
+      - "Reference data sampled at max 5000/type (60,445 cells) to balance computational efficiency and representativeness"
+      - "NB regression 100 epochs (originally 250; ELBO converged at ~50 epochs)"
+      - "Spatial model 5000 epochs (originally 30000; ELBO converged at ~3000)"
+      - "Lightning 2.6.1 requires accelerator='gpu' instead of use_gpu=True"
+      - "obs_names_make_unique() resolves duplicate barcode issues across samples"
+      - "E-MTAB-9260 spatial coordinates not ready (F-2); only GSE287278 processed"
+    outputs:
+      - "Phase_output/phase4_spatial/spatial_merged_qc.h5ad (10,135 spots, 756MB)"
+      - "Phase_output/phase4_spatial/spatial_deconvolution.h5ad (742MB)"
+      - "Phase_output/phase4_spatial/deconvolution_proportions.csv"
+      - "Phase_output/phase4_spatial/phase4_report.json"
+      - "Phase_output/phase4_spatial/figures/ (11 figures)"
+
+  - phase: 5
+    step: "proportion_deg + pathway_enrichment"
+    status: "completed"
+    completed_at: "2026-03-06"
+    summary: |
+      Disease comparison differential analysis complete (WOI Control vs AS + RIF vs CTR).
+
+      Primary comparison: WOI Control (66,064) vs AS (40,336) -- same study GSE215968
+      Sample counts: WOI 12, AS 16 (after filtering samples with <50 cells)
+
+      Significant cell proportion changes (AS vs WOI, padj<0.05):
+      - CD133+_progenitor: 7.7%->0.68% downward (log2FC=-3.51, padj=0.011) *
+      - Secretory_glandular: 16.1%->1.8% downward (log2FC=-3.13, padj=0.025)
+      - NKT_cells: 4.2%->19.1% upward (log2FC=+2.18, padj=0.035)
+      - Macrophages: 0.5%->6.8% upward (log2FC=+3.71, padj=0.035)
+      - SOX9+LGR5+_stem trend: 6.5%->2.4% down (padj=0.21)
+
+      Pseudobulk DEG (PyDESeq2, padj<0.05, |log2FC|>0.25):
+      - Decidualized_stromal: 3,875 (1,698 up + 2,177 down) -- most affected
+      - Lymphatic_endothelium: 1,533 (766 up + 767 down)
+      - Smooth_muscle: 729 (476 up + 253 down)
+      - Macrophages: 542 (271 up + 271 down)
+      - Glandular_epithelium: 509 (219 up + 290 down)
+      - NKT_cells: 331 (103 up + 228 down)
+      - CD133+_progenitor: 223 (14 up + 209 down) * predominantly downregulated
+      - Lymphoid_immune: 207 (83 up + 124 down)
+      - Secretory_glandular: 91 (89 up + 2 down)
+      - Basalis_fibroblast: 11 (7 up + 4 down)
+      Total: 3,726 up + 4,325 down = 8,051 DEGs
+
+      GSEA pathway analysis (10 cell types x 5 gene sets):
+      - GO/KEGG/Reactome/WikiPathway + custom stem cell pathways
+      - Decidualized_stromal: 426 significant pathways
+      - Macrophages: 442 significant pathways
+      - Lymphatic_endothelium: 385 significant pathways
+      - Custom pathway heatmap shows Wnt/Notch/TGF-beta/fibrosis changes across cell types
+
+      RIF comparison (Visium deconvolution, 4 CTR vs 4 RIF):
+      - Glandular_epithelium: increased in RIF (log2FC=+2.62)
+      - NKT/Macrophages/Smooth_muscle: decreased in RIF
+      - Statistical power limited (n=4/group)
+    key_decisions:
+      - "Primary comparison selected as WOI Control vs AS (same study GSE215968, reduces batch effects)"
+      - "AS_CD133 excluded (CD133+-sorted data; proportions not comparable)"
+      - "SOX9+LGR5+_stem pseudobulk analysis skipped due to insufficient sample count (F-7)"
+      - "GSEA pre-ranked using rank_score = -log10(p) x sign(log2FC)"
+      - "6 custom stem cell/pathway gene sets defined (Wnt/Notch/TGF-beta/fibrosis/regeneration/niche)"
+    outputs:
+      - "Phase_output/phase5_disease/deg_*.csv (DEG tables for 10 cell types)"
+      - "Phase_output/phase5_disease/gsea_*.csv (GSEA results)"
+      - "Phase_output/phase5_disease/ora_*.csv (ORA results)"
+      - "Phase_output/phase5_disease/figures/ (16 figures)"
+      - "Phase_output/phase5_disease/phase5_step1_report.json"
+      - "Phase_output/phase5_disease/phase5_step2_pathway_report.json"
+
+  - phase: 6
+    step: "trajectory_grn"
+    status: "completed"
+    completed_at: "2026-03-06"
+    summary: |
+      Stem cell fate trajectory and transcription factor regulatory network analysis complete.
+
+      Step 1 - Trajectory analysis:
+      Epithelial lineage DPT (72,417 cells): SOX9+LGR5+_stem → CD133+_progenitor → Glandular/Secretory
+      - SOX9+LGR5+_stem pseudotime median=0.116 (earliest); CD133+_progenitor=0.516
+      - PAGA connectivity confirmed stem → progenitor → differentiated epithelium lineage relationship
+
+      Mesenchymal lineage DPT (134,504 cells): Basalis_fibroblast → Decidualized_stromal → Smooth_muscle
+      - Basalis_fibroblast earliest pseudotime, supporting its role as niche stem cell
+
+      CytoTRACE stemness score (simplified version, based on gene detection count):
+      - SOX9+LGR5+_stem highest (0.342), confirming stem cell identity
+      - CD133+_progenitor (0.304), Basalis_fibroblast (0.290)
+      - SOX9+LGR5+ CytoTRACE drastically decreased in AS (0.334 → 0.072, p=1.78e-48) *
+
+      Disease trajectory comparison (KS test, all p<0.05):
+      - SOX9+LGR5+: ctrl_median=0.334, AS_median=0.072, difference=-0.261
+      - CD133+_progenitor: ctrl=0.230, AS=0.138, difference=-0.092
+      - Glandular_epithelium: ctrl=0.299, AS=0.179, difference=-0.120
+
+      Step 2 - TF activity inference (decoupler ULM + CollecTRI):
+      - 760 TF activities inferred, 62,411 regulatory relationships
+      - Top TFs: MYC, ZBTB4, TP53, JUN show high activity across cell types
+
+      Disease-differential TFs (AS vs Control, padj<0.05):
+      - SOX9+LGR5+_stem: 255 up + 352 down (REST/MYC downregulated, IRF9 upregulated)
+      - CD133+_progenitor: 161 up + 404 down (GRHL2/RBPJ downregulated, ZEB2 upregulated)
+      - Basalis_fibroblast: 395 up + 196 down (STAT2/GATA4 upregulated)
+      - Decidualized_stromal: 438 up + 304 down
+      - Glandular_epithelium: 285 up + 409 down (ZEB2/SNAI2 upregulated → EMT)
+    key_decisions:
+      - "CellRank CytoTRACE kernel requires 'Ms' layer which is unavailable; switched to simplified gene detection count version"
+      - "decoupler 2.x API: dc.mt.ulm(); results stored in obsm['score_ulm']"
+      - "CollecTRI via omnipath (genesymbols=True); filtered sources starting with COMPLEX"
+      - "PAGA + DPT used instead of Monocle3/RNA velocity (no additional layers or splicing information required)"
+    outputs:
+      - "Phase_output/phase6_trajectory/epithelial_trajectory.h5ad (72,417 cells)"
+      - "Phase_output/phase6_trajectory/mesenchymal_trajectory.h5ad (134,504 cells)"
+      - "Phase_output/phase6_trajectory/tf_diff_*.csv (TF differential tables for 5 cell types)"
+      - "Phase_output/phase6_trajectory/phase6_report.json"
+      - "Phase_output/phase6_trajectory/figures/ (10+ figures: PAGA, DPT, CytoTRACE, TF heatmap, UMAP)"
+
+  - phase: 7
+    step: "cell_communication"
+    status: "completed"
+    completed_at: "2026-03-06"
+    summary: |
+      Cell-cell communication and microenvironment analysis complete (liana rank_aggregate multi-method consensus).
+
+      Step 1 - Global communication analysis:
+      - Method: liana rank_aggregate (CellChat + CellPhoneDB + NATMI consensus scoring)
+      - Resource: consensus (4,624 LR pairs), 1000 permutations
+      - 56,760 interaction tests, 1,430 significant (magnitude_rank<0.01)
+      - Downsampled: max 5000 cells per type
+
+      Stem cell niche interactions:
+      - 636 significant interactions (315 received + 435 sent)
+      - SOX9+LGR5+_stem: 20 autocrine + 94 paracrine; primarily from Basalis_fibroblast/Decidualized_stromal
+      - CD133+_progenitor: 1 autocrine + 65 paracrine (primarily paracrine-dependent)
+      - Basalis_fibroblast: most active niche signaling hub (250 outgoing signals)
+      - ECM/Adhesion pathways dominant (299 interactions), WNT (28), Inflammation (24), EGF (16)
+
+      Disease-differential communication (Control vs AS):
+      - 33,721 common interactions; 11,746 enhanced in AS, 9,423 reduced in AS
+      - Fibrosis signals: 2,167 enhanced vs 1,433 reduced in AS (net enhancement)
+      - Regeneration signals: 1,233 enhanced vs 1,105 reduced in AS
+
+      Step 2 - Pathway in-depth analysis:
+      20 significantly changed pathways (padj<0.05):
+      - SOX9+LGR5+_stem: all pathways downregulated (WNT/NOTCH/TGFb/EGF/FGF/Hedgehog/Cytokine/Chemokine) *
+      - CD133+_progenitor: Chemokine downward, FGF down, EGF down; but NOTCH up, WNT up
+      - Basalis_fibroblast: pathways upregulated (NOTCH up, WNT up, Hedgehog up, TGFb up, EGF up) * fibrotic reprogramming
+
+      Top ligands: TIMP1, LGALS1, LUM, VIM, COL1A1 (ECM/adhesion dominant)
+      Drug target candidates: ligands CXCL8, LGALS9, SEMA4D, PDGFC, DKK3; receptors SDC2, MET, PDGFRA
+    key_decisions:
+      - "liana Python used instead of R CellChat/NicheNet; multi-method consensus scoring is more robust"
+      - "Downsampled to max 5000 cells per type to balance computational efficiency"
+      - "WOI Control vs AS as primary comparison (same study GSE215968)"
+      - "8 key pathway gene sets: WNT, NOTCH, TGFb_BMP, FGF, EGF, Hedgehog, Cytokine, Chemokine"
+    outputs:
+      - "Phase_output/phase7_communication/liana_global_results.csv (56,760 interactions)"
+      - "Phase_output/phase7_communication/liana_control/as_results.csv (grouped results)"
+      - "Phase_output/phase7_communication/stem_niche_interactions.csv (636 interactions)"
+      - "Phase_output/phase7_communication/disease_diff_interactions.csv"
+      - "Phase_output/phase7_communication/drug_target_candidates_from_comm.json"
+      - "Phase_output/phase7_communication/figures/ (8 figures)"
+      - "Phase_output/phase7_communication/phase7_report.json"
+
+  - phase: 8
+    step: "drug_targets"
+    status: "completed"
+    completed_at: "2026-03-06"
+    summary: |
+      Drug target discovery and validation complete.
+
+      Target prioritization scoring (463 candidates):
+      Scoring criteria: DEG evidence x cell type count + TF regulation + communication ligand/receptor + stemness genes + fibrosis genes
+
+      Top 10 targets:
+      1. IER3 (score=25): 8 cell type DEG, stem cell-specific DEG *
+      2. ELF3 (score=23): 5 cell type DEG + 5 cell type TF differential, epithelial transcription factor
+      3. CXCL8 (score=23): 6 cell type DEG, communication ligand, 43 approved drugs * druggable
+      4. PAEP (score=22): maxLFC=11.25, 98% expression in organoids *
+      5. MT1H (score=22): metallothionein
+      6. MT1G (score=22): metallothionein
+      7. GPX3 (score=22): antioxidant enzyme
+      8. NNMT (score=21): nicotinamide metabolism, stem cell DEG
+      9. MET (score=21): HGF receptor, 21 approved drugs, 50% organoid expression ** druggable
+      10. CKS2 (score=21): cell cycle-related
+
+      DGIdb drug matching:
+      - 60/100 targets have drug interactions
+      - 3,030 drug-target pairs, 2,289 drugs
+      - 1,123 approved drugs (52 targets)
+
+      Druggability stratification (top 50):
+      - Tier1 (approved drugs): 24 targets
+      - Tier2 (investigational stage): 5 targets
+      - Tier3 (novel targets): 21 targets
+
+      Key druggable targets:
+      - MET: cabozantinib, crizotinib, tepotinib and 21 other approved drugs
+      - PGR: letrozole, progesterone and 20 other approved drugs
+      - CXCL8: 43 approved drugs (anti-inflammatory direction)
+      - NNMT: niacin
+
+      Organoid validation (GSE216748, 49,609 cells):
+      - 30/30 top targets expressed in organoids
+      - PAEP (98.2%), IER3 (82.5%), LAMB3 (75.2%), ELF3 (71.7%) highly expressed
+      - MET (50.3%) suitable for organoid drug screening
+    key_decisions:
+      - "Multi-phase evidence integration scoring (Phase 5 DEG + Phase 6 TF + Phase 7 communication)"
+      - "DGIdb GraphQL API batch query (top 100 targets)"
+      - "Three-tier druggability classification: Tier1/2/3"
+      - "Organoid data used for independent target expression validation (not included in primary analysis)"
+    outputs:
+      - "Phase_output/phase8_drug_targets/target_prioritization.csv (463 targets)"
+      - "Phase_output/phase8_drug_targets/drug_gene_interactions.csv (3,030 pairs)"
+      - "Phase_output/phase8_drug_targets/full_target_list.csv"
+      - "Phase_output/phase8_drug_targets/organoid_validation.csv"
+      - "Phase_output/phase8_drug_targets/phase8_report.json"
+      - "Phase_output/phase8_drug_targets/figures/ (4 figures)"

@@ -1,0 +1,213 @@
+# TOPIC Configuration — Human Endometrial Basalis Stem Cell Atlas Construction and Drug Intervention Target Discovery for Regenerative Disorders
+#
+# Version: 1.0.0
+# Created: 2026-03-05
+
+# =============================================================================
+# Project Metadata
+# =============================================================================
+
+metadata:
+  project_name: "Human Endometrial Basalis Stem Cell Atlas Construction and Drug Intervention Target Discovery for Regenerative Disorders"
+  created_date: "2026-03-05"
+  author: "User"
+  research_type: "basic_research"
+  quality_requirements: "high"
+
+# =============================================================================
+# Scientific Questions
+# =============================================================================
+
+scientific_questions:
+  - Q1: "What are the molecular characteristics and cell subpopulation composition of human endometrial basalis stem cells? How to construct a high-resolution basalis stem cell atlas?"
+  - Q2: "What are the transcriptional regulatory networks and key signaling pathways of basalis stem cells during normal endometrial regeneration?"
+  - Q3: "What are the functional abnormalities and molecular mechanisms of basalis stem cells in regenerative disorders (Asherman's syndrome, thin endometrium)?"
+  - Q4: "How do the cell-cell communication networks of the basalis stem cell microenvironment (niche) differ between normal and regenerative disorder conditions?"
+  - Q5: "Based on differential signaling pathways and transcription factor networks, which potential drug intervention targets can be discovered to promote endometrial regeneration?"
+
+# =============================================================================
+# Hypotheses
+# =============================================================================
+
+hypotheses:
+  - H1: "The endometrial basalis layer contains stem/progenitor cell subpopulations with SOX9+/LGR5- characteristics, with hierarchical spatial distribution and transcriptional features"
+  - H2: "In regenerative disorders, dysregulation of key signaling pathways including Wnt, Notch, and TGF-beta is the core mechanism driving stem cell dysfunction"
+  - H3: "Drugs targeting pro-fibrotic signaling pathways (e.g., TGF-beta) or activating stem cell self-renewal pathways (e.g., Wnt) can reverse the regenerative disorder phenotype"
+
+# =============================================================================
+# Biological Context
+# =============================================================================
+
+biological_context:
+  organism: "Homo sapiens"
+  tissue: "Endometrium, with focus on the basalis layer"
+  condition: "Normal menstrual cycle vs regenerative disorders (Asherman's syndrome, thin endometrium)"
+  key_cell_types:
+    - "SOX9+LGR5+ surface epithelial stem cells"
+    - "SOX9+LGR5- basalis glandular stem/progenitor cells"
+    - "SOX9+ proliferating progenitor cells"
+    - "Ciliated epithelial cells"
+    - "Secretory epithelial cells"
+    - "Stromal fibroblasts"
+    - "Decidualized stromal cells"
+    - "Vascular endothelial cells"
+    - "Uterine natural killer cells (uNK)"
+    - "Macrophages"
+    - "Smooth muscle cells"
+
+# =============================================================================
+# Analysis Principles
+# =============================================================================
+
+analysis_principles:
+  - "Multi-dataset integration analysis to construct a high-resolution stem cell atlas"
+  - "Combined single-cell and spatial transcriptomics analysis for spatial localization validation"
+  - "Disease-normal comparative analysis to uncover molecular mechanisms of regenerative disorders"
+  - "Drug target discovery-oriented, focusing on druggable pathways and targets"
+  - "Prioritize biological significance over technical details"
+  - "Emphasize cross-dataset consistency validation of results"
+
+# =============================================================================
+# Dataset Configuration
+# =============================================================================
+
+datasets:
+  # Core datasets
+  core:
+    - id: "HECA_integrated"
+      description: "Human Endometrial Cell Atlas (integrated reference atlas)"
+      source: "Nature Genetics 2024, doi:10.1038/s41588-024-01873-w"
+      data_type: "scRNA-seq + snRNA-seq + Spatial Transcriptomics (integrated)"
+      samples: "313,527 single cells (63 women) + 312,246 single-nucleus transcriptomes"
+      role: "Reference atlas, SOX9/LGR5 stem cell subpopulation annotation"
+
+    - id: "GSE215968_GSE216748"
+      accession: ["GSE215968", "GSE216748"]
+      description: "Asherman's syndrome endometrial single-cell atlas"
+      source: "Santamaria et al. Nature Communications 2023"
+      data_type: "scRNA-seq"
+      samples: "9 AS cases + 10 secretory phase controls + 12 WOI controls + organoids"
+      role: "Core disease dataset for regenerative disorders"
+
+    - id: "E-MTAB-9260_10287"
+      accession: ["E-MTAB-9260", "E-MTAB-10287"]
+      description: "Human endometrial spatiotemporal dynamics atlas"
+      source: "Garcia-Alonso et al. Nature Genetics 2021"
+      data_type: "scRNA-seq + 10x Visium spatial transcriptomics"
+      samples: "5 patients, 11 samples + 2 full-thickness uterine Visium sections"
+      role: "Spatial validation, basalis/functionalis layer distinction"
+
+  # Important supplementary datasets
+  important:
+    - id: "PRJNA730360"
+      accession: "PRJNA730360"
+      description: "Thin endometrium single-cell transcriptome"
+      source: "Lv et al. PNAS 2022"
+      data_type: "scRNA-seq"
+      samples: "3 normal vs 3 thin endometrium"
+      role: "Alternative regenerative disorder disease model"
+
+    - id: "GSE111976"
+      accession: "GSE111976"
+      description: "Human endometrial menstrual cycle single-cell atlas"
+      source: "Wang et al. Nature Medicine 2020"
+      data_type: "scRNA-seq"
+      samples: "27 donors, 73,181 cells"
+      role: "Normal baseline reference atlas"
+
+    - id: "GSE287278"
+      accession: "GSE287278"
+      description: "Recurrent implantation failure endometrial spatial transcriptome"
+      source: "Scientific Data 2025"
+      data_type: "10x Visium"
+      samples: "4 normal + 4 RIF"
+      role: "Spatial microenvironment characterization"
+
+    - id: "GSE260658"
+      accession: "GSE260658"
+      description: "Human uterine cell atlas"
+      source: "GEO"
+      data_type: "scRNA-seq"
+      samples: "Full-thickness uterine cell atlas"
+      role: "Whole-uterus reference annotation, microenvironment extended analysis"
+
+  # Supplementary datasets
+  supplementary:
+    - id: "GSE234354"
+      accession: "GSE234354"
+      description: "Endometrial molecular staging Bulk RNA-seq"
+      source: "Nature Communications 2023"
+      data_type: "Bulk RNA-seq"
+      samples: "236 endometrial biopsies"
+      role: "Cyclic gene expression dynamics reference"
+
+    - id: "GSE127918"
+      accession: "GSE127918"
+      description: "Endometrial stromal cell decidualization transcriptome"
+      source: "GEO"
+      data_type: "RNA-seq"
+      samples: "Decidualized/non-decidualized stromal cells"
+      role: "Decidualization gene signature reference"
+
+# =============================================================================
+# Exploration Configuration
+# =============================================================================
+
+exploration_config:
+  strategy: "comprehensive"
+  enable_learning: true
+  quality_thresholds:
+    clustering:
+      silhouette_score:
+        poor: 0.30
+        good: 0.60
+        excellent: 0.75
+    annotation:
+      annotation_confidence:
+        poor: 0.65
+        good: 0.90
+
+# =============================================================================
+# Data Quality Review Configuration
+# =============================================================================
+
+quality_review:
+  enabled: true
+  auto_triggers:
+    quality_requirements:
+      enabled: true
+      trigger_if: ["high", "clinical_grade"]
+    research_type:
+      enabled: true
+      trigger_if: ["clinical_translation", "method_comparison"]
+    warning_threshold:
+      enabled: true
+      threshold: 2
+    multi_batch:
+      enabled: true
+      threshold: 5
+  interaction:
+    auto_proceed_on_warnings: true
+    delay_seconds: 5
+
+# =============================================================================
+# Termination Conditions
+# =============================================================================
+
+termination_conditions:
+  - "Successfully construct a high-resolution basalis stem cell atlas with spatial validation"
+  - "Identify differential pathways and candidate targets between normal and regenerative disorder conditions"
+  - "Candidate drug targets are supported by literature evidence and biological plausibility"
+  - "All scientific questions are adequately answered"
+
+# =============================================================================
+# Publication Target
+# =============================================================================
+
+publication_target:
+  target_journal: "cell_reports"
+  study_type: "computational"
+  data_deposition:
+    repository: "geo"
+    accession_number: null
+    code_repository: null
