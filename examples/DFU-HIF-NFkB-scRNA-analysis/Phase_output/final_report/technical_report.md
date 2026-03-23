@@ -31,9 +31,9 @@
 
 Diabetic foot ulcers (DFUs) represent a severe complication of diabetes mellitus characterized by chronic, non-healing wounds with significant morbidity and mortality. The molecular interplay between hypoxia signaling (HIF-1α) and inflammatory cascades (NF-κB) in the wound microenvironment remains incompletely understood. Here, we present a comprehensive integrative analysis combining single-cell RNA sequencing (scRNA-seq) of 86,137 cells from 50 DFU and control skin samples with bulk RNA-seq data from three independent cohorts, two macrophage hypoxia datasets, and three temporal wound-healing datasets.
 
-Our analysis reveals a paradigm-shifting finding: healing DFU wounds are characterized by M1-polarized macrophage dominance rather than the conventionally assumed M2 anti-inflammatory state. NF-κB signaling is the primary driver of M1 polarization (Spearman rho = 0.819), with HIF-1α acting as a synergistic co-activator (rho = 0.340). The HIF-1α/NF-κB coupling axis strongly correlates with the M1-M2 polarization balance (rho = 0.721). We identify a hypoxia-responsive, extracellular matrix-remodeling fibroblast subpopulation (HE-Fibroblasts: MMP1+/MMP3+/HIF1A+) that is 4.2-fold enriched in healing versus non-healing wounds. In macrophages, hypoxia scoring reveals dramatically higher hypoxia activation in healing wounds (mean score 0.101 vs. 0.013, p = 1.33 x 10^-155), and a distinct HIF+M1 macrophage subcluster (C0) whose composition is 75.9% healing-derived. Bulk RNA-seq validation across two independent DFU cohorts confirms HIF1A upregulation (fold changes 1.91-4.06), robust HIF1A-NFKB1 co-expression correlation (rho = 0.634-0.708), and massive inflammatory gene induction (IL1B up to 9.33-fold, CXCL8 up to 23.34-fold).
+Our analysis reveals a finding that challenges the conventional model: non-healing DFU wounds are characterized by M2 macrophage retention and impaired M1 activation, rather than by excessive M1-driven inflammation. Healing wounds exhibit robust M1-polarized macrophages with strong HIF-1α/NF-κB coupling, suggesting that the capacity for M1 inflammatory initiation — and subsequent normal M1→M2 transition — is associated with wound resolution. NF-κB signaling is strongly associated with M1 polarization (Spearman rho = 0.819), with HIF-1α acting as a synergistic co-activator (rho = 0.340). The HIF-1α/NF-κB coupling axis strongly correlates with the M1-M2 polarization balance (rho = 0.721). We identify a hypoxia-responsive, extracellular matrix-remodeling fibroblast subpopulation (HE-Fibroblasts: MMP1+/MMP3+/HIF1A+) that is 4.2-fold enriched in healing versus non-healing wounds. In macrophages, hypoxia scoring reveals dramatically higher hypoxia activation in healing wounds (mean score 0.101 vs. 0.013, p = 1.33 x 10^-155), and a distinct HIF+M1 macrophage subcluster (C0) whose composition is 75.9% healing-derived. Bulk RNA-seq validation across two independent DFU cohorts confirms HIF1A upregulation (fold changes 1.91-4.06), robust HIF1A-NFKB1 co-expression correlation (rho = 0.634-0.708), and massive inflammatory gene induction (IL1B up to 9.33-fold, CXCL8 up to 23.34-fold).
 
-These findings establish the HIF-1α/NF-κB coupling axis as a central orchestrator of the DFU wound microenvironment, redefine the role of M1 macrophage polarization in wound healing, and identify actionable therapeutic targets for chronic wound management.
+These findings establish the HIF-1α/NF-κB coupling axis as a central orchestrator of the DFU wound microenvironment, reveal M2 retention as a hallmark of non-healing wounds, and identify actionable therapeutic targets for restoring normal macrophage dynamic transition in chronic wound management.
 
 ---
 
@@ -144,7 +144,7 @@ Sub-clustering of the fibroblast compartment revealed a distinctive subpopulatio
 
 This subpopulation represents a wound-activated fibroblast state that combines hypoxia-responsive transcription with aggressive extracellular matrix remodeling, suggesting that productive ECM turnover under hypoxic conditions is a hallmark of healing-competent wounds (**Figure 3**).
 
-#### 4.1.4 Macrophage Polarization: The M1 Paradigm Shift
+#### 4.1.4 Macrophage Polarization: M2 Retention and Impaired M1 Activation
 
 Analysis of macrophage polarization states across conditions revealed a finding that challenges the conventional wound healing paradigm:
 
@@ -156,10 +156,10 @@ Analysis of macrophage polarization states across conditions revealed a finding 
 | HIF ↔ M1 score         | 0.340   | HIF-1α contributes to but does not dominate M1      |
 | (HIF+NFKB) ↔ (M1-M2)  | **0.721** | Combined coupling strongly predicts polarization balance |
 
-**Critical paradigm-shifting observation:** Healing DFU wounds were characterized by M1-biased macrophage polarization, while Non-Healing wounds exhibited M2-biased polarization. This directly contradicts the conventional model that chronic wound inflammation (M1 excess) is pathological and that M2 transition is necessary for healing. Instead, our data suggest that:
+**Critical observation challenging the conventional model:** Healing DFU wounds were characterized by M1-biased macrophage polarization, while Non-Healing wounds exhibited M2-biased polarization. This directly contradicts the simplified model that chronic wound inflammation (M1 excess) is pathological and that M2 transition is necessary for healing. Instead, our data suggest that:
 
-1. A robust M1 inflammatory response, driven by NF-κB and augmented by HIF-1α, is **necessary** for effective wound healing.
-2. Non-healing wounds are characterized by M2-biased macrophage populations that may reflect a dysfunctional, pro-fibrotic, and immunosuppressive state rather than productive resolution.
+1. Non-healing wounds are characterized by M2-biased macrophage populations that may reflect a dysfunctional, immunosuppressive state — rather than the physiological M2 phenotype associated with tissue repair — locked in a state that fails to adequately clear wound bed pathogens, necrotic tissue, and senescent cells.
+2. Healing wounds retain the capacity to mount a robust M1 inflammatory response, driven by NF-κB and augmented by HIF-1α, which may be a prerequisite for initiating the normal M1→M2 transition that underlies successful wound resolution.
 3. The HIF-1α/NF-κB coupling axis serves as the upstream switch that controls the M1/M2 polarization balance (**Figure 4**).
 
 #### 4.1.5 Cell-Cell Communication: IL-1 Signaling Axis
@@ -275,9 +275,9 @@ These genes represent direct transcriptional targets of the HIF-1α/NF-κB coupl
 
 ## 5. Key Findings Summary
 
-### Finding 1: M1 Macrophage Polarization Is Required for DFU Healing (Paradigm Shift)
+### Finding 1: Non-Healing DFUs Exhibit M2 Macrophage Retention and Impaired M1 Activation
 
-Contrary to the prevailing model that M2 anti-inflammatory macrophages promote wound healing, our data demonstrate that healing DFU wounds are characterized by M1-dominant macrophage populations. Non-healing wounds exhibit M2-biased polarization, suggesting that productive M1-driven inflammation is necessary for healing initiation and progression in the diabetic wound context.
+Contrary to the simplified model that M2 anti-inflammatory macrophages universally promote wound healing, our data demonstrate that non-healing DFU wounds are characterized by M2-dominant macrophage populations locked in a dysregulated state. Healing wounds instead exhibit M1-biased polarization, suggesting that the capacity for adequate M1-driven inflammatory initiation — and subsequent M1→M2 dynamic transition — is associated with healing progression in the diabetic wound context.
 
 ### Finding 2: NF-κB Is the Primary Driver, HIF-1α Is the Synergistic Co-activator
 
@@ -307,11 +307,11 @@ Temporal analysis reveals that diabetic and control wounds activate largely over
 
 ## 6. Discussion
 
-### 6.1 Redefining the M1/M2 Paradigm in Diabetic Wound Healing
+### 6.1 Redefining the M1/M2 Dynamic in Diabetic Wound Healing
 
-Our findings necessitate a fundamental reassessment of the macrophage polarization paradigm in DFU pathophysiology. The conventional model, which views chronic wound inflammation as a pathological "stalling" in the M1 phase, assumes that M1-to-M2 transition is the critical determinant of healing. Our data suggest an alternative framework:
+Our findings necessitate a reassessment of the macrophage polarization model in DFU pathophysiology. The conventional model, which views chronic wound inflammation as a pathological "stalling" in the M1 phase, assumes that M1-to-M2 transition is the critical determinant of healing. Our data suggest an alternative framework:
 
-**Revised model:** In diabetic wounds, the capacity to mount a robust, HIF-1α-augmented M1 inflammatory response is a prerequisite for healing. Non-healing wounds are not "stuck in M1" but rather fail to adequately activate the M1 program in the first place, defaulting to an M2-biased state that may reflect immune exhaustion, metabolic dysfunction, or premature anti-inflammatory skewing.
+**Revised model:** In diabetic wounds, non-healing is characterized not by "being stuck in M1" but rather by a failure to adequately activate the initial M1 program, with macrophages defaulting to an M2-biased state that may reflect immune exhaustion, metabolic dysfunction, or premature anti-inflammatory skewing. The capacity to mount a robust, HIF-1α-augmented M1 inflammatory response appears to be a prerequisite for the subsequent M1→M2 transition that drives wound resolution.
 
 This interpretation is consistent with emerging literature demonstrating that adequate initial inflammation is necessary for wound debridement, pathogen clearance, and activation of reparative fibroblast programs. The IL-1 communication axis (M1 macrophage → Fibroblast) we identified provides a direct mechanistic link between macrophage activation and wound repair.
 

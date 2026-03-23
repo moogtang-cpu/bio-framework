@@ -14,7 +14,7 @@ Integrative single-cell and bulk RNA-seq analysis investigating the HIF-1α/NF-�
 
 ## Key Findings
 
-1. **M1 polarization drives DFU healing** (paradigm shift): Healing wounds show M1-biased macrophages; non-healing wounds are M2-dominant
+1. **Non-healing DFUs show M2 macrophage retention** (challenges conventional model): Healing wounds show M1-biased macrophages; non-healing wounds are locked in a dysregulated M2-dominant state, suggesting failure of normal M1→M2 dynamic transition
 2. **NF-κB is the primary M1 driver** (rho = 0.728), with HIF-1α as synergistic co-activator (rho = 0.594)
 3. **HIF+M1 macrophage subcluster**: 42.1% in healing vs. 9.9% in non-healing wounds
 4. **HE-Fibroblasts** (MMP1+/MMP3+/HIF1A+): 4.2-fold enriched in healing DFU
