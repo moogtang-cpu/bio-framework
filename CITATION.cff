@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use Bio-Framework in your research, please cite it as below."
+authors:
+  - family-names: Tang
+    given-names: Hanqing
+    alias: moogtang
+title: "Bio-Framework: An AI Agent Framework for Automated Bioinformatics Analysis"
+version: 1.0.0
+date-released: 2026-01-01
+url: "https://github.com/moogtang-cpu/bio-framework"
+license: LicenseRef-Bio-Framework-Evaluation
+keywords:
+  - bioinformatics
+  - AI agent
+  - single-cell RNA-seq
+  - scRNA-seq
+  - spatial transcriptomics
+  - bulk RNA-seq
+  - multi-omics
+  - automated analysis
+  - Claude Code
+  - publication workflow

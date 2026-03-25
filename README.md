@@ -1,6 +1,6 @@
-# Bio-Framework
+# Bio-Framework — AI Agent for Bioinformatics Analysis
 
-> **Not another AI chatbot. A 350 KB+ structured knowledge-driven analysis navigation system.**
+> **Not another AI chatbot.** A structured knowledge framework that guides Claude Code through automated bioinformatics workflows — scRNA-seq (Seurat / Scanpy), spatial transcriptomics, bulk RNA-seq (DESeq2 / limma), proteomics, and multi-omics — from raw data QC to publication-ready SCI manuscript.
 
 ---
 

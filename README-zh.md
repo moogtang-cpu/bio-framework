@@ -1,6 +1,6 @@
-# Bio-Framework
+# Bio-Framework — AI Agent for Bioinformatics Analysis
 
-> **不是又一个 AI 聊天机器人。是 350 KB+ 结构化知识驱动的分析导航系统。**
+> **不是又一个 AI 聊天机器人。** 一套结构化知识框架，引导 Claude Code 自动执行生物信息学工作流——单细胞 RNA-seq（Seurat / Scanpy）、空间转录组学、bulk RNA-seq（DESeq2 / limma）、蛋白质组学、多组学——从原始数据 QC 到可投稿的 SCI 论文。
 
 ---
 
