@@ -1,5 +1,11 @@
 # Bio-Framework — AI Agent for Bioinformatics Analysis
 
+[![Built for Claude Code](https://img.shields.io/badge/built%20for-Claude%20Code-blueviolet)](https://claude.com/claude-code)
+[![License: Non-Commercial](https://img.shields.io/badge/license-Non--Commercial%20Evaluation-orange)](./LICENSE-zh.md)
+[![Last Commit](https://img.shields.io/github/last-commit/moogtang-cpu/bio-framework)](https://github.com/moogtang-cpu/bio-framework/commits/main)
+[![Stars](https://img.shields.io/github/stars/moogtang-cpu/bio-framework?style=social)](https://github.com/moogtang-cpu/bio-framework/stargazers)
+[![English](https://img.shields.io/badge/lang-English-blue)](./README.md)
+
 > **不是又一个 AI 聊天机器人。** 一套结构化知识框架，引导 Claude Code 自动执行生物信息学工作流——单细胞 RNA-seq（Seurat / Scanpy）、空间转录组学、bulk RNA-seq（DESeq2 / limma）、蛋白质组学、多组学——从原始数据 QC 到可投稿的 SCI 论文。
 
 ---

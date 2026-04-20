@@ -1,5 +1,11 @@
 # Bio-Framework — AI Agent for Bioinformatics Analysis
 
+[![Built for Claude Code](https://img.shields.io/badge/built%20for-Claude%20Code-blueviolet)](https://claude.com/claude-code)
+[![License: Non-Commercial](https://img.shields.io/badge/license-Non--Commercial%20Evaluation-orange)](./LICENSE.md)
+[![Last Commit](https://img.shields.io/github/last-commit/moogtang-cpu/bio-framework)](https://github.com/moogtang-cpu/bio-framework/commits/main)
+[![Stars](https://img.shields.io/github/stars/moogtang-cpu/bio-framework?style=social)](https://github.com/moogtang-cpu/bio-framework/stargazers)
+[![简体中文](https://img.shields.io/badge/lang-简体中文-red)](./README-zh.md)
+
 > **Not another AI chatbot.** A structured knowledge framework that guides Claude Code through automated bioinformatics workflows — scRNA-seq (Seurat / Scanpy), spatial transcriptomics, bulk RNA-seq (DESeq2 / limma), proteomics, and multi-omics — from raw data QC to publication-ready SCI manuscript.
 
 ---
